@@ -28,16 +28,13 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Script from "next/script";
+import HeroBackgroundSlideshow from "./components/client/HeroBackgroundSlideshow";
+import { PHONE_SCHEMA } from "./lib/phone";
 import VehicleCarousel from "./components/client/VehicleCarousel";
 import Button from "./components/ui/Button";
 import Card from "./components/ui/Card";
 
 const vehicles = [
-  {
-    name: "TESLA Model S",
-    image: "/tesla-model-S-2.png",
-    desc: "Berline électrique premium",
-  },
   {
     name: "Mercedes SUV",
     image: "/mercedes-glc-luxury-suv.png",
@@ -55,14 +52,8 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
-        <Image
-          src="/port-cannes-yachts.jpg"
-          alt="Taxi Marseille — centre-ville, port et aéroport Marignane"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40" />
+        <HeroBackgroundSlideshow />
+        <div className="absolute inset-0 z-2 bg-black/50" aria-hidden />
         <div className="relative z-10 text-center text-white max-w-3xl px-6">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-balance">
             Taxi Marseille
@@ -330,7 +321,7 @@ export default function Home() {
               {
                 icon: Car,
                 title: "Véhicules Premium",
-                desc: "Mercedes, Tesla, et van 8 places pour groupes et familles.",
+                desc: "Mercedes SUV et van 8 places pour groupes et familles.",
               },
               {
                 icon: Clock,
@@ -366,7 +357,8 @@ export default function Home() {
               Notre flotte de taxis à Marseille
             </h2>
             <p className="text-lg text-muted-foreground">
-              Véhicules haut de gamme : berlines, SUV et{" "}
+              Véhicules haut de gamme :{" "}
+              <strong className="text-foreground">SUV Mercedes</strong> et{" "}
               <strong className="text-foreground">
                 Mercedes Classe V 8 places
               </strong>{" "}
@@ -387,8 +379,8 @@ export default function Home() {
             <p className="text-lg mb-8 text-primary-foreground/90">
               Environ 25 à 35 minutes depuis l&apos;aéroport Marseille Provence,
               notre service <strong>taxi aéroport Marseille</strong> assure des
-              trajets confortables vers le centre-ville, la gare
-              Saint-Charles, le littoral ou votre hôtel.
+              trajets confortables vers le centre-ville, la gare Saint-Charles,
+              le littoral ou votre hôtel.
             </p>
             <ul className="space-y-4 mb-8">
               {[
@@ -412,7 +404,7 @@ export default function Home() {
             </Button>
           </div>
           <Image
-            src="/arrivée-glc-2.jpeg"
+            src="/taxi-marseille-aeroport-marignane.jpeg"
             alt="Taxi aéroport Marseille depuis l'aéroport Marignane"
             width={500}
             height={500}
@@ -504,7 +496,7 @@ export default function Home() {
             "@type": "TaxiService",
             name: "Taxi Marseille",
             url: "https://www.taxis-marseille.fr/",
-            telephone: "+33 6 98 76 54 32",
+            telephone: PHONE_SCHEMA,
             areaServed: [
               "Marseille",
               "Aix-en-Provence",

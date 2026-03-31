@@ -18,7 +18,7 @@ export default function ReservationForm() {
     time: "",
     passengers: "1",
     luggage: "0",
-    vehicle: "classe-e",
+    vehicle: "glc",
     notes: "",
   });
 
@@ -84,11 +84,12 @@ export default function ReservationForm() {
             time: formData.time,
             passengers: formData.passengers,
             luggage: formData.luggage,
-            vehicle: formData.vehicle === "classe-e" ? "TESLA Model S" : 
-                    formData.vehicle === "glc" ? "Mercedes SUV" : 
-                    formData.vehicle === "vito"
-                      ? "Mercedes Classe V — 8 places"
-                      : formData.vehicle,
+            vehicle:
+              formData.vehicle === "glc"
+                ? "Mercedes SUV"
+                : formData.vehicle === "vito"
+                  ? "Mercedes Classe V — 8 places"
+                  : formData.vehicle,
             notes: formData.notes || "Aucune note",
           };
 
@@ -118,7 +119,7 @@ export default function ReservationForm() {
             time: "",
             passengers: "1",
             luggage: "0",
-            vehicle: "classe-e",
+            vehicle: "glc",
             notes: "",
           });
         }, 5000);
@@ -177,7 +178,7 @@ export default function ReservationForm() {
                   </label>
                   <Input
                     type="tel"
-                    placeholder="+33 6 XX XX XX XX"
+                    placeholder="+33 7 XX XX XX XX"
                     required
                     value={formData.phone}
                     onChange={(e) =>
@@ -318,7 +319,6 @@ export default function ReservationForm() {
                       setFormData({ ...formData, vehicle: e.target.value })
                     }
                   >
-                    <option value="classe-e">TESLA Model S</option>
                     <option value="glc">Mercedes SUV</option>
                     <option value="vito">
                       Mercedes Classe V — 8 places (groupes)

@@ -11,16 +11,16 @@ export const metadata = {
   },
 };
 
-import { Building2, Star, Shield, CheckCircle, Clock } from "lucide-react";
-import Image from "next/image";
 import Button from "@/app/components/ui/Button";
+import { Building2, CheckCircle, Clock, Shield, Star } from "lucide-react";
+import Image from "next/image";
 
 export default function TrajetsHotelsEvenements() {
   return (
     <main className="min-h-screen bg-white">
       <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
         <Image
-          src="/palace-cannes.jpg"
+          src="/marseille-evenements.jpg"
           alt="Taxi hôtels et événements Marseille"
           fill
           className="object-cover"
@@ -83,10 +83,10 @@ export default function TrajetsHotelsEvenements() {
           <div className="space-y-8 text-lg text-gray-800 leading-relaxed">
             <p>
               Salons professionnels au <strong>Parc Chanot</strong>, séminaires
-              vue mer au <strong>Palais du Pharo</strong>, matchs à
-              l&apos;<strong>Orange Vélodrome</strong> ou soirées dans les
-              hôtels du centre : nous planifions les déposes et prises en
-              charge aux accès autorisés.
+              vue mer au <strong>Palais du Pharo</strong>, matchs à l&apos;
+              <strong>Orange Vélodrome</strong> ou soirées dans les hôtels du
+              centre : nous planifions les déposes et prises en charge aux accès
+              autorisés.
             </p>
             <ul className="space-y-3">
               {[

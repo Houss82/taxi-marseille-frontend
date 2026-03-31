@@ -21,14 +21,14 @@ export default function Services() {
     {
       title: "Taxi aéroport Marseille (MRS)",
       desc: "Navette fiable vers / depuis l'aéroport Marseille Provence",
-      image: "/aeroport-nice-cannes.jpg",
+      image: "/aeroport-marseille.jpg",
       details: ["Prix fixe", "Suivi de vol", "24h/24 disponible"],
       href: "/services/taxi-aeroport-marseille",
     },
     {
       title: "Hôtels & Événements",
       desc: "Pharo, Chanot, Vélodrome, centres d'affaires et hôtels 4-5*",
-      image: "/palace-cannes.jpg",
+      image: "/marseille-evenements.jpg",
       details: ["Discrétion", "Ponctualité", "Mise à disposition possible"],
       href: "/services/trajets-hotels-evenements",
     },
@@ -46,16 +46,9 @@ export default function Services() {
     {
       title: "Gare Saint-Charles",
       desc: "Correspondances TGV, bus et navettes port",
-      image: "/taxi-gare-de-cannes.jpeg",
+      image: "/vieux-port-marseille.jpg",
       details: ["Prise en charge quai", "Bagages assistés", "Attente train"],
-      href: "/reservation",
-    },
-    {
-      title: "Vieux-Port & Joliette",
-      desc: "Croisiéristes, bureaux Euroméditerranée, Mucem",
-      image: "/port-cannes-yachts.jpg",
-      details: ["Accès zones dense", "Multilingue sur demande"],
-      href: "/secteurs",
+      href: "/services/taxi-gare-saint-charles",
     },
     {
       title: "Chauffeur privé",
@@ -66,7 +59,7 @@ export default function Services() {
         "Van 8 places sur demande",
         "Business & loisirs",
       ],
-      href: "/reservation",
+      href: "/services/chauffeur-prive-marseille",
     },
   ];
 
@@ -114,7 +107,10 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={service.href || "/reservation"} className="mt-auto">
+                  <Link
+                    href={service.href || "/reservation"}
+                    className="mt-auto"
+                  >
                     <Button className="w-full bg-accent text-accent-foreground hover:opacity-90">
                       Voir
                     </Button>

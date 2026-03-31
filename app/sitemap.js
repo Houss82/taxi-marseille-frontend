@@ -30,6 +30,16 @@ export default function sitemap() {
       priority: 0.85,
       changeFrequency: "monthly",
     },
+    {
+      path: "/services/taxi-gare-saint-charles",
+      priority: 0.85,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/services/chauffeur-prive-marseille",
+      priority: 0.85,
+      changeFrequency: "monthly",
+    },
     { path: "/secteurs", priority: 0.9, changeFrequency: "monthly" },
     {
       path: "/secteurs/vieux-port",

@@ -22,6 +22,14 @@ const navItems = [
         label: "Marseille → Aix & Cassis",
         href: "/services/marseille-aix-cassis",
       },
+      {
+        label: "Gare Saint-Charles",
+        href: "/services/taxi-gare-saint-charles",
+      },
+      {
+        label: "Chauffeur privé",
+        href: "/services/chauffeur-prive-marseille",
+      },
     ],
   },
   {

@@ -14,8 +14,9 @@ const nextConfig = {
       '@': path.resolve(__dirname),
     };
     
-    // En développement, désactiver le cache webpack pour éviter les problèmes de CSS
-    if (dev && !isServer) {
+    // En dev : désactiver le cache disque webpack (client + serveur) pour éviter
+    // les ENOENT sur .next/cache/webpack/**/ *.pack.gz (cache corrompu / concurrence).
+    if (dev) {
       config.cache = false;
     }
     

@@ -11,16 +11,16 @@ export const metadata = {
   },
 };
 
-import { Plane, Clock, Shield, CheckCircle, Users } from "lucide-react";
-import Image from "next/image";
 import Button from "@/app/components/ui/Button";
+import { CheckCircle, Clock, Plane, Shield, Users } from "lucide-react";
+import Image from "next/image";
 
 export default function TaxiAeroportMarseille() {
   return (
     <main className="min-h-screen bg-white">
       <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
         <Image
-          src="/aeroport-nice-cannes.jpg"
+          src="/aeroport-marseille.jpg"
           alt="Taxi aéroport Marseille Marignane - Taxi Marseille"
           fill
           className="object-cover"
@@ -101,8 +101,8 @@ export default function TaxiAeroportMarseille() {
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100">
               <p className="text-gray-800 mb-0 leading-relaxed text-lg">
                 <strong className="text-accent">Taxi Marseille</strong> prend en
-                charge vos arrivées et départs au terminal : panneau
-                nominatif, aide aux bagages ; berlines, SUV ou{" "}
+                charge vos arrivées et départs au terminal : panneau nominatif,
+                aide aux bagages ; berlines, SUV ou{" "}
                 <strong>van Mercedes 8 places</strong> selon le nombre de
                 passagers.
               </p>

@@ -10,6 +10,7 @@ export const metadata = {
 };
 
 import { Building2, FileText, Globe, Mail, MapPin, Phone } from "lucide-react";
+import { PHONE_FR, PHONE_INTL, PHONE_TEL_HREF } from "../lib/phone";
 
 export default function MentionsLegales() {
   return (
@@ -74,7 +75,17 @@ export default function MentionsLegales() {
                       <Phone className="w-5 h-5 text-accent shrink-0 mt-1" />
                       <div>
                         <p className="font-bold mb-1">Téléphone :</p>
-                        <p>+33 6 98 76 54 32</p>
+                        <p>
+                          <a
+                            href={PHONE_TEL_HREF}
+                            className="text-accent hover:underline font-bold"
+                          >
+                            {PHONE_FR}
+                          </a>
+                          <span className="block text-sm text-muted-foreground mt-1">
+                            {PHONE_INTL}
+                          </span>
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">

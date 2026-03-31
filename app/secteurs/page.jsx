@@ -12,6 +12,7 @@ export const metadata = {
 };
 
 import Button from "@/app/components/ui/Button";
+import { PHONE_FR, PHONE_INTL, PHONE_TEL_HREF } from "@/app/lib/phone";
 import { ArrowRight, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -76,8 +77,8 @@ export default function Secteurs() {
             Nos Secteurs à Marseille
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 text-balance">
-            Taxi disponible 24h/24 sur les quartiers emblématiques de la cité
-            phocéenne
+            Vieux-Port, Joliette &amp; Euroméditerranée, Panier : taxi 24h/24 sur
+            les quartiers emblématiques de Marseille
           </p>
         </div>
       </section>
@@ -167,7 +168,11 @@ export default function Secteurs() {
             </Button>
           </div>
           <p className="mt-6 text-sm text-accent-foreground/80">
-            📞 <strong>+33 6 98 76 54 32</strong> | ✉️{" "}
+            📞{" "}
+            <a href={PHONE_TEL_HREF} className="font-bold underline-offset-2 hover:underline">
+              {PHONE_FR}
+            </a>{" "}
+            <span className="text-accent-foreground/90">({PHONE_INTL})</span> | ✉️{" "}
             <strong>contact@taxis-marseille.fr</strong>
             <br />
             Service disponible 24h/24 et 7j/7 • Réponse garantie sous 2 heures

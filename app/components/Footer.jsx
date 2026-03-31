@@ -2,6 +2,7 @@
 
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import { PHONE_FR, PHONE_INTL, PHONE_TEL_HREF } from "../lib/phone";
 
 export default function Footer() {
   return (
@@ -56,6 +57,22 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/services/taxi-gare-saint-charles"
+                  className="hover:text-accent transition-colors"
+                >
+                  Gare Saint-Charles
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/chauffeur-prive-marseille"
+                  className="hover:text-accent transition-colors"
+                >
+                  Chauffeur privé
+                </Link>
+              </li>
+              <li>
                 <Link href="/reservation" className="hover:text-accent transition-colors">
                   Réservation
                 </Link>
@@ -67,9 +84,19 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4">Contact</h3>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>+33 6 98 76 54 32</span>
+              <li className="flex flex-col gap-0.5">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <a
+                    href={PHONE_TEL_HREF}
+                    className="hover:text-accent transition-colors font-medium"
+                  >
+                    {PHONE_FR}
+                  </a>
+                </div>
+                <span className="pl-6 text-xs text-primary-foreground/70">
+                  {PHONE_INTL}
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />

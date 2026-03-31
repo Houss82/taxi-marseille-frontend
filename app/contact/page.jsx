@@ -7,6 +7,12 @@ import Button from "../components/ui/Button"
 import Card from "../components/ui/Card"
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react"
 import ContactForm from "../components/client/ContactForm"
+import {
+  PHONE_FR,
+  PHONE_INTL,
+  PHONE_TEL_HREF,
+  PHONE_WHATSAPP_HREF,
+} from "../lib/phone"
 
 export const metadata = {
   title: "Contact - Taxi Marseille",
@@ -21,16 +27,16 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Téléphone",
-      info: "+33 6 98 76 54 32",
+      info: `${PHONE_FR} · ${PHONE_INTL}`,
       action: "Appeler",
-      href: "tel:+33698765432",
+      href: PHONE_TEL_HREF,
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      info: "+33 6 98 76 54 32",
+      info: `${PHONE_FR} · ${PHONE_INTL}`,
       action: "Envoyer",
-      href: "https://wa.me/33698765432",
+      href: PHONE_WHATSAPP_HREF,
     },
     {
       icon: Mail,
