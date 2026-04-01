@@ -3,9 +3,11 @@
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
-/** Fichier sur disque en NFD (é = e + accent combiné) — URL doit correspondre */
-const CATHEDRALE =
-  "/taxi-marseille-Cath\u0065\u0301drale-Sainte-Marie-Majeure.jpeg";
+/** Nom de fichier ASCII (sans accent) pour le même chemin en local et en prod */
+const SLIDE_CATHEDRALE = {
+  src: "/taxi-marseille-Cathedrale-Sainte-Marie-Majeure.jpeg",
+  alt: "Taxi Marseille — Cathédrale Sainte-Marie-Majeure",
+};
 
 const SLIDE_INTERCONTINENTAL = {
   src: "/taxi-InterContinental-Marseille-cours.jpeg",
@@ -19,10 +21,7 @@ const SLIDE_BASILIQUE = {
 };
 
 const DEFAULT_SLIDES = [
-  {
-    src: CATHEDRALE,
-    alt: "Taxi Marseille — Cathédrale Sainte-Marie-Majeure",
-  },
+  SLIDE_CATHEDRALE,
   {
     src: "/taxi-marseille-aeroport-marignane.jpeg",
     alt: "Taxi Marseille — aéroport Marseille Marignane (MRS)",

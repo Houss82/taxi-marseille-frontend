@@ -3,6 +3,7 @@
 import { AlertCircle, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { createReservation } from "../../lib/api";
+import { FORMSPREE_RESERVATION_URL } from "../../lib/formspree";
 import Button from "../ui/Button";
 import Card from "../ui/Card";
 import Input from "../ui/Input";
@@ -75,6 +76,7 @@ export default function ReservationForm() {
         // Envoyer également à Formspree pour recevoir les emails (en parallèle, sans bloquer)
         try {
           const formspreeData = {
+            type: "Réservation Taxi Marseille",
             name: formData.name,
             phone: `${indicatifPays} ${telephone}`,
             email: formData.email || "Non renseigné",
@@ -93,7 +95,7 @@ export default function ReservationForm() {
             notes: formData.notes || "Aucune note",
           };
 
-          await fetch("https://formspree.io/f/mldqnkoq", {
+          await fetch(FORMSPREE_RESERVATION_URL, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
