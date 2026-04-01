@@ -27,21 +27,30 @@ export default function ReservationForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Fonction pour extraire l'indicatif pays du numéro de téléphone
-  const extractCountryCode = (phone) => {
-    // Si le numéro commence par +, extraire l'indicatif
-    if (phone.startsWith("+")) {
-      const match = phone.match(/^(\+\d{1,4})(.+)$/);
-      if (match) {
-        return {
-          indicatifPays: match[1],
-          telephone: match[2].replace(/\s/g, ""),
-        };
-      }
+  // Indicatif + national : uniquement des chiffres côté API (8–15)
+  const extractCountryCode = (raw) => {
+    const phone = (raw || "").trim();
+    if (!phone) return { indicatifPays: "+33", telephone: "" };
+
+    const digits = phone.replace(/\D/g, "");
+
+    // +33… ou 0033… → national sans le 0 initial (ex. 33612345678 → 612345678)
+    if (digits.startsWith("33") && digits.length >= 10) {
+      let national = digits.slice(2);
+      if (national.startsWith("0")) national = national.slice(1);
+      return { indicatifPays: "+33", telephone: national };
     }
-    // Sinon, utiliser +33 par défaut et nettoyer le numéro
-    const cleanedPhone = phone.replace(/\s/g, "").replace(/^0/, "");
-    return { indicatifPays: "+33", telephone: cleanedPhone };
+
+    // Numéro français avec 0 initial (10 chiffres)
+    if (digits.length >= 10 && digits.startsWith("0")) {
+      return { indicatifPays: "+33", telephone: digits.slice(1) };
+    }
+
+    if (digits.startsWith("0")) {
+      return { indicatifPays: "+33", telephone: digits.slice(1) };
+    }
+
+    return { indicatifPays: "+33", telephone: digits };
   };
 
   const handleSubmit = async (e) => {
@@ -52,6 +61,14 @@ export default function ReservationForm() {
     try {
       // Extraire l'indicatif pays et le téléphone
       const { indicatifPays, telephone } = extractCountryCode(formData.phone);
+
+      if (!/^\d{8,15}$/.test(telephone)) {
+        setError(
+          "Numéro invalide : saisissez 8 à 15 chiffres (ex. 06 12 34 56 78 ou +33 6 12 34 56 78)."
+        );
+        setLoading(false);
+        return;
+      }
 
       // Préparer les données pour l'API backend
       const reservationData = {

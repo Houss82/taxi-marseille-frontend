@@ -497,6 +497,8 @@ export default function Home() {
             name: "Taxi Marseille",
             url: "https://www.taxis-marseille.fr/",
             telephone: PHONE_SCHEMA,
+            image: "https://www.taxis-marseille.fr/taxi-Marseille-logo.png",
+            logo: "https://www.taxis-marseille.fr/taxi-Marseille-logo.png",
             areaServed: [
               "Marseille",
               "Aix-en-Provence",

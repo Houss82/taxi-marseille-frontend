@@ -185,7 +185,7 @@ export default async function BlogPostPage({ params }) {
                   name: "Taxi Marseille",
                   logo: {
                     "@type": "ImageObject",
-                    url: "https://www.taxis-marseille.fr/logo.png",
+                    url: "https://www.taxis-marseille.fr/taxi-Marseille-logo.png",
                   },
                 },
                 description: post.excerpt,

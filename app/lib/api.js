@@ -12,7 +12,14 @@ export async function createReservation(reservationData) {
       body: JSON.stringify(reservationData),
     });
 
-    const data = await response.json();
+    let data;
+    try {
+      data = await response.json();
+    } catch {
+      throw new Error(
+        "Réponse serveur invalide. Vérifiez que l’API répond correctement."
+      );
+    }
 
     if (!response.ok) {
       throw new Error(
@@ -22,6 +29,11 @@ export async function createReservation(reservationData) {
 
     return data;
   } catch (error) {
+    if (error instanceof TypeError && String(error.message).includes("fetch")) {
+      throw new Error(
+        "Connexion impossible vers l’API (réseau ou blocage CORS). Redéployez le backend avec la dernière version ou ajoutez votre origine dans CORS_ORIGINS sur Vercel."
+      );
+    }
     console.error("Erreur API:", error);
     throw error;
   }

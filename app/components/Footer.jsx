@@ -1,8 +1,9 @@
 // ✅ SERVER COMPONENT - Pas de "use client"
 
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { PHONE_FR, PHONE_INTL, PHONE_TEL_HREF } from "../lib/phone";
+import { PHONE_FR, PHONE_TEL_HREF } from "../lib/phone";
 
 export default function Footer() {
   return (
@@ -12,11 +13,13 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-sm">
-                  T
-                </span>
-              </div>
+              <Image
+                src="/taxi-Marseille-logo.png"
+                alt="Taxi Marseille"
+                width={32}
+                height={32}
+                className="h-8 w-8 object-contain shrink-0"
+              />
               <span className="font-bold text-lg">Taxi Marseille</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
@@ -84,19 +87,14 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4">Contact</h3>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
-              <li className="flex flex-col gap-0.5">
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 shrink-0" />
-                  <a
-                    href={PHONE_TEL_HREF}
-                    className="hover:text-accent transition-colors font-medium"
-                  >
-                    {PHONE_FR}
-                  </a>
-                </div>
-                <span className="pl-6 text-xs text-primary-foreground/70">
-                  {PHONE_INTL}
-                </span>
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 shrink-0" />
+                <a
+                  href={PHONE_TEL_HREF}
+                  className="hover:text-accent transition-colors font-medium"
+                >
+                  {PHONE_FR}
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />

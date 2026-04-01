@@ -39,6 +39,12 @@ export const metadata = {
     siteName: "Taxi Marseille",
     locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "/taxi-Marseille-logo.png",
+        alt: "Logo Taxi Marseille",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -48,12 +54,24 @@ export const metadata = {
   icons: {
     icon: [
       {
-        url: "/Taxi_Cannes-removebg-preview.png",
-        sizes: "any",
+        url: "/taxi-Marseille-logo.png",
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: "/taxi-Marseille-logo.png",
+        type: "image/png",
+        sizes: "192x192",
+      },
+    ],
+    apple: [
+      {
+        url: "/taxi-Marseille-logo.png",
+        sizes: "180x180",
         type: "image/png",
       },
     ],
-    apple: "/Taxi_Cannes-removebg-preview.png",
+    shortcut: "/taxi-Marseille-logo.png",
   },
 };
 
