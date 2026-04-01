@@ -8,7 +8,8 @@ export default function Button({
   className = "",
   ...props 
 }) {
-  const baseClasses = "inline-flex items-center justify-center rounded-full font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50 disabled:pointer-events-none"
+  const baseClasses =
+    "inline-flex cursor-pointer items-center justify-center rounded-full font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 disabled:pointer-events-none"
   
   const sizeClasses = {
     sm: "h-9 px-3 text-sm",

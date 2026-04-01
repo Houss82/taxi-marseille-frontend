@@ -119,9 +119,9 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-}
+  }
 
-body {
+  body {
     @apply bg-background text-foreground;
   }
 }
@@ -806,4 +806,34 @@ html {
   .prose .comparison-item strong {
     font-size: 1rem !important;
   }
+}
+
+/*
+ * Curseur interactif — HORS @layer : en cascade, tout ce qui est dans @layer (base/utilities
+ * Tailwind) est SOUS les règles « sans couche ». Sinon les utilitaires .cursor-* gagnent
+ * et la main ne s’affiche pas. Voir : https://developer.mozilla.org/en-US/docs/Web/CSS/@layer
+ */
+a:any-link:not([aria-disabled="true"]),
+a[href]:not([aria-disabled="true"]),
+button:not(:disabled):not([disabled]),
+[role="button"]:not([aria-disabled="true"]),
+input[type="button"]:not(:disabled):not([disabled]),
+input[type="submit"]:not(:disabled):not([disabled]),
+input[type="reset"]:not(:disabled):not([disabled]),
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"],
+input[type="range"],
+input[type="color"],
+summary,
+label[for],
+select:not(:disabled):not([disabled]) {
+  cursor: pointer !important;
+}
+
+button:disabled,
+button[disabled],
+input:disabled,
+select:disabled {
+  cursor: not-allowed !important;
 }

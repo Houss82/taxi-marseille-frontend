@@ -75,7 +75,7 @@ export default function HeaderClient({ navItems, children }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-60"
+            className="md:hidden fixed inset-0 z-60 cursor-pointer bg-black/20 backdrop-blur-sm"
             onClick={() => setIsMobileMenuOpen(false)}
           />
 

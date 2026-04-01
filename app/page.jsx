@@ -5,10 +5,9 @@ export const revalidate = 86400;
 
 // ✅ Métadonnées SEO pour cette page
 export const metadata = {
-  title:
-    "Taxi Marseille – Taxi aéroport Marseille Marignane (MRS) & Service sur la métropole",
+  title: "Taxi Marseille | Aéroport Marignane, Gare Saint-Charles & Vieux-Port",
   description:
-    "Taxi Marseille 24h/24 : taxi aéroport Marseille (MRS), gare Saint-Charles, Vieux-Port, Joliette, congrès. Van Mercedes 8 places pour groupes. Trajets Aix-en-Provence & Cassis.",
+    "Taxi Marseille 24h/24 : aéroport Marseille Provence Marignane, gare Saint-Charles, Vieux-Port, hôtels et congrès. Van Mercedes 8 places, trajets locaux et longue distance.",
   alternates: {
     canonical: "https://www.taxis-marseille.fr/",
   },
@@ -17,6 +16,7 @@ export const metadata = {
 import {
   Building2,
   Car,
+  CheckCircle2,
   ChevronRight,
   Clock,
   Compass,
@@ -26,13 +26,21 @@ import {
   Train,
   Users,
 } from "lucide-react";
+import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import Script from "next/script";
 import HeroBackgroundSlideshow from "./components/client/HeroBackgroundSlideshow";
-import { PHONE_SCHEMA } from "./lib/phone";
 import VehicleCarousel from "./components/client/VehicleCarousel";
 import Button from "./components/ui/Button";
 import Card from "./components/ui/Card";
+import { PHONE_SCHEMA } from "./lib/phone";
+
+/** Serif élégante pour le nom de marque — lisible, premium, sobre (hôtellerie / transport) */
+const fontHeroBrand = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["700"],
+  display: "swap",
+});
 
 const vehicles = [
   {
@@ -51,24 +59,29 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative flex min-h-screen flex-col items-center justify-start overflow-hidden pt-32 md:justify-center">
         <HeroBackgroundSlideshow />
         <div className="absolute inset-0 z-2 bg-black/50" aria-hidden />
         <div className="relative z-10 text-center text-white max-w-3xl px-6">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-balance">
-            Taxi Marseille
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-balance">
+            <span
+              className={`${fontHeroBrand.className} bg-linear-to-r from-sky-200 via-blue-400 to-blue-500 bg-clip-text text-5xl font-bold tracking-normal text-transparent md:text-7xl`}
+            >
+              Taxi Marseille
+            </span>{" "}
+            – Aéroport Marignane, Gare Saint-Charles et Vieux-Port
           </h1>
-          <h2 className="text-xl md:text-2xl mb-8 text-white/90 text-balance">
-            Réservation 24h/24 – aéroport Marignane (MRS), gare Saint-Charles,
+          <p className="text-lg md:text-2xl mb-6 text-white/90 text-balance">
+            Réservation 24h/24 pour vos trajets à Marseille, vers
+            l&apos;aéroport Marseille Provence, la gare Saint-Charles, le
             Vieux-Port, Euroméditerranée et toute la métropole.
-          </h2>
-          <p className="text-base md:text-lg mb-4 text-white/80">
-            Réservez un taxi à Marseille pour vos déplacements privés ou
-            professionnels en Provence et sur la côte.
           </p>
-          <p className="text-base md:text-lg mb-8 text-white/95 font-medium">
-            Véhicule 8 places disponible (Mercedes Classe V) — idéal groupes et
-            taxi aéroport Marseille.
+          <p className="text-base md:text-lg mb-8 text-white/85">
+            Déplacements privés ou professionnels en Provence.{" "}
+            <span className="text-white/95 font-medium">
+              Van Mercedes 8 places sur réservation — groupes, familles,
+              transfert aéroport.
+            </span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -150,7 +163,7 @@ export default function Home() {
       <section className="py-12 bg-white border-y border-gray-200">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-gray-900">
-            Taxi à Marseille – Service local officiel 24h/24
+            Service de taxi à Marseille 24h/24
           </h2>
           <p className="text-lg text-gray-700 text-center leading-relaxed">
             Entreprise de taxi sur Marseille : prises en charge au Vieux-Port,
@@ -326,7 +339,7 @@ export default function Home() {
               {
                 icon: Clock,
                 title: "Disponibilité 24/7",
-                desc: "Taxi Marseille disponible jour et nuit.",
+                desc: "Service disponible jour et nuit sur la métropole.",
               },
               {
                 icon: CreditCard,
@@ -359,9 +372,7 @@ export default function Home() {
             <p className="text-lg text-muted-foreground">
               Véhicules haut de gamme :{" "}
               <strong className="text-foreground">SUV Mercedes</strong> et{" "}
-              <strong className="text-foreground">
-                Mercedes Classe V 8 places
-              </strong>{" "}
+              <strong className="text-foreground">Mercedes Van 8 places</strong>{" "}
               pour familles et groupes.
             </p>
           </div>
@@ -398,7 +409,7 @@ export default function Home() {
             </ul>
             <Button
               href="/reservation"
-              className="bg-accent text-accent-foreground hover:opacity-90 px-8 py-6 text-lg"
+              className="bg-accent text-accent-foreground hover:opacity-90 px-8 py-8 text-lg"
             >
               Réserver un taxi aéroport Marseille
             </Button>
@@ -413,12 +424,78 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section SEO : taxi gare Saint-Charles */}
+      <section className="relative overflow-hidden border-t border-gray-100 bg-linear-to-b from-slate-50 via-white to-blue-50/40 py-20">
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          <div className="absolute -left-24 top-1/4 h-72 w-72 rounded-full bg-accent/15 blur-3xl" />
+          <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-blue-200/30 blur-3xl" />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-6">
+          <div className="rounded-2xl border border-gray-200/90 bg-white/95 p-8 shadow-xl shadow-gray-200/40 backdrop-blur-sm md:p-10">
+            <div className="mb-8 flex flex-col items-center text-center">
+              <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-accent/20 via-blue-100 to-blue-50 text-accent shadow-inner">
+                <Train className="h-8 w-8" strokeWidth={1.75} aria-hidden />
+              </div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
+                Gare SNCF · Centre-ville Marseille
+              </p>
+              <h2 className="text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
+                Taxi gare Saint-Charles Marseille
+              </h2>
+            </div>
+            <p className="mb-8 text-center text-lg leading-relaxed text-gray-700 md:text-left">
+              Transferts en taxi depuis et vers la gare Saint-Charles : prise en
+              charge rapide pour les arrivées{" "}
+              <strong className="font-semibold text-gray-900">TGV</strong>,{" "}
+              <strong className="font-semibold text-gray-900">TER</strong> et
+              départs longue distance. Liaisons vers l&apos;aéroport Marseille
+              Provence, le Vieux-Port, les hôtels du centre et toute la
+              métropole.
+            </p>
+            <ul className="mb-8 grid gap-3 sm:grid-cols-2">
+              {[
+                "Attente panneau nominatif possible",
+                "Suivi des retards train",
+                "Vers aéroport MRS & hôtels",
+                "Van 8 places sur demande",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2.5 text-sm text-gray-700"
+                >
+                  <CheckCircle2
+                    className="mt-0.5 h-5 w-5 shrink-0 text-accent"
+                    aria-hidden
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
+              <Button
+                href="/services/taxi-gare-saint-charles"
+                className="w-full bg-accent text-accent-foreground hover:opacity-90 sm:w-auto px-8 py-8 text-lg"
+              >
+                Détails &amp; tarifs gare Saint-Charles
+              </Button>
+              <Button
+                href="/reservation"
+                variant="outline"
+                className="w-full border-gray-300 bg-white text-gray-800 hover:bg-gray-50 sm:w-auto"
+              >
+                Réserver un taxi
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Avis de nos clients taxi Marseille
+              Avis de nos clients
             </h2>
             <p className="text-lg text-muted-foreground">
               Des centaines de trajets réussis chaque année à Marseille et en

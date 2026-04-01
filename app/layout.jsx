@@ -14,11 +14,11 @@ export const metadata = {
   metadataBase: new URL("https://www.taxis-marseille.fr"),
   title: {
     default:
-      "Taxi Marseille – Taxi aéroport Marseille Marignane (MRS) & Chauffeur Privé",
+      "Taxi Marseille | Aéroport Marignane, Gare Saint-Charles & Vieux-Port",
     template: "%s | Taxi Marseille",
   },
   description:
-    "Taxi Marseille 24h/24 : aéroport MRS, gare Saint-Charles, Vieux-Port, congrès. Van Mercedes 8 places pour groupes et familles.",
+    "Taxi Marseille 24h/24 : aéroport Marseille Provence Marignane, gare Saint-Charles, Vieux-Port, hôtels et congrès. Van Mercedes 8 places, trajets locaux et longue distance.",
   keywords: [
     "taxi Marseille",
     "taxi à Marseille",
@@ -32,9 +32,9 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Taxi Marseille – Taxi aéroport Marseille Marignane (MRS) & Chauffeur Privé",
+      "Taxi Marseille | Aéroport Marignane, Gare Saint-Charles & Vieux-Port",
     description:
-      "Service de taxi à Marseille : taxi aéroport Marseille (MRS), gare Saint-Charles, hôtels et événements. Réservation 24h/24.",
+      "Taxi Marseille 24h/24 : aéroport Marignane, gare Saint-Charles, Vieux-Port, hôtels et congrès. Van Mercedes 8 places.",
     url: "/",
     siteName: "Taxi Marseille",
     locale: "fr_FR",

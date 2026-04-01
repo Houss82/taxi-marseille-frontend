@@ -3,10 +3,11 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Désactiver le cache webpack en développement pour éviter les problèmes de CSS
+  // Dev : éviter d’évincer trop vite les entrées (sinon le HTML peut référencer un ancien
+  // chunk CSS → 404 sur layout.css et page « sans CSS » jusqu’au reload).
   onDemandEntries: {
-    maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
+    maxInactiveAge: 120 * 1000,
+    pagesBufferLength: 8,
   },
   webpack: (config, { dev, isServer }) => {
     config.resolve.alias = {
