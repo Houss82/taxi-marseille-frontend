@@ -80,6 +80,7 @@ const blogCategories = [
       hover: "hover:bg-purple-100",
     },
     articleCategories: [
+      "Guides",
       "Guides Pratiques",
       "Guide Pratique",
       "Conseils",

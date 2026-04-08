@@ -18,13 +18,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { PHONE_FR, PHONE_TEL_HREF } from "@/app/lib/phone";
+import { useMobileMenu } from "./MobileMenuContext";
 
 export default function HeaderClient({ navItems, children }) {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
   const [isScrolled, setIsScrolled] = useState(!isHomePage);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isMobileMenuOpen, setIsMobileMenuOpen } = useMobileMenu();
   /** Desktop : sous-menu au survol */
   const [openDropdown, setOpenDropdown] = useState(null);
   /** Mobile : accordéon sous-menus (même design que taxi-cagnes-sur-mer) */
@@ -229,24 +231,58 @@ export default function HeaderClient({ navItems, children }) {
               </div>
             </nav>
 
-            {/* CTA fixé en bas du panneau (comme taxi-cagnes-sur-mer) */}
+            {/* CTA bas de panneau : appeler (prioritaire) + réserver */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 16 }}
               transition={{ duration: 0.25, delay: 0.15 }}
-              className="shrink-0 mt-auto px-6 pt-3 border-t border-gray-200 bg-white pb-[max(1.5rem,env(safe-area-inset-bottom,0px))]"
+              className="shrink-0 mt-auto px-6 pt-3 border-t border-gray-200 bg-linear-to-b from-white to-slate-50/90 pb-[max(1.5rem,env(safe-area-inset-bottom,0px))]"
             >
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                <Link
-                  href="/reservation"
-                  className="flex items-center justify-center gap-2 w-full bg-linear-to-r from-accent to-accent/80 text-accent-foreground text-center py-4 px-6 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                  onClick={() => setIsMobileMenuOpen(false)}
+              <div className="flex flex-col gap-3">
+                <motion.a
+                  href={PHONE_TEL_HREF}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group relative flex w-full items-center justify-center gap-3 overflow-hidden rounded-2xl bg-linear-to-br from-cyan-500 via-cyan-600 to-blue-700 px-5 py-4 text-white shadow-xl shadow-cyan-500/25 ring-1 ring-white/20"
                 >
-                  <Car className="w-5 h-5 shrink-0" />
-                  RÉSERVER
-                </Link>
-              </motion.div>
+                  <span
+                    className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/15 blur-2xl transition group-hover:bg-white/25"
+                    aria-hidden
+                  />
+                  <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 ring-1 ring-white/30">
+                    <Phone className="h-6 w-6" strokeWidth={2.25} aria-hidden />
+                  </span>
+                  <span className="relative min-w-0 flex-1 text-left">
+                    <span className="block text-xs font-semibold uppercase tracking-wider text-cyan-100">
+                      Appeler maintenant
+                    </span>
+                    <span className="font-mono text-lg font-bold tracking-wide tabular-nums">
+                      {PHONE_FR}
+                    </span>
+                  </span>
+                  <span
+                    className="relative rounded-full bg-white/15 px-2.5 py-1 text-[0.65rem] font-bold uppercase text-cyan-50 ring-1 ring-white/25"
+                    aria-hidden
+                  >
+                    24/7
+                  </span>
+                </motion.a>
+
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                  <Link
+                    href="/reservation"
+                    className="flex items-center justify-center gap-2 w-full border-2 border-accent/30 bg-white py-3.5 px-6 rounded-xl font-bold text-base text-accent shadow-sm hover:bg-accent/5 hover:border-accent/50 transition-all duration-300"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <Car className="w-5 h-5 shrink-0" />
+                    Réserver en ligne
+                  </Link>
+                </motion.div>
+              </div>
             </motion.div>
           </motion.div>
         </>

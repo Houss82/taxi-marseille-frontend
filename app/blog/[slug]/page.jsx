@@ -1,3 +1,4 @@
+import MobileBlogCallCTA from "@/app/components/client/MobileBlogCallCTA";
 import ResponsiveTableWrapper from "@/app/components/ResponsiveTableWrapper";
 import SEOBreadcrumb from "@/app/components/SEOBreadcrumb";
 import { getAllPosts, getAllPostSlugs, getPostBySlug } from "@/lib/blog";
@@ -43,7 +44,7 @@ export default async function BlogPostPage({ params }) {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-32 md:pb-0">
       {/* Breadcrumb */}
       <div className="bg-white border-b pt-24 sm:pt-24">
         <div className="max-w-4xl mx-auto px-6 sm:px-4 pb-4 sm:pb-6">
@@ -394,6 +395,8 @@ export default async function BlogPostPage({ params }) {
           </div>
         </section>
       )}
+
+      <MobileBlogCallCTA />
     </div>
   );
 }

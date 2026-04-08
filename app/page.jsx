@@ -30,6 +30,7 @@ import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import Script from "next/script";
 import HeroBackgroundSlideshow from "./components/client/HeroBackgroundSlideshow";
+import MobileBlogCallCTA from "./components/client/MobileBlogCallCTA";
 import VehicleCarousel from "./components/client/VehicleCarousel";
 import Button from "./components/ui/Button";
 import Card from "./components/ui/Card";
@@ -57,7 +58,7 @@ const vehicles = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white pb-32 md:pb-0">
       {/* Hero Section */}
       <section className="relative flex min-h-screen flex-col items-center justify-start overflow-hidden pt-32 md:justify-center">
         <HeroBackgroundSlideshow />
@@ -594,6 +595,8 @@ export default function Home() {
           }),
         }}
       />
+
+      <MobileBlogCallCTA />
     </main>
   );
 }

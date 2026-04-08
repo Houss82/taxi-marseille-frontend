@@ -1,3 +1,4 @@
+import MobileBlogCallCTA from "@/app/components/client/MobileBlogCallCTA";
 import SEOBreadcrumb from "@/app/components/SEOBreadcrumb";
 import { getAllPosts } from "@/lib/blog";
 import blogCategories, {
@@ -58,7 +59,7 @@ export default async function BlogPage({ searchParams }) {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-32 md:pb-0">
       <div className="bg-white border-b pt-24">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <SEOBreadcrumb items={breadcrumbItems} />
@@ -301,6 +302,8 @@ export default async function BlogPage({ searchParams }) {
           )}
         </div>
       </section>
+
+      <MobileBlogCallCTA />
     </div>
   );
 }

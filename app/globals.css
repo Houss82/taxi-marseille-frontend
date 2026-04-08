@@ -503,6 +503,16 @@ html {
   @apply rounded-lg shadow-lg my-6;
 }
 
+/* Article blog : image van — plafond large en desktop uniquement (évite les images trop hautes sans les écraser) */
+@media (min-width: 1024px) {
+  .prose img.blog-img-van-desktop {
+    max-height: min(48rem, 88vh);
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 .prose hr {
   @apply my-8 border-t-2 border-gray-200;
 }
@@ -836,4 +846,164 @@ button[disabled],
 input:disabled,
 select:disabled {
   cursor: not-allowed !important;
+}
+
+/* —— Bandeau mobile CTA : animations continues (couleurs, lueur, brillance) —— */
+@keyframes mobile-cta-glow-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 -12px 40px -8px rgba(15, 23, 42, 0.2),
+      0 0 0 1px rgba(255, 255, 255, 0.35),
+      0 0 20px -2px rgba(6, 182, 212, 0.35);
+  }
+  33% {
+    box-shadow:
+      0 -12px 40px -8px rgba(15, 23, 42, 0.2),
+      0 0 0 1px rgba(255, 255, 255, 0.45),
+      0 0 32px 2px rgba(59, 130, 246, 0.5);
+  }
+  66% {
+    box-shadow:
+      0 -12px 40px -8px rgba(15, 23, 42, 0.2),
+      0 0 0 1px rgba(255, 255, 255, 0.4),
+      0 0 28px 4px rgba(139, 92, 246, 0.35);
+  }
+}
+
+@keyframes mobile-cta-aurora {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translate(-5%, -5%) scale(1.1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: translate(8%, 10%) scale(1.15);
+  }
+}
+
+@keyframes mobile-cta-gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes mobile-cta-shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-14deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.55;
+  }
+  40% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateX(250%) skewX(-14deg);
+    opacity: 0;
+  }
+}
+
+@keyframes mobile-cta-label-shine {
+  0%,
+  100% {
+    color: rgb(100 116 139);
+  }
+  50% {
+    color: rgb(6 182 212);
+  }
+}
+
+.mobile-cta-shell--animated {
+  animation: mobile-cta-glow-pulse 4s ease-in-out infinite;
+}
+
+.mobile-cta-aurora-blob {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  inset: -40%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(6, 182, 212, 0.35) 0%,
+    transparent 45%
+  ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(99, 102, 241, 0.3) 0%,
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(59, 130, 246, 0.25) 0%,
+      transparent 40%
+    );
+  filter: blur(28px);
+  animation: mobile-cta-aurora 10s ease-in-out infinite;
+}
+
+.mobile-cta-call-bg {
+  background: linear-gradient(
+    125deg,
+    #06b6d4,
+    #0891b2,
+    #2563eb,
+    #6366f1,
+    #06b6d4
+  );
+  background-size: 280% 280%;
+  animation: mobile-cta-gradient-flow 6s ease infinite;
+}
+
+.mobile-cta-shimmer-layer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.mobile-cta-shimmer-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.12) 42%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.12) 58%,
+    transparent 100%
+  );
+  width: 55%;
+  animation: mobile-cta-shimmer 3.2s ease-in-out infinite;
+}
+
+.mobile-cta-label--animated {
+  animation: mobile-cta-label-shine 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-cta-shell--animated,
+  .mobile-cta-aurora-blob,
+  .mobile-cta-call-bg,
+  .mobile-cta-shimmer-layer::after,
+  .mobile-cta-label--animated {
+    animation: none !important;
+  }
+
+  .mobile-cta-call-bg {
+    background: linear-gradient(125deg, #06b6d4, #0891b2, #2563eb);
+    background-size: auto;
+  }
 }
