@@ -14,6 +14,7 @@ export const metadata = {
 import Button from "@/app/components/ui/Button";
 import { CheckCircle, Clock, Plane, Shield, Users } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TaxiAeroportMarseille() {
   return (
@@ -94,6 +95,16 @@ export default function TaxiAeroportMarseille() {
               L&apos;aéroport Marseille Provence dessert le monde entier. Nous
               assurons vos trajets vers le Vieux-Port, les business districts,
               les ports de plaisance ou votre domicile.
+            </p>
+            <p className="mt-5 text-sm text-muted-foreground max-w-2xl mx-auto">
+              <Link
+                href="/blog/taxi-aeroport-marseille-mrs-guide-2026"
+                className="font-semibold text-accent underline-offset-2 hover:underline"
+              >
+                Taxi aéroport Marseille Marignane
+              </Link>{" "}
+              — guide (terminaux, durées, tarifs indicatifs) pour compléter cette
+              page.
             </p>
           </div>
 

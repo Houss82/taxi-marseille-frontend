@@ -22,6 +22,12 @@ Ci-dessous : nos **transferts depuis et vers MRS**, les **temps de trajet**, des
   <span class="badge info">🚙 Mercedes GLC & Van Classe V</span>
 </div>
 
+<div class="highlight-box">
+<h2>Réserver un taxi entre l'aéroport Marseille Provence et Marseille</h2>
+<p>Nous assurons les <strong>transferts depuis et vers l'aéroport Marseille Provence (Marignane)</strong> <strong>24 h/24 et 7 j/7</strong>, avec <strong>tarif annoncé à la réservation</strong>, <strong>suivi de vol</strong> et <strong>prise en charge au terminal</strong> (hall de sortie selon votre vol). Mercedes GLC ou <strong>Van Mercedes jusqu'à 8 places</strong> pour groupes et bagages.</p>
+<p class="mb-0"><a href="/reservation">Réserver en ligne</a> · <a href="/tarifs">Consulter les tarifs</a> · <a href="/services/taxi-aeroport-marseille">Service taxi aéroport Marseille</a></p>
+</div>
+
 ---
 
 ## ✈️ Présentation de l'aéroport Marseille Provence (Marignane)

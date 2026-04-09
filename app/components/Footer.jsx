@@ -3,6 +3,7 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { GOOGLE_BUSINESS_MAPS_URL } from "../lib/google-business";
 import { PHONE_FR, PHONE_TEL_HREF } from "../lib/phone";
 
 /** Lien footer : zone pleine largeur + curseur main (inline par défaut = flèche sur le vide à côté du texte) */
@@ -101,9 +102,22 @@ export default function Footer() {
                   contact@taxis-marseille.fr
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                <span>Marseille, Bouches-du-Rhône</span>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                <span>
+                  9 Av. de la Grognarde, 13011 Marseille — Bouches-du-Rhône
+                </span>
+              </li>
+              <li>
+                <a
+                  href={GOOGLE_BUSINESS_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${contactLink} font-medium`}
+                >
+                  <MapPin className="w-4 h-4 shrink-0 pointer-events-none" />
+                  Voir notre fiche Google
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />

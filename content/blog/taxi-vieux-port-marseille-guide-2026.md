@@ -25,5 +25,6 @@ Les zones de dépose évoluent selon les événements. Votre chauffeur choisit l
 
 - **Mucem / Fort Saint-Jean** : courte liaison depuis le port.
 - **Gare Saint-Charles** : idéal en connexion TGV.
+- **Aéroport Marseille Provence (Marignane)** : [guide taxi MRS ↔ centre-ville](/blog/taxi-aeroport-marseille-mrs-guide-2026).
 
 [Découvrir le secteur Vieux-Port](/secteurs/vieux-port) | [Réserver](/reservation)

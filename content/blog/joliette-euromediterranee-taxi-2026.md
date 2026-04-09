@@ -22,5 +22,6 @@ keywords:
 
 - **Multiples entrées** : votre chauffeur choisit l'itinéraire selon l'heure de pointe.
 - **Connexion rapide** vers le **Vieux-Port** ou la **gare Saint-Charles**.
+- Depuis l’**aéroport** : voir le [guide transfert Marignane → Marseille](/blog/taxi-aeroport-marseille-mrs-guide-2026).
 
 [Page secteur Joliette](/secteurs/joliette-euromediterranee) | [Contact](/contact)

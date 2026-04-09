@@ -10,6 +10,7 @@ export const metadata = {
 };
 
 import { Building2, FileText, Globe, Mail, MapPin, Phone } from "lucide-react";
+import { GOOGLE_BUSINESS_MAPS_URL } from "../lib/google-business";
 import { PHONE_FR, PHONE_INTL, PHONE_TEL_HREF } from "../lib/phone";
 
 export default function MentionsLegales() {
@@ -67,8 +68,16 @@ export default function MentionsLegales() {
                       <MapPin className="w-5 h-5 text-accent shrink-0 mt-1" />
                       <div>
                         <p className="font-bold mb-1">Adresse :</p>
-                        <p>Marseille, Bouches-du-Rhône</p>
+                        <p>9 Av. de la Grognarde, 13011 Marseille</p>
                         <p>Bouches-du-Rhône, France</p>
+                        <a
+                          href={GOOGLE_BUSINESS_MAPS_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-2 inline-block text-accent font-medium hover:underline"
+                        >
+                          Fiche Google Maps
+                        </a>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">

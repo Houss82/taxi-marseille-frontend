@@ -40,6 +40,16 @@ export default function Pricing() {
                 van 8 places sur devis pour groupes.
               </span>
             </p>
+            <p className="mt-5 text-base text-muted-foreground max-w-2xl mx-auto">
+              Pour le trajet aéroport :{" "}
+              <Link
+                href="/blog/taxi-aeroport-marseille-mrs-guide-2026"
+                className="text-accent font-semibold underline-offset-2 hover:underline"
+              >
+                transfert aéroport Marseille Provence
+              </Link>{" "}
+              (durées, zones et conseils pratiques).
+            </p>
           </div>
 
           {/* Pricing Table */}

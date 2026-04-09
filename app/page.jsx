@@ -21,19 +21,23 @@ import {
   Clock,
   Compass,
   CreditCard,
+  MapPin,
   Plane,
+  Sparkles,
   Star,
   Train,
   Users,
 } from "lucide-react";
 import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import HeroBackgroundSlideshow from "./components/client/HeroBackgroundSlideshow";
 import MobileBlogCallCTA from "./components/client/MobileBlogCallCTA";
 import VehicleCarousel from "./components/client/VehicleCarousel";
 import Button from "./components/ui/Button";
 import Card from "./components/ui/Card";
+import { GOOGLE_BUSINESS_MAPS_URL } from "./lib/google-business";
 import { PHONE_SCHEMA } from "./lib/phone";
 
 /** Serif élégante pour le nom de marque — lisible, premium, sobre (hôtellerie / transport) */
@@ -160,18 +164,203 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BLOC CORRECTIF SEO - Identification claire pour Google */}
-      <section className="py-12 bg-white border-y border-gray-200">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-gray-900">
-            Service de taxi à Marseille 24h/24
-          </h2>
-          <p className="text-lg text-gray-700 text-center leading-relaxed">
-            Entreprise de taxi sur Marseille : prises en charge au Vieux-Port,
-            Joliette, préfecture, gare Saint-Charles et liaisons vers
-            l&apos;aéroport Marseille Provence (Marignane). Service 24h/24 et
-            7j/7 sur la métropole et les Bouches-du-Rhône.
-          </p>
+      {/* Service 24/7 — carte vitrée, hiérarchie lisible */}
+      <section className="relative py-16 md:py-20 overflow-hidden border-y border-slate-200/80">
+        <div
+          className="pointer-events-none absolute inset-0 bg-linear-to-br from-cyan-500/7 via-white to-blue-600/8"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -left-32 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-cyan-400/20 blur-3xl"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -right-24 bottom-0 h-64 w-64 rounded-full bg-blue-500/15 blur-3xl"
+          aria-hidden
+        />
+        <div className="relative z-10 mx-auto max-w-5xl px-6">
+          <div className="rounded-[1.75rem] border border-white/80 bg-white/75 p-8 shadow-2xl shadow-slate-900/6 ring-1 ring-slate-900/5 backdrop-blur-xl md:p-10">
+            <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-10">
+              <div className="mx-auto flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-linear-to-br from-cyan-500 to-blue-700 text-white shadow-lg shadow-cyan-500/30 md:mx-0">
+                <Clock className="h-10 w-10" strokeWidth={1.75} aria-hidden />
+              </div>
+              <div className="min-w-0 flex-1 text-center md:text-left">
+                <div className="mb-4 flex flex-wrap items-center justify-center gap-2 md:justify-start">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-200/80 bg-cyan-50/90 px-3 py-1 text-xs font-bold uppercase tracking-wide text-cyan-800">
+                    <Sparkles className="h-3.5 w-3.5" aria-hidden />
+                    24h/24 · 7j/7
+                  </span>
+                  <span className="inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-600">
+                    Bouches-du-Rhône
+                  </span>
+                </div>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+                  Service de taxi à Marseille 24h/24
+                </h2>
+                <p className="mt-4 text-lg leading-relaxed text-slate-600">
+                  <strong className="font-semibold text-slate-800">
+                    Entreprise de taxi sur Marseille
+                  </strong>{" "}
+                  : prises en charge au Vieux-Port, Joliette, préfecture, gare
+                  Saint-Charles et liaisons vers l&apos;aéroport Marseille
+                  Provence (Marignane). Service sur toute la métropole.
+                </p>
+                <ul className="mt-6 grid gap-3 sm:grid-cols-3">
+                  {[
+                    { icon: MapPin, label: "Dépose au plus près" },
+                    { icon: Plane, label: "Liaison aéroport MRS" },
+                    { icon: Train, label: "Gare & centre-ville" },
+                  ].map(({ icon: Icon, label }) => (
+                    <li
+                      key={label}
+                      className="flex items-center gap-3 rounded-xl border border-slate-100 bg-slate-50/80 px-4 py-3 text-left text-sm font-medium text-slate-700"
+                    >
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-accent shadow-sm ring-1 ring-slate-100">
+                        <Icon className="h-4 w-4" aria-hidden />
+                      </span>
+                      {label}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quartiers — grille bento + pastilles, texte aéré */}
+      <section className="relative border-b border-slate-100 bg-linear-to-b from-white via-slate-50/50 to-white py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-10 text-center md:mb-14">
+            <span className="mb-3 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent">
+              <MapPin className="h-3.5 w-3.5" aria-hidden />
+              Toute la ville
+            </span>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+              Taxi à Marseille dans tous les quartiers
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 md:text-lg">
+              Des courses locales aux trajets vers l&apos;aéroport : un{" "}
+              <strong className="text-slate-800">taxi à Marseille</strong> qui
+              connaît vos secteurs.
+            </p>
+            <p className="mx-auto mt-6 max-w-3xl text-left text-base leading-relaxed text-slate-700 md:text-center">
+              Nous assurons vos trajets en taxi dans les principaux secteurs de
+              Marseille : Vieux-Port, Le Panier, Joliette, Euroméditerranée,
+              Saint-Charles, Prado, Castellane, La Timone, quartiers sud et
+              quartiers nord.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3 md:gap-5">
+            <div className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-6 text-center shadow-md shadow-slate-200/40 transition hover:border-cyan-200 hover:shadow-lg md:p-7">
+              <div className="mb-4 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-cyan-500 to-teal-600 text-white shadow-md">
+                <Building2 className="h-5 w-5" aria-hidden />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900">
+                Cœur de ville
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                Canebière, centre historique,{" "}
+                <Link
+                  href="/secteurs/vieux-port"
+                  className="font-semibold text-accent underline-offset-2 hover:underline"
+                >
+                  Vieux-Port
+                </Link>
+                ,{" "}
+                <Link
+                  href="/secteurs/le-panier"
+                  className="font-semibold text-accent underline-offset-2 hover:underline"
+                >
+                  Le Panier
+                </Link>{" "}
+                — arrondissements{" "}
+                <span className="font-medium text-slate-800">1er, 2e, 6e</span>.
+              </p>
+            </div>
+            <div className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-6 text-center shadow-md shadow-slate-200/40 transition hover:border-blue-200 hover:shadow-lg md:p-7">
+              <div className="mb-4 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-blue-600 to-indigo-700 text-white shadow-md">
+                <Train className="h-5 w-5" aria-hidden />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900">
+                Gare &amp; affaires
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <strong className="text-slate-800">Saint-Charles</strong>, La
+                Timone, Parc Chanot,{" "}
+                <Link
+                  href="/secteurs/joliette-euromediterranee"
+                  className="font-semibold text-accent underline-offset-2 hover:underline"
+                >
+                  Joliette &amp; Euroméditerranée
+                </Link>
+                , Docks.
+              </p>
+            </div>
+            <div className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-6 text-center shadow-md shadow-slate-200/40 transition hover:border-violet-200 hover:shadow-lg md:p-7">
+              <div className="mb-4 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-violet-600 to-fuchsia-700 text-white shadow-md">
+                <Compass className="h-5 w-5" aria-hidden />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900">
+                Grand Marseille
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                Prado, Castellane, Orange Vélodrome — quartiers{" "}
+                <span className="font-medium text-slate-800">sud</span> (8e, 9e,
+                11e, 12e) et <span className="font-medium text-slate-800">nord</span>{" "}
+                (13e, 14e, 15e, 16e).
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-wrap justify-center gap-2 md:mt-10">
+            {[
+              "1er",
+              "2e",
+              "6e",
+              "8e",
+              "9e",
+              "11e",
+              "12e",
+              "13e",
+              "14e",
+              "15e",
+              "16e",
+            ].map((arr) => (
+              <span
+                key={arr}
+                className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-600 shadow-sm"
+              >
+                {arr} arr.
+              </span>
+            ))}
+          </div>
+
+          <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-dashed border-slate-200 bg-slate-50/80 px-6 py-6 text-center md:mt-12 md:px-8">
+            <p className="text-sm leading-relaxed text-slate-600 md:text-base">
+              Hôtel, cabinet, résidence : votre{" "}
+              <strong className="text-slate-800">taxi Marseille</strong> ajuste
+              l&apos;itinéraire au trafic et aux événements (matchs au
+              Vélodrome, salons…).
+            </p>
+            <div className="mt-5 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+              <Link
+                href="/secteurs"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-accent/30 bg-white px-5 py-3 text-sm font-bold text-accent shadow-sm transition hover:border-accent/60 hover:bg-accent/5"
+              >
+                Secteurs desservis
+                <ChevronRight className="h-4 w-4" aria-hidden />
+              </Link>
+              <Link
+                href="/services/taxi-aeroport-marseille"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-linear-to-r from-cyan-600 to-blue-700 px-5 py-3 text-sm font-bold text-white shadow-md shadow-cyan-500/25 transition hover:opacity-95"
+              >
+                <Plane className="h-4 w-4" aria-hidden />
+                Transfert aéroport
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -263,7 +452,7 @@ export default function Home() {
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -ml-16 -mb-16"></div>
               <p className="text-gray-800 mb-0 leading-relaxed text-lg relative z-10">
                 Vous pouvez{" "}
-                <a
+                <Link
                   href="/reservation"
                   className="inline-flex items-center gap-1 text-accent font-bold hover:text-primary transition-all duration-200 relative group text-xl"
                 >
@@ -271,9 +460,9 @@ export default function Home() {
                     réserver votre taxi à Marseille en ligne
                     <span className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></span>
                   </span>
-                </a>{" "}
+                </Link>{" "}
                 24h/24 et 7j/7 ou nous contacter pour un{" "}
-                <a
+                <Link
                   href="/tarifs"
                   className="inline-flex items-center gap-1 text-accent font-bold hover:text-primary transition-all duration-200 relative group text-xl"
                 >
@@ -281,7 +470,7 @@ export default function Home() {
                     devis taxi aéroport Marseille
                     <span className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></span>
                   </span>
-                </a>{" "}
+                </Link>{" "}
                 vers Aix-en-Provence, Cassis, l&apos;aéroport ou toute autre
                 destination.
               </p>
@@ -414,6 +603,15 @@ export default function Home() {
             >
               Réserver un taxi aéroport Marseille
             </Button>
+            <p className="mt-6 text-sm text-primary-foreground/85 max-w-xl leading-relaxed">
+              <Link
+                href="/blog/taxi-aeroport-marseille-mrs-guide-2026"
+                className="font-semibold text-accent underline-offset-4 hover:underline"
+              >
+                Guide : taxi depuis Marignane (MRS)
+              </Link>{" "}
+              — durées, fourchettes de prix, terminaux et FAQ.
+            </p>
           </div>
           <Image
             src="/taxi-marseille-aeroport-marignane.jpeg"
@@ -587,11 +785,13 @@ export default function Home() {
             ],
             address: {
               "@type": "PostalAddress",
+              streetAddress: "9 Av. de la Grognarde",
+              postalCode: "13011",
               addressLocality: "Marseille",
               addressRegion: "Provence-Alpes-Côte d'Azur",
               addressCountry: "FR",
             },
-            sameAs: [],
+            sameAs: [GOOGLE_BUSINESS_MAPS_URL],
           }),
         }}
       />

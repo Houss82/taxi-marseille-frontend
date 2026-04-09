@@ -2,6 +2,7 @@
 // ISR: Revalidate toutes les 24 heures pour le SEO
 export const revalidate = 86400;
 
+import Link from "next/link";
 import ReservationForm from "../components/client/ReservationForm";
 import Card from "../components/ui/Card";
 
@@ -26,6 +27,15 @@ export default function Reservation() {
               Confirmation instantanée par email — véhicule{" "}
               <span className="text-foreground font-medium">8 places</span>{" "}
               sélectionnable pour les groupes.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground max-w-xl mx-auto">
+              Course depuis ou vers l&apos;aéroport ?{" "}
+              <Link
+                href="/blog/taxi-aeroport-marseille-mrs-guide-2026"
+                className="text-accent font-medium underline-offset-2 hover:underline"
+              >
+                Chauffeur aéroport Marseille — infos utiles
+              </Link>
             </p>
           </div>
 

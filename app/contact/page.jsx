@@ -7,6 +7,7 @@ import Button from "../components/ui/Button"
 import Card from "../components/ui/Card"
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react"
 import ContactForm from "../components/client/ContactForm"
+import { GOOGLE_BUSINESS_MAPS_URL } from "../lib/google-business"
 import {
   PHONE_FR,
   PHONE_INTL,
@@ -57,6 +58,16 @@ export default function Contact() {
             <p className="text-xl text-muted-foreground">
               Disponible 24h/24 - 7j/7 — véhicule 8 places sur demande
             </p>
+            <div className="mt-8 flex justify-center">
+              <a
+                href={GOOGLE_BUSINESS_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-accent bg-white px-6 py-4 text-base font-bold text-accent shadow-md transition hover:bg-accent/5 hover:shadow-lg"
+              >
+                ⭐ Voir nos avis clients Google
+              </a>
+            </div>
                 </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -99,10 +110,19 @@ export default function Contact() {
                   <li className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                   <div>
-                      <p className="font-bold">Localisation</p>
+                      <p className="font-bold">Adresse</p>
                       <p className="text-sm text-primary-foreground/80">
-                        Marseille, Bouches-du-Rhône, France
+                        9 Av. de la Grognarde, 13011 Marseille — Provence-Alpes-Côte
+                        d&apos;Azur, France
                       </p>
+                      <a
+                        href={GOOGLE_BUSINESS_MAPS_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex text-sm font-semibold text-accent underline-offset-2 hover:underline"
+                      >
+                        ⭐ Voir nos avis clients Google
+                      </a>
                   </div>
                   </li>
                   <li className="flex items-start gap-3">
