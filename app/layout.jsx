@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import Footer from "./components/Footer";
+import GoogleTag from "./components/GoogleTag";
 import Header from "./components/Header";
 import { Providers } from "./providers";
 import "./globals.css";
@@ -86,6 +87,7 @@ export default function RootLayout({ children }) {
         className={`${inter.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
+        <GoogleTag />
         <Providers>
           <Header />
           <main>{children}</main>

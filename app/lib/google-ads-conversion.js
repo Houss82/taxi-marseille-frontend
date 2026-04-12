@@ -1,8 +1,10 @@
 /**
- * Google Ads — conversion (page /merci uniquement, via GoogleAdsConversionMerci)
+ * Google Ads
  *
- * Action « Contact » — mesure par chargement de page (extrait d’événement Google Ads).
- * La balise globale gtag est chargée uniquement sur /merci, puis l’événement conversion.
+ * - Balise globale gtag.js : app/components/GoogleTag.jsx (import dans layout.jsx)
+ * - Événement conversion : app/components/client/GoogleAdsConversionMerci.jsx (page /merci uniquement)
+ *
+ * Action « Contact » — mesure par chargement de page.
  */
 export const GOOGLE_ADS_CONVERSION_ACTIVE = true;
 
