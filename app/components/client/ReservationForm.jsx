@@ -1,14 +1,17 @@
 "use client";
 
-import { AlertCircle, CheckCircle } from "lucide-react";
+import { AlertCircle } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { createReservation } from "../../lib/api";
 import { FORMSPREE_RESERVATION_URL } from "../../lib/formspree";
+import { setReservationConfirmationFlag } from "../../lib/reservation-confirmation";
 import Button from "../ui/Button";
 import Card from "../ui/Card";
 import Input from "../ui/Input";
 
 export default function ReservationForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -23,7 +26,6 @@ export default function ReservationForm() {
     notes: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -124,24 +126,14 @@ export default function ReservationForm() {
           console.warn("Erreur Formspree (non bloquant):", formspreeError);
         }
 
-        setSubmitted(true);
-        // Réinitialiser le formulaire après 5 secondes
-        setTimeout(() => {
-          setSubmitted(false);
-          setFormData({
-            name: "",
-            phone: "",
-            email: "",
-            from: "",
-            to: "",
-            date: "",
-            time: "",
-            passengers: "1",
-            luggage: "0",
-            vehicle: "glc",
-            notes: "",
-          });
-        }, 5000);
+        const flagOk = setReservationConfirmationFlag();
+        if (flagOk) {
+          router.push("/merci");
+        } else {
+          setError(
+            "Impossible de finaliser la redirection depuis ce navigateur. Votre réservation a bien été enregistrée — appelez-nous si besoin."
+          );
+        }
       }
     } catch (err) {
       setError(err.message || "Une erreur est survenue. Veuillez réessayer.");
@@ -153,26 +145,15 @@ export default function ReservationForm() {
 
   return (
     <Card className="p-8">
-      {submitted ? (
-        <div className="flex flex-col items-center justify-center py-12">
-          <CheckCircle className="w-16 h-16 text-accent mb-4" />
-          <h3 className="text-2xl font-bold mb-2">Réservation Confirmée!</h3>
-          <p className="text-muted-foreground text-center">
-            Vous recevrez une confirmation par email. Notre équipe vous
-            contactera sous 30 minutes.
-          </p>
+      {error && (
+        <div className="mb-6 p-4 bg-destructive/10 border border-destructive/20 rounded-lg flex items-start gap-3">
+          <AlertCircle className="w-5 h-5 text-destructive shrink-0 mt-0.5" />
+          <div>
+            <p className="text-sm font-medium text-destructive">{error}</p>
+          </div>
         </div>
-      ) : (
-        <>
-          {error && (
-            <div className="mb-6 p-4 bg-destructive/10 border border-destructive/20 rounded-lg flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-destructive shrink-0 mt-0.5" />
-              <div>
-                <p className="text-sm font-medium text-destructive">{error}</p>
-              </div>
-            </div>
-          )}
-          <form onSubmit={handleSubmit} className="space-y-6">
+      )}
+      <form onSubmit={handleSubmit} className="space-y-6">
             {/* Personal Info */}
             <div>
               <h3 className="font-bold text-lg mb-4">
@@ -380,9 +361,7 @@ export default function ReservationForm() {
                 </>
               )}
             </Button>
-          </form>
-        </>
-      )}
+      </form>
     </Card>
   );
 }
