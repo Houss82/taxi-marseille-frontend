@@ -19,12 +19,12 @@ Ci-dessous : nos **transferts depuis et vers MRS**, les **temps de trajet**, des
   <span class="badge success">🚗 Transferts aéroport MRS 24/7</span>
   <span class="badge info">✈️ Suivi de vol</span>
   <span class="badge success">💰 Tarif annoncé à la réservation</span>
-  <span class="badge info">🚙 Mercedes GLC & Van Classe V</span>
+  <span class="badge info">🚙 Mercedes GLC & van 8 places</span>
 </div>
 
 <div class="highlight-box">
 <h2>Réserver un taxi entre l'aéroport Marseille Provence et Marseille</h2>
-<p>Nous assurons les <strong>transferts depuis et vers l'aéroport Marseille Provence (Marignane)</strong> <strong>24 h/24 et 7 j/7</strong>, avec <strong>tarif annoncé à la réservation</strong>, <strong>suivi de vol</strong> et <strong>prise en charge au terminal</strong> (hall de sortie selon votre vol). Mercedes GLC ou <strong>Van Mercedes jusqu'à 8 places</strong> pour groupes et bagages.</p>
+<p>Nous assurons les <strong>transferts depuis et vers l'aéroport Marseille Provence (Marignane)</strong> <strong>24 h/24 et 7 j/7</strong>, avec <strong>tarif annoncé à la réservation</strong>, <strong>suivi de vol</strong> et <strong>prise en charge au terminal</strong> (hall de sortie selon votre vol). Mercedes GLC ou <strong>Mercedes van 8 places</strong> pour groupes et bagages.</p>
 <p class="mb-0"><a href="/reservation">Réserver en ligne</a> · <a href="/tarifs">Consulter les tarifs</a> · <a href="/services/taxi-aeroport-marseille">Service taxi aéroport Marseille</a></p>
 </div>
 
@@ -143,7 +143,7 @@ Les montants ci-dessous sont des **fourchettes indicatives** pour un **taxi aér
     <tr style="background-color: #f3f4f6;">
       <th style="padding: 12px; text-align: left; border: 1px solid #e5e7eb; font-weight: 600;">Trajet</th>
       <th style="padding: 12px; text-align: left; border: 1px solid #e5e7eb; font-weight: 600;">Mercedes GLB monospace</th>
-      <th style="padding: 12px; text-align: left; border: 1px solid #e5e7eb; font-weight: 600;">Van Mercedes (6–8 places)</th>
+      <th style="padding: 12px; text-align: left; border: 1px solid #e5e7eb; font-weight: 600;">Mercedes van 8 places</th>
     </tr>
   </thead>
   <tbody>
@@ -194,11 +194,11 @@ Le **Mercedes GLC** convient aux **courses vers Marseille centre**, **Vieux-Port
 - **Familles** : sièges enfant sur demande (à préciser à la réservation).
 - **Bagages** : indiquez le nombre de **grandes valises** pour dimensionner le véhicule.
 
-### Van Mercedes Classe V : groupes & familles (jusqu'à 8 places)
+### Mercedes van 8 places : groupes & familles
 
-<img src="/taxi-marseille-van-8-places.jpeg" alt="Van Mercedes Classe V 8 places, transfert aéroport Marseille Provence" class="blog-img-van-desktop" />
+<img src="/taxi-marseille-van-8-places.jpeg" alt="Mercedes van 8 places, transfert aéroport Marseille Provence" class="blog-img-van-desktop" />
 
-Le **Van Classe V** est prévu pour les **groupes**, **séminaires** et **familles nombreuses** — **jusqu'à 8 passagers** et bagages volumineux, **un seul véhicule** depuis la **dépose aéroport** jusqu'à votre hôtel ou lieu de réception.
+Le **Mercedes van 8 places** est prévu pour les **groupes**, **séminaires** et **familles nombreuses** — **jusqu'à 8 passagers** et bagages volumineux, **un seul véhicule** depuis la **dépose aéroport** jusqu'à votre hôtel ou lieu de réception.
 
 ---
 
@@ -214,7 +214,7 @@ Pour les **arrivées**, nous suivons l'horaire réel du vol lorsque c'est possib
 
 ### ✅ Service premium & disponibilité 24/7
 
-- Véhicules **récentes** (Mercedes GLC, Van Classe V).
+- Véhicules **récentes** (Mercedes GLC, Mercedes van 8 places).
 - **Disponibilité** jour et nuit pour les vols **hors horaires** classiques.
 - **Aide** bagages et **conseils** sur votre trajet.
 
@@ -236,7 +236,7 @@ Vol international tôt : **prise en charge** à domicile ou hôtel avec **marge*
 
 ### Scénario 4 : Séminaire à Euroméditerranée
 
-**Van Classe V** ou plusieurs véhicules coordonnés, **dépose** près des **Docks** ou des bureaux.
+**Mercedes van 8 places** ou plusieurs véhicules coordonnés, **dépose** près des **Docks** ou des bureaux.
 
 ---
 
@@ -271,7 +271,7 @@ Oui : **24 h/24 et 7 j/7**, y compris nuits, week-ends et jours fériés — uti
 
 ### Groupe et gros bagages ?
 
-Indiquez **passagers** et **grandes valises** : nous proposons un **GLC** ou un **Van Classe V** selon le volume.
+Indiquez **passagers** et **grandes valises** : nous proposons un **GLC** ou un **Mercedes van 8 places** selon le volume.
 
 ### Comment rejoindre la gare depuis l'aéroport ?
 

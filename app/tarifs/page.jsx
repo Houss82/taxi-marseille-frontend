@@ -148,7 +148,7 @@ export default function Pricing() {
               <li>• Attente (à partir de 15 min): 0,35€/min</li>
               <li>• Réduction groupe à partir de 5 personnes</li>
               <li>
-                • Mercedes Classe V 8 places : tarif sur devis (précisez le
+                • Mercedes van 8 places : tarif sur devis (précisez le
                 nombre de passagers à la réservation)
               </li>
             </ul>

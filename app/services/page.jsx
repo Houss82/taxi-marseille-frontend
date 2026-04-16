@@ -11,7 +11,7 @@ import Card from "../components/ui/Card";
 export const metadata = {
   title: "Services - Taxi Marseille",
   description:
-    "Services taxi à Marseille : taxi aéroport Marseille (MRS), gare, hôtels, congrès, Aix & Cassis. Van Mercedes 8 places pour groupes. Chauffeur privé 24/7.",
+    "Services taxi à Marseille : taxi aéroport Marseille (MRS), gare, hôtels, congrès, Aix & Cassis. Mercedes van 8 places pour groupes. Chauffeur privé 24/7.",
   keywords:
     "services taxi marseille, taxi aéroport marseille marignane, taxi gare saint-charles, chauffeur privé marseille",
 };
@@ -28,9 +28,20 @@ export default function Services() {
     {
       title: "Hôtels & Événements",
       desc: "Pharo, Chanot, Vélodrome, centres d'affaires et hôtels 4-5*",
-      image: "/marseille-evenements.jpg",
+      image: "/taxi-marseille-velodrome-match.jpeg",
       details: ["Discrétion", "Ponctualité", "Mise à disposition possible"],
       href: "/services/trajets-hotels-evenements",
+    },
+    {
+      title: "Mercedes van 8 places",
+      desc: "Van pour groupes : aéroport, gare, séminaires, Aix, Cassis",
+      image: "/taxi-marseille-service-8-places.jpeg",
+      details: [
+        "Jusqu’à 8 passagers",
+        "Bagages & sièges enfants sur demande",
+        "Devis transparent",
+      ],
+      href: "/services/van-8-places",
     },
     {
       title: "Marseille → Aix & Cassis",
@@ -66,13 +77,14 @@ export default function Services() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative h-96 flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden pt-20">
         <Image
-          src="/service-page.jpg"
-          alt="Services Taxi Marseille"
+          src="/taxi-marseille-service.jpeg"
+          alt="Mercedes van 8 places — Taxi Marseille"
           fill
-          className="object-cover"
+          className="object-cover object-center w-full h-full"
           priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center text-white">

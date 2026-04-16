@@ -5,15 +5,17 @@ export const revalidate = 86400;
 
 // ✅ Métadonnées SEO pour cette page
 export const metadata = {
-  title: "Taxi Marseille | Aéroport Marignane, Gare Saint-Charles & Vieux-Port",
+  title:
+    "Taxi Marseille 24h/24 — Aéroport Marignane, Gare Saint-Charles, Vieux-Port | Appel direct",
   description:
-    "Taxi Marseille 24h/24 : aéroport Marseille Provence Marignane, gare Saint-Charles, Vieux-Port, hôtels et congrès. Van Mercedes 8 places, trajets locaux et longue distance.",
+    "Taxi à Marseille 24h/24, 7j/7. Prise en charge en 10 à 20 minutes pour l'aéroport Marignane, la gare Saint-Charles, le Vieux-Port et toute la métropole. Réponse immédiate au téléphone — pas d'attente. Mercedes van 8 places sur demande.",
   alternates: {
     canonical: "https://www.taxis-marseille.fr/",
   },
 };
 
 import {
+  Anchor,
   Building2,
   Car,
   CheckCircle2,
@@ -22,9 +24,12 @@ import {
   Compass,
   CreditCard,
   MapPin,
+  Phone,
   Plane,
+  ShieldCheck,
   Sparkles,
   Star,
+  Timer,
   Train,
   Users,
 } from "lucide-react";
@@ -33,12 +38,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import HeroBackgroundSlideshow from "./components/client/HeroBackgroundSlideshow";
-import MobileBlogCallCTA from "./components/client/MobileBlogCallCTA";
 import VehicleCarousel from "./components/client/VehicleCarousel";
 import Button from "./components/ui/Button";
 import Card from "./components/ui/Card";
 import { GOOGLE_BUSINESS_MAPS_URL } from "./lib/google-business";
-import { PHONE_SCHEMA } from "./lib/phone";
+import { PHONE_FR, PHONE_SCHEMA, PHONE_TEL_HREF } from "./lib/phone";
 
 /** Serif élégante pour le nom de marque — lisible, premium, sobre (hôtellerie / transport) */
 const fontHeroBrand = Playfair_Display({
@@ -54,109 +58,234 @@ const vehicles = [
     desc: "Confort et espace pour vos trajets",
   },
   {
-    name: "Mercedes Classe V — 8 places",
+    name: "Mercedes van 8 places",
     image: "/mercedes-v-luxury-van.png",
     desc: "Van 8 passagers : groupes, familles, bagages volumineux",
+  },
+];
+
+/** FAQ SEO locale — utilisée pour le rendu visible et le JSON-LD FAQPage */
+const FAQ_ITEMS = [
+  {
+    q: "Combien coûte un taxi à Marseille ?",
+    a: "Les courses en taxi à Marseille sont facturées selon les tarifs officiels préfectoraux (prise en charge + tarif horokilométrique). Sur les trajets longs ou aéroport, nous proposons un prix fixe annoncé à la réservation, sans mauvaise surprise.",
+  },
+  {
+    q: "Quel prix pour un taxi Marseille → aéroport Marignane (MRS) ?",
+    a: "Comptez en général entre 55 € et 75 € depuis le centre-ville de Marseille (Vieux-Port, gare Saint-Charles, Euroméditerranée) selon l'heure, le trafic et le point de départ. Prix fixe possible sur demande — appelez-nous pour un devis immédiat.",
+  },
+  {
+    q: "Combien de temps pour aller à l'aéroport Marseille Provence depuis le centre ?",
+    a: "Environ 25 à 35 minutes en taxi depuis le centre de Marseille, selon le trafic A7/A55. Prévoyez une marge aux heures de pointe (7h–9h et 17h–19h) ou lors de salons au Parc Chanot.",
+  },
+  {
+    q: "Votre taxi à Marseille est-il disponible la nuit ?",
+    a: "Oui, notre service taxi Marseille est disponible 24h/24 et 7j/7, y compris la nuit, les week-ends et les jours fériés. Pour une course nocturne, nous recommandons un appel direct pour une prise en charge rapide.",
+  },
+  {
+    q: "Comment réserver un taxi rapidement à Marseille ?",
+    a: `Le plus rapide : appelez directement le ${PHONE_FR} — nous vous confirmons l'heure d'arrivée en quelques secondes. Vous pouvez aussi réserver en ligne via notre formulaire pour recevoir une confirmation e-mail.`,
+  },
+  {
+    q: "Prenez-vous les groupes et les bagages volumineux ?",
+    a: "Oui, nous disposons de véhicules Mercedes SUV et d'un Mercedes van 8 places pour les familles, équipes et groupes avec bagages (croisière, aéroport, déménagement léger). Précisez-le simplement à la réservation.",
   },
 ];
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white pb-32 md:pb-0">
-      {/* Hero Section */}
-      <section className="relative flex min-h-screen flex-col items-center justify-start overflow-hidden pt-32 md:justify-center">
+      {/* Hero Section — orienté conversion (appel immédiat) */}
+      <section className="relative flex min-h-[88vh] md:min-h-[92vh] lg:min-h-[86vh] flex-col items-center justify-start overflow-hidden pt-28 pb-12 md:justify-center md:pt-32 lg:pt-24 lg:pb-16">
         <HeroBackgroundSlideshow />
-        <div className="absolute inset-0 z-2 bg-black/50" aria-hidden />
-        <div className="relative z-10 text-center text-white max-w-3xl px-6">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-balance">
-            <span
-              className={`${fontHeroBrand.className} bg-linear-to-r from-sky-200 via-blue-400 to-blue-500 bg-clip-text text-5xl font-bold tracking-normal text-transparent md:text-7xl`}
-            >
-              Taxi Marseille
-            </span>{" "}
-            – Aéroport Marignane, Gare Saint-Charles et Vieux-Port
-          </h1>
-          <p className="text-lg md:text-2xl mb-6 text-white/90 text-balance">
-            Réservation 24h/24 pour vos trajets à Marseille, vers
-            l&apos;aéroport Marseille Provence, la gare Saint-Charles, le
-            Vieux-Port, Euroméditerranée et toute la métropole.
-          </p>
-          <p className="text-base md:text-lg mb-8 text-white/85">
-            Déplacements privés ou professionnels en Provence.{" "}
-            <span className="text-white/95 font-medium">
-              Van Mercedes 8 places sur réservation — groupes, familles,
-              transfert aéroport.
+        <div className="absolute inset-0 z-2 bg-black/55" aria-hidden />
+        <div className="relative z-10 text-center text-white max-w-3xl lg:max-w-5xl px-6 lg:px-10">
+          <div className="mb-5 flex flex-wrap items-center justify-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-emerald-500/30">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-white" />
+              Disponible 24h/24
             </span>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              href="/reservation"
-              size="lg"
-              className="bg-accent text-accent-foreground hover:opacity-90 px-8 py-6 text-lg"
-            >
-              Réserver un taxi à Marseille
-            </Button>
-            <Button
-              href="/tarifs"
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg bg-transparent"
-            >
-              Consulter les tarifs taxi Marseille
-            </Button>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm ring-1 ring-white/30">
+              <MapPin className="h-3.5 w-3.5" aria-hidden />
+              Marseille &amp; métropole
+            </span>
           </div>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6 leading-tight lg:leading-[1.1] text-balance">
+            <span
+              className={`${fontHeroBrand.className} bg-linear-to-r from-sky-200 via-blue-400 to-blue-500 bg-clip-text text-5xl md:text-7xl lg:text-[5rem] font-bold tracking-normal text-transparent lg:block lg:mb-3`}
+            >
+              Taxi Marseille 24h/24
+            </span>{" "}
+            <span className="block lg:text-[1.9rem] lg:font-bold lg:text-white text-lg md:text-xl mt-1">
+              Appelez, on arrive en 10 à 20 minutes.
+            </span>
+          </h1>
+
+          {/* Bandeau urgence — différenciateur */}
+          <div className="mb-6 lg:mb-8 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-2 text-sm md:text-base font-bold text-emerald-900 ring-2 ring-emerald-500/60 shadow-lg shadow-emerald-900/20">
+            <Timer className="h-4 w-4 md:h-5 md:w-5 text-emerald-700" strokeWidth={2.5} aria-hidden />
+            Temps d&apos;attente moyen : 10–15 min à Marseille
+          </div>
+
+          <p className="text-base md:text-lg lg:text-lg mb-7 lg:mb-10 text-white/90 text-balance lg:leading-relaxed lg:max-w-2xl lg:mx-auto">
+            Aéroport Marignane, gare Saint-Charles, Vieux-Port : chauffeur local
+            à votre porte. <span className="font-semibold text-white">Réponse immédiate — sans attente au téléphone.</span>
+          </p>
+
+          {/* CTA : 1 bouton principal (appel) + 1 lien secondaire minimal */}
+          <div className="flex flex-col items-center gap-4">
+            <a
+              href={PHONE_TEL_HREF}
+              aria-label={`Appeler Taxi Marseille maintenant au ${PHONE_FR}`}
+              className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-3 overflow-hidden rounded-full bg-linear-to-br from-emerald-500 via-emerald-600 to-green-700 px-8 py-6 lg:px-12 lg:py-7 text-white shadow-2xl shadow-emerald-500/50 ring-2 ring-white/25 hover:scale-[1.02] transition-transform"
+            >
+              <span
+                className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-white/20 blur-2xl transition group-hover:bg-white/30"
+                aria-hidden
+              />
+              <span className="relative flex h-12 w-12 lg:h-14 lg:w-14 shrink-0 items-center justify-center rounded-full bg-white/20 ring-1 ring-white/40">
+                <Phone className="h-6 w-6 lg:h-7 lg:w-7 animate-pulse" strokeWidth={2.5} aria-hidden />
+              </span>
+              <span className="relative flex flex-col items-start leading-tight">
+                <span className="text-[0.7rem] lg:text-xs font-bold uppercase tracking-[0.18em] text-emerald-50">
+                  Appeler maintenant
+                </span>
+                <span className="font-mono text-xl lg:text-3xl font-bold tabular-nums tracking-wider">
+                  {PHONE_FR}
+                </span>
+              </span>
+            </a>
+
+            <Link
+              href="/reservation"
+              className="inline-flex items-center gap-1.5 text-xs font-normal text-white/60 underline-offset-4 hover:text-white/85"
+            >
+              Formulaire disponible si besoin
+            </Link>
+          </div>
+
+          {/* Micro-preuves de réassurance */}
+          <ul className="mt-8 lg:mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs md:text-sm text-white/85">
+            <li className="flex items-center gap-1.5">
+              <Sparkles className="h-4 w-4 text-emerald-300" aria-hidden />
+              Réponse immédiate, sans attente
+            </li>
+            <li className="flex items-center gap-1.5">
+              <ShieldCheck className="h-4 w-4 text-emerald-300" aria-hidden />
+              Chauffeur local agréé
+            </li>
+            <li className="flex items-center gap-1.5">
+              <CreditCard className="h-4 w-4 text-emerald-300" aria-hidden />
+              CB &amp; espèces à bord
+            </li>
+            <li className="flex items-center gap-1.5">
+              <Users className="h-4 w-4 text-emerald-300" aria-hidden />
+              Van 8 places sur demande
+            </li>
+          </ul>
         </div>
       </section>
 
-      {/* Quick Services */}
-      <section className="py-16 bg-white">
+      {/* Trajets populaires — SEO local + CTA appel par carte */}
+      <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <header className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">
+          <header className="text-center mb-10 lg:mb-12">
+            <span className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent">
+              <MapPin className="h-3.5 w-3.5" aria-hidden />
+              Trajets populaires
+            </span>
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold mb-3">
               Vos trajets en taxi depuis Marseille
             </h2>
-            <p className="text-muted-foreground">
-              Aéroport Marignane, gare Saint-Charles, hôtels du centre, ports de
-              plaisance et escapades vers Aix ou la côte.{" "}
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Aéroport, gare, hôtels, port, escapades en Provence.{" "}
               <span className="text-foreground font-medium">
-                Van 8 places sur demande.
+                Mercedes van 8 places sur demande.
               </span>
             </p>
           </header>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {[
               {
                 icon: Plane,
-                label: "Aéroport Marignane (MRS)",
-                desc: "Service porte-à-porte",
+                label: "Marseille → Aéroport Marignane",
+                desc: "Transfert MRS, suivi de vol, prix fixe.",
+                meta: "~25–35 min",
+                href: "/services/taxi-aeroport-marseille",
               },
               {
                 icon: Train,
-                label: "Gare Saint-Charles",
-                desc: "Arrivées & départs TGV",
+                label: "Marseille → Gare Saint-Charles",
+                desc: "Accueil TGV/TER, panneau nominatif sur demande.",
+                meta: "~10–20 min",
+                href: "/services/taxi-gare-saint-charles",
+              },
+              {
+                icon: Anchor,
+                label: "Marseille → Vieux-Port",
+                desc: "Ferries Corse/Maghreb, croisières, hôtels du port.",
+                meta: "Centre-ville",
+                href: "/secteurs/vieux-port",
               },
               {
                 icon: Building2,
-                label: "Hôtels & congrès",
-                desc: "Pharo, Chanot, centre-ville",
+                label: "Marseille → Euroméditerranée / Joliette",
+                desc: "Tours La Marseillaise, CMA CGM, Les Docks.",
+                meta: "~5–15 min",
+                href: "/secteurs/joliette-euromediterranee",
               },
               {
                 icon: Compass,
-                label: "Longue distance",
-                desc: "Aix, Cassis, littoral",
+                label: "Marseille → Aix-en-Provence / Cassis",
+                desc: "Longue distance, escapades Provence, route des Crêtes.",
+                meta: "Devis fixe",
+                href: "/services/marseille-aix-cassis",
               },
-            ].map((service, i) => {
+              {
+                icon: Users,
+                label: "Prado · Castellane · Vélodrome",
+                desc: "Quartiers sud, matchs, salons Parc Chanot.",
+                meta: "Sud Marseille",
+                href: "/secteurs",
+              },
+            ].map((service) => {
               const Icon = service.icon;
               return (
                 <Card
-                  key={i}
-                  className="p-6 text-center hover:shadow-lg transition-shadow"
+                  key={service.label}
+                  className="group flex flex-col p-6 text-left hover:shadow-lg transition-shadow"
                 >
-                  <Icon className="w-8 h-8 mx-auto mb-4 text-accent" />
-                  <h3 className="font-bold mb-2">{service.label}</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <div className="mb-4 flex items-center justify-between">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                      <Icon className="w-5 h-5" aria-hidden />
+                    </span>
+                    <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[0.7rem] font-semibold text-slate-600">
+                      {service.meta}
+                    </span>
+                  </div>
+                  <h3 className="font-bold mb-2 text-base lg:text-lg leading-snug">
+                    {service.label}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-5">
                     {service.desc}
                   </p>
+                  <div className="mt-auto flex flex-wrap items-center gap-3">
+                    <a
+                      href={PHONE_TEL_HREF}
+                      className="inline-flex items-center gap-1.5 rounded-full bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-emerald-700 transition-colors"
+                      aria-label={`Appeler pour ${service.label}`}
+                    >
+                      <Phone className="h-3.5 w-3.5" aria-hidden />
+                      Appeler
+                    </a>
+                    <Link
+                      href={service.href}
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
+                    >
+                      En savoir plus
+                      <ChevronRight className="h-3.5 w-3.5" aria-hidden />
+                    </Link>
+                  </div>
                 </Card>
               );
             })}
@@ -308,8 +437,9 @@ export default function Home() {
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 Prado, Castellane, Orange Vélodrome — quartiers{" "}
                 <span className="font-medium text-slate-800">sud</span> (8e, 9e,
-                11e, 12e) et <span className="font-medium text-slate-800">nord</span>{" "}
-                (13e, 14e, 15e, 16e).
+                11e, 12e) et{" "}
+                <span className="font-medium text-slate-800">nord</span> (13e,
+                14e, 15e, 16e).
               </p>
             </div>
           </div>
@@ -524,7 +654,7 @@ export default function Home() {
               {
                 icon: Car,
                 title: "Véhicules Premium",
-                desc: "Mercedes SUV et van 8 places pour groupes et familles.",
+                desc: "Mercedes SUV et Mercedes van 8 places pour groupes et familles.",
               },
               {
                 icon: Clock,
@@ -562,7 +692,7 @@ export default function Home() {
             <p className="text-lg text-muted-foreground">
               Véhicules haut de gamme :{" "}
               <strong className="text-foreground">SUV Mercedes</strong> et{" "}
-              <strong className="text-foreground">Mercedes Van 8 places</strong>{" "}
+              <strong className="text-foreground">Mercedes van 8 places</strong>{" "}
               pour familles et groupes.
             </p>
           </div>
@@ -587,7 +717,7 @@ export default function Home() {
               {[
                 "Prix fixe annoncé à l’avance",
                 "Chauffeur à l’arrivée avec panneau nominatif",
-                "Van 8 places disponible pour groupes et bagages",
+                "Mercedes van 8 places pour groupes et bagages",
                 "Pas de supplément pour bagages ou retard avion",
                 "Réservation en ligne ou par téléphone",
               ].map((item, i) => (
@@ -656,7 +786,7 @@ export default function Home() {
                 "Attente panneau nominatif possible",
                 "Suivi des retards train",
                 "Vers aéroport MRS & hôtels",
-                "Van 8 places sur demande",
+                "Mercedes van 8 places sur demande",
               ].map((item) => (
                 <li
                   key={item}
@@ -741,23 +871,105 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Banner */}
+      {/* FAQ SEO locale — Taxi Marseille */}
+      <section className="py-20 lg:py-24 bg-white border-t border-slate-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <header className="text-center mb-10 lg:mb-14">
+            <span className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent">
+              Questions fréquentes
+            </span>
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">
+              Taxi à Marseille : tout savoir avant de réserver
+            </h2>
+            <p className="mt-4 text-base md:text-lg text-slate-600">
+              Prix, délais, disponibilité, aéroport Marignane, paiement : nos
+              réponses en quelques lignes.
+            </p>
+          </header>
+          <div className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-slate-50/40 shadow-sm">
+            {FAQ_ITEMS.map((item, i) => (
+              <details
+                key={item.q}
+                className="group px-6 py-5 md:px-8 md:py-6"
+                {...(i === 0 ? { open: true } : {})}
+              >
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-left font-bold text-slate-900 text-base md:text-lg">
+                  <span>{item.q}</span>
+                  <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-accent ring-1 ring-slate-200 transition-transform group-open:rotate-45">
+                    <span className="text-xl leading-none" aria-hidden>
+                      +
+                    </span>
+                  </span>
+                </summary>
+                <div className="mt-3 text-sm md:text-base leading-relaxed text-slate-700">
+                  {item.a}
+                </div>
+              </details>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-sm text-slate-600 mb-4">
+              Une question spécifique ? Notre standard vous répond 24h/24.
+            </p>
+            <a
+              href={PHONE_TEL_HREF}
+              className="inline-flex items-center gap-3 rounded-full bg-linear-to-br from-emerald-500 to-green-700 px-6 py-4 text-white shadow-lg shadow-emerald-500/30 hover:scale-[1.02] transition-transform"
+            >
+              <Phone className="h-5 w-5" aria-hidden />
+              <span className="font-mono text-lg font-bold tabular-nums">
+                {PHONE_FR}
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner final — 1 gros bouton appel, lien réservation discret */}
       <section className="py-20 bg-accent text-accent-foreground">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Besoin d&apos;un taxi à Marseille maintenant ?
           </h2>
-          <p className="text-lg mb-8 text-accent-foreground/90">
-            Réservez votre trajet en quelques clics et recevez une confirmation
-            immédiate par email.
+          <p className="text-lg mb-10 text-accent-foreground/90">
+            Un appel, une voiture à votre porte en{" "}
+            <strong className="font-bold">10 à 20 minutes</strong>.
           </p>
-          <Button
-            href="/reservation"
-            size="lg"
-            className="bg-primary text-primary-foreground hover:opacity-90 px-8 py-6 text-lg"
-          >
-            Réserver un taxi à Marseille
-          </Button>
+
+          <div className="flex flex-col items-center gap-5">
+            <a
+              href={PHONE_TEL_HREF}
+              aria-label={`Appeler Taxi Marseille au ${PHONE_FR}`}
+              className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-4 overflow-hidden rounded-full bg-linear-to-br from-emerald-500 via-emerald-600 to-green-700 px-8 py-6 md:px-12 md:py-8 text-white shadow-2xl shadow-emerald-900/40 ring-2 ring-white/30 hover:scale-[1.02] transition-transform"
+            >
+              <span
+                className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-white/20 blur-2xl transition group-hover:bg-white/30"
+                aria-hidden
+              />
+              <span className="relative flex h-14 w-14 md:h-16 md:w-16 shrink-0 items-center justify-center rounded-full bg-white/20 ring-1 ring-white/40">
+                <Phone
+                  className="h-7 w-7 md:h-8 md:w-8 animate-pulse"
+                  strokeWidth={2.5}
+                  aria-hidden
+                />
+              </span>
+              <span className="relative flex flex-col items-start leading-tight">
+                <span className="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-emerald-50">
+                  Appeler maintenant
+                </span>
+                <span className="font-mono text-2xl md:text-4xl font-bold tabular-nums tracking-wider">
+                  {PHONE_FR}
+                </span>
+              </span>
+            </a>
+
+            <Link
+              href="/reservation"
+              className="inline-flex items-center gap-1.5 text-xs font-normal text-white/65 underline-offset-4 hover:text-white/90"
+            >
+              Formulaire disponible si besoin
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -796,7 +1008,26 @@ export default function Home() {
         }}
       />
 
-      <MobileBlogCallCTA />
+      {/* JSON-LD FAQPage — rich results Google */}
+      <Script
+        id="faq-taxi-marseille"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: FAQ_ITEMS.map((item) => ({
+              "@type": "Question",
+              name: item.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.a,
+              },
+            })),
+          }),
+        }}
+      />
     </main>
   );
 }

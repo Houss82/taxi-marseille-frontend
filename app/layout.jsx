@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import MobileBlogCallCTA from "./components/client/MobileBlogCallCTA";
 import Footer from "./components/Footer";
 import GoogleTag from "./components/GoogleTag";
 import Header from "./components/Header";
@@ -20,7 +21,7 @@ export const metadata = {
     template: "%s | Taxi Marseille",
   },
   description:
-    "Taxi Marseille 24h/24 : aéroport Marseille Provence Marignane, gare Saint-Charles, Vieux-Port, hôtels et congrès. Van Mercedes 8 places, trajets locaux et longue distance.",
+    "Taxi Marseille 24h/24 : aéroport Marseille Provence Marignane, gare Saint-Charles, Vieux-Port, hôtels et congrès. Mercedes van 8 places, trajets locaux et longue distance.",
   keywords: [
     "taxi Marseille",
     "taxi à Marseille",
@@ -36,7 +37,7 @@ export const metadata = {
     title:
       "Taxi Marseille | Aéroport Marignane, Gare Saint-Charles & Vieux-Port",
     description:
-      "Taxi Marseille 24h/24 : aéroport Marignane, gare Saint-Charles, Vieux-Port, hôtels et congrès. Van Mercedes 8 places.",
+      "Taxi Marseille 24h/24 : aéroport Marignane, gare Saint-Charles, Vieux-Port, hôtels et congrès. Mercedes van 8 places.",
     url: "/",
     siteName: "Taxi Marseille",
     locale: "fr_FR",
@@ -92,6 +93,7 @@ export default function RootLayout({ children }) {
           <Header />
           <main>{children}</main>
           <Footer />
+          <MobileBlogCallCTA />
         </Providers>
       </body>
     </html>

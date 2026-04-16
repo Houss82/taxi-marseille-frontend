@@ -38,7 +38,7 @@ export default function Footer() {
               Service de taxi premium sur Marseille et la métropole. Confort,
               ponctualité et disponibilité 24h/24.{" "}
               <span className="text-primary-foreground">
-                Véhicule 8 places (Mercedes Classe V) sur réservation.
+                Mercedes van 8 places sur réservation.
               </span>
             </p>
           </div>
@@ -58,6 +58,11 @@ export default function Footer() {
                   className={navLink}
                 >
                   Hôtels &amp; événements
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/van-8-places" className={navLink}>
+                  Mercedes van 8 places
                 </Link>
               </li>
               <li>

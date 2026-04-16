@@ -3,24 +3,24 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Dev : éviter d’évincer trop vite les entrées (sinon le HTML peut référencer un ancien
-  // chunk CSS → 404 sur layout.css et page « sans CSS » jusqu’au reload).
+  // Dev : garder les pages compilées longtemps en mémoire pour éviter que le navigateur
+  // garde un HTML qui pointe vers d’anciens chunks (CSS en 404 → page sans styles).
   onDemandEntries: {
-    maxInactiveAge: 120 * 1000,
-    pagesBufferLength: 8,
+    maxInactiveAge: 60 * 60 * 1000,
+    pagesBufferLength: 25,
   },
   webpack: (config, { dev, isServer }) => {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname),
     };
-    
-    // En dev : désactiver le cache disque webpack (client + serveur) pour éviter
-    // les ENOENT sur .next/cache/webpack/**/ *.pack.gz (cache corrompu / concurrence).
+
+    // En dev : cache mémoire (pas de .pack.gz sur disque) — moins de corruptions qu’un
+    // cache fichier, rebuilds plus stables que cache: false avec gros projet.
     if (dev) {
-      config.cache = false;
+      config.cache = { type: 'memory' };
     }
-    
+
     return config;
   },
 }

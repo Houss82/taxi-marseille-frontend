@@ -109,7 +109,7 @@ export default function ReservationForm() {
               formData.vehicle === "glc"
                 ? "Mercedes SUV"
                 : formData.vehicle === "vito"
-                  ? "Mercedes Classe V — 8 places"
+                  ? "Mercedes van 8 places"
                   : formData.vehicle,
             notes: formData.notes || "Aucune note",
           };
@@ -267,9 +267,9 @@ export default function ReservationForm() {
             <div>
               <h3 className="font-bold text-lg mb-2">Passagers et Véhicule</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Van <strong className="text-foreground">Mercedes 8 places</strong>{" "}
+                <strong className="text-foreground">Mercedes van 8 places</strong>{" "}
                 disponible : indiquez le nombre de passagers puis choisissez
-                « Mercedes Classe V » ci-dessous.
+                « Mercedes van 8 places » ci-dessous.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
@@ -321,7 +321,7 @@ export default function ReservationForm() {
                   >
                     <option value="glc">Mercedes SUV</option>
                     <option value="vito">
-                      Mercedes Classe V — 8 places (groupes)
+                      Mercedes van 8 places (groupes)
                     </option>
                   </select>
                 </div>

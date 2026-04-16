@@ -26,6 +26,11 @@ export default function sitemap() {
       changeFrequency: "monthly",
     },
     {
+      path: "/services/van-8-places",
+      priority: 0.85,
+      changeFrequency: "monthly",
+    },
+    {
       path: "/services/marseille-aix-cassis",
       priority: 0.85,
       changeFrequency: "monthly",

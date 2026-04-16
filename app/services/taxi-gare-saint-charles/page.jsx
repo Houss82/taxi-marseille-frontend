@@ -98,7 +98,7 @@ export default function TaxiGareSaintCharles() {
                 hôtels du centre, l&apos;
                 <strong>aéroport Marseille Provence (MRS)</strong> ou les
                 terminaux de croisière.{" "}
-                <strong>Mercedes Classe V 8 places</strong> sur demande pour
+                <strong>Mercedes van 8 places</strong> sur demande pour
                 familles et bagages volumineux.
               </p>
             </div>

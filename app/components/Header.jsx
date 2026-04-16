@@ -20,6 +20,10 @@ const navItems = [
         href: "/services/trajets-hotels-evenements",
       },
       {
+        label: "Mercedes van 8 places",
+        href: "/services/van-8-places",
+      },
+      {
         label: "Marseille → Aix & Cassis",
         href: "/services/marseille-aix-cassis",
       },

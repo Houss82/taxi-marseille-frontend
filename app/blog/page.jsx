@@ -1,4 +1,3 @@
-import MobileBlogCallCTA from "@/app/components/client/MobileBlogCallCTA";
 import SEOBreadcrumb from "@/app/components/SEOBreadcrumb";
 import { getAllPosts } from "@/lib/blog";
 import blogCategories, {
@@ -303,7 +302,6 @@ export default async function BlogPage({ searchParams }) {
         </div>
       </section>
 
-      <MobileBlogCallCTA />
     </div>
   );
 }

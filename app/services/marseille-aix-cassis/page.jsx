@@ -1,3 +1,6 @@
+// ✅ SERVER COMPONENT — ISR
+export const revalidate = 86400;
+
 export const metadata = {
   title:
     "Taxi Marseille → Aix-en-Provence & Cassis | Longue distance | Taxi Marseille",
@@ -12,6 +15,7 @@ export const metadata = {
 
 import { MapPin, Clock, Shield, CheckCircle, Compass } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/app/components/ui/Button";
 
 export default function MarseilleAixCassis() {
@@ -88,9 +92,19 @@ export default function MarseilleAixCassis() {
               <strong>Cassis</strong> pour embarquer vers les calanques, ou sur
               les points de vue de la <strong>route des Crêtes</strong>.
             </p>
+            <p className="text-base text-gray-700">
+              Pour les groupes jusqu&apos;à 8 passagers, voir notre page dédiée{" "}
+              <Link
+                href="/services/van-8-places"
+                className="font-semibold text-accent underline-offset-2 hover:underline"
+              >
+                Mercedes van 8 places
+              </Link>
+              .
+            </p>
             <ul className="space-y-3">
               {[
-                "Mercedes Classe V 8 places pour les groupes",
+                "Mercedes van 8 places pour les groupes",
                 "Pauses photos et attente sur site",
                 "Retour soirée possible après dîner à Cassis",
               ].map((t, i) => (

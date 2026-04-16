@@ -1,4 +1,3 @@
-import MobileBlogCallCTA from "@/app/components/client/MobileBlogCallCTA";
 import ResponsiveTableWrapper from "@/app/components/ResponsiveTableWrapper";
 import SEOBreadcrumb from "@/app/components/SEOBreadcrumb";
 import { getAllPosts, getAllPostSlugs, getPostBySlug } from "@/lib/blog";
@@ -396,7 +395,6 @@ export default async function BlogPostPage({ params }) {
         </section>
       )}
 
-      <MobileBlogCallCTA />
     </div>
   );
 }

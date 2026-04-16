@@ -1,10 +1,15 @@
 "use client";
 
 import { PHONE_FR, PHONE_TEL_HREF } from "@/app/lib/phone";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Calendar, Phone } from "lucide-react";
-import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { useMobileMenu } from "./MobileMenuContext";
+
+/** Seuil de scroll avant affichage sur la page d'accueil (en px). */
+const HOME_SCROLL_THRESHOLD = 240;
 
 const spring = {
   type: "spring",
@@ -20,6 +25,28 @@ const spring = {
 export default function MobileBlogCallCTA() {
   const reduce = useReducedMotion();
   const { isMobileMenuOpen } = useMobileMenu();
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
+  /** Sur la home : masqué tant qu'on n'a pas scrollé.
+   *  Sur les autres pages : visible d'emblée. */
+  const [isVisible, setIsVisible] = useState(!isHomePage);
+
+  useEffect(() => {
+    if (!isHomePage) {
+      setIsVisible(true);
+      return;
+    }
+
+    setIsVisible(window.scrollY > HOME_SCROLL_THRESHOLD);
+
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > HOME_SCROLL_THRESHOLD);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHomePage]);
 
   /* Masqué quand le menu burger est ouvert (z-index + chevauchement du CTA menu) */
   if (isMobileMenuOpen) {
@@ -27,14 +54,18 @@ export default function MobileBlogCallCTA() {
   }
 
   return (
-    <motion.div
-      className="fixed inset-x-0 bottom-0 z-100 md:hidden"
-      role="complementary"
-      aria-label="Actions rapides : appeler ou réserver"
-      initial={reduce ? false : { y: "120%", opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={reduce ? { duration: 0 } : spring}
-    >
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          key="mobile-cta"
+          className="fixed inset-x-0 bottom-0 z-100 md:hidden"
+          role="complementary"
+          aria-label="Actions rapides : appeler ou réserver"
+          initial={reduce ? false : { y: "120%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={reduce ? { opacity: 0 } : { y: "120%", opacity: 0 }}
+          transition={reduce ? { duration: 0 } : spring}
+        >
       <div className="pointer-events-none mx-auto max-w-lg px-3 pt-2">
         <motion.div
           className={`pointer-events-auto relative overflow-hidden rounded-[1.35rem] border border-white/40 bg-white/70 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-2xl ${!reduce ? "mobile-cta-shell--animated" : "shadow-[0_-12px_40px_-8px_rgba(15,23,42,0.18)]"}`}
@@ -156,8 +187,10 @@ export default function MobileBlogCallCTA() {
               </motion.div>
             </div>
           </div>
+          </motion.div>
+        </div>
         </motion.div>
-      </div>
-    </motion.div>
+      )}
+    </AnimatePresence>
   );
 }

@@ -398,7 +398,28 @@ export default function HeaderClient({ navItems, children }) {
             })}
           </nav>
 
-          <div className="hidden md:flex gap-4 items-center">
+          <div className="hidden md:flex gap-3 items-center">
+            <a
+              href={PHONE_TEL_HREF}
+              className={`group hidden lg:inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold transition-all ${
+                isScrolled
+                  ? "bg-cyan-50 text-cyan-800 ring-1 ring-cyan-200 hover:bg-cyan-100"
+                  : "bg-white/15 text-white ring-1 ring-white/30 backdrop-blur-sm hover:bg-white/25"
+              }`}
+              aria-label={`Appeler Taxi Marseille au ${PHONE_FR}`}
+            >
+              <Phone className="h-4 w-4 shrink-0" strokeWidth={2.25} aria-hidden />
+              <span className="font-mono tabular-nums tracking-wide">{PHONE_FR}</span>
+              <span
+                className={`ml-1 rounded-full px-1.5 py-0.5 text-[0.6rem] font-bold uppercase leading-none ring-1 ${
+                  isScrolled
+                    ? "bg-cyan-100 text-cyan-700 ring-cyan-200"
+                    : "bg-white/20 text-white ring-white/30"
+                }`}
+              >
+                24/7
+              </span>
+            </a>
             <Link
               href="/reservation"
               className="px-6 py-2 bg-accent text-accent-foreground rounded-full font-medium hover:opacity-90 transition-opacity"

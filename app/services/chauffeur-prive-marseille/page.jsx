@@ -93,7 +93,7 @@ export default function ChauffeurPriveMarseille() {
               <p className="text-gray-800 mb-0 leading-relaxed text-lg">
                 Nous adaptons le véhicule à votre usage : berline ou SUV pour
                 les trajets urbains,{" "}
-                <strong>Mercedes Classe V 8 places</strong> pour groupes,
+                <strong>Mercedes van 8 places</strong> pour groupes,
                 équipes ou matériel. Planning fluide entre bureaux, hôtels,
                 salles de congrès et aéroport.
               </p>
