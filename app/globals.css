@@ -503,13 +503,15 @@ html {
   @apply rounded-lg shadow-lg my-6;
 }
 
-/* Article blog : image van — plafond large en desktop uniquement (évite les images trop hautes sans les écraser) */
+/* Article blog : image van — ratio 16/9, plafond raisonnable et cadrage sur le véhicule (bas de la photo) en desktop uniquement */
 @media (min-width: 1024px) {
   .prose img.blog-img-van-desktop {
-    max-height: min(48rem, 88vh);
     width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 520px;
+    height: auto;
     object-fit: cover;
-    object-position: center;
+    object-position: center 80%;
   }
 }
 

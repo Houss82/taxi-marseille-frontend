@@ -114,14 +114,14 @@ export default async function BlogPostPage({ params }) {
             </div>
           </div>
 
-          {/* Image principale */}
+          {/* Image principale — mobile: hauteur fixe ; desktop: ratio 16/9 adapté au cadrage photo */}
           <div className="relative w-full rounded-2xl overflow-hidden mb-12 bg-gray-50">
-            <div className="relative w-full h-[384px] md:aspect-auto md:h-[600px] lg:h-[700px]">
+            <div className="relative w-full h-[320px] sm:h-[384px] md:h-auto md:aspect-video md:max-h-[520px]">
               <Image
                 src={post.image}
                 alt={post.title}
                 fill
-                className="object-cover"
+                className="object-cover object-[center_80%]"
                 priority={true}
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 1200px"
