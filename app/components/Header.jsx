@@ -16,24 +16,24 @@ const navItems = [
         href: "/services/taxi-aeroport-marseille",
       },
       {
-        label: "Hôtels & Événements",
-        href: "/services/trajets-hotels-evenements",
+        label: "Mise à disposition (mariage & congrès)",
+        href: "/services/mise-a-disposition-mariage-congres",
       },
       {
         label: "Mercedes van 8 places",
         href: "/services/van-8-places",
       },
       {
-        label: "Marseille → Aix & Cassis",
-        href: "/services/marseille-aix-cassis",
+        label: "Port de croisières",
+        href: "/services/port-de-croisieres",
       },
       {
         label: "Gare Saint-Charles",
         href: "/services/taxi-gare-saint-charles",
       },
       {
-        label: "Chauffeur privé",
-        href: "/services/chauffeur-prive-marseille",
+        label: "City tour : visite de Marseille",
+        href: "/services/city-tour-visite-marseille",
       },
     ],
   },

@@ -28,7 +28,6 @@ import {
   Plane,
   ShieldCheck,
   Sparkles,
-  Star,
   Timer,
   Train,
   Users,
@@ -37,6 +36,7 @@ import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import ElfsightGoogleReviews from "./components/client/ElfsightGoogleReviews";
 import HeroBackgroundSlideshow from "./components/client/HeroBackgroundSlideshow";
 import VehicleCarousel from "./components/client/VehicleCarousel";
 import Button from "./components/ui/Button";
@@ -54,7 +54,7 @@ const fontHeroBrand = Playfair_Display({
 const vehicles = [
   {
     name: "Mercedes SUV",
-    image: "/mercedes-glc-luxury-suv.png",
+    image: "/suv-marseille.png",
     desc: "Confort et espace pour vos trajets",
   },
   {
@@ -123,13 +123,20 @@ export default function Home() {
 
           {/* Bandeau urgence — différenciateur */}
           <div className="mb-6 lg:mb-8 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-2 text-sm md:text-base font-bold text-emerald-900 ring-2 ring-emerald-500/60 shadow-lg shadow-emerald-900/20">
-            <Timer className="h-4 w-4 md:h-5 md:w-5 text-emerald-700" strokeWidth={2.5} aria-hidden />
+            <Timer
+              className="h-4 w-4 md:h-5 md:w-5 text-emerald-700"
+              strokeWidth={2.5}
+              aria-hidden
+            />
             Temps d&apos;attente moyen : 10–15 min à Marseille
           </div>
 
           <p className="text-base md:text-lg lg:text-lg mb-7 lg:mb-10 text-white/90 text-balance lg:leading-relaxed lg:max-w-2xl lg:mx-auto">
             Aéroport Marignane, gare Saint-Charles, Vieux-Port : chauffeur local
-            à votre porte. <span className="font-semibold text-white">Réponse immédiate — sans attente au téléphone.</span>
+            à votre porte.{" "}
+            <span className="font-semibold text-white">
+              Réponse immédiate — sans attente au téléphone.
+            </span>
           </p>
 
           {/* CTA : 1 bouton principal (appel) + 1 lien secondaire minimal */}
@@ -144,7 +151,11 @@ export default function Home() {
                 aria-hidden
               />
               <span className="relative flex h-12 w-12 lg:h-14 lg:w-14 shrink-0 items-center justify-center rounded-full bg-white/20 ring-1 ring-white/40">
-                <Phone className="h-6 w-6 lg:h-7 lg:w-7 animate-pulse" strokeWidth={2.5} aria-hidden />
+                <Phone
+                  className="h-6 w-6 lg:h-7 lg:w-7 animate-pulse"
+                  strokeWidth={2.5}
+                  aria-hidden
+                />
               </span>
               <span className="relative flex flex-col items-start leading-tight">
                 <span className="text-[0.7rem] lg:text-xs font-bold uppercase tracking-[0.18em] text-emerald-50">
@@ -183,6 +194,38 @@ export default function Home() {
               Van 8 places sur demande
             </li>
           </ul>
+        </div>
+      </section>
+
+      {/* Reviews Section (Google Reviews en temps réel via Elfsight) */}
+      <section className="py-20 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Avis de nos clients
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Des avis Google en temps réel : votre meilleure garantie avant de
+              réserver.
+            </p>
+          </div>
+          <div className="mt-4">
+            <ElfsightGoogleReviews
+              widgetClassName="elfsight-app-f474b67e-af96-4dcc-9e4b-5e5517a5a747"
+              containerClassName="max-w-6xl mx-auto"
+            />
+          </div>
+          <div className="mt-6 text-center">
+            <a
+              href={GOOGLE_BUSINESS_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-accent underline-offset-4 hover:underline"
+            >
+              Voir tous les avis sur Google
+              <ChevronRight className="h-4 w-4" aria-hidden />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -236,10 +279,10 @@ export default function Home() {
               },
               {
                 icon: Compass,
-                label: "Marseille → Aix-en-Provence / Cassis",
-                desc: "Longue distance, escapades Provence, route des Crêtes.",
-                meta: "Devis fixe",
-                href: "/services/marseille-aix-cassis",
+                label: "Marseille → Port de croisières",
+                desc: "Terminaux J4 & MPCT : embarquement, débarquement, bagages.",
+                meta: "J4 · MPCT",
+                href: "/services/port-de-croisieres",
               },
               {
                 icon: Users,
@@ -815,58 +858,6 @@ export default function Home() {
                 Réserver un taxi
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Reviews Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Avis de nos clients
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Des centaines de trajets réussis chaque année à Marseille et en
-              Provence.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Marie D.",
-                rating: 5,
-                review:
-                  "Service de taxi à Marseille impeccable pour notre séjour. Très professionnel !",
-              },
-              {
-                name: "Jean M.",
-                rating: 5,
-                review:
-                  "Chauffeur courtois, véhicule propre et à l'heure pour notre taxi aéroport Marseille (aéroport–Vieux-Port).",
-              },
-              {
-                name: "Sophie L.",
-                rating: 5,
-                review:
-                  "Expérience premium du début à la fin. Taxi Marseille parfait pour les congrès.",
-              },
-            ].map((review, i) => (
-              <Card key={i} className="p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  {Array(review.rating)
-                    .fill(0)
-                    .map((_, j) => (
-                      <Star
-                        key={j}
-                        className="w-4 h-4 fill-accent text-accent"
-                      />
-                    ))}
-                </div>
-                <p className="text-foreground mb-4 italic">"{review.review}"</p>
-                <p className="font-bold text-sm">{review.name}</p>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

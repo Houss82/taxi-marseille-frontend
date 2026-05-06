@@ -11,9 +11,9 @@ import Card from "../components/ui/Card";
 export const metadata = {
   title: "Services - Taxi Marseille",
   description:
-    "Services taxi à Marseille : taxi aéroport Marseille (MRS), gare, hôtels, congrès, Aix & Cassis. Mercedes van 8 places pour groupes. Chauffeur privé 24/7.",
+    "Services taxi à Marseille : taxi aéroport Marseille (MRS), gare Saint-Charles, Mercedes van 8 places, mise à disposition (mariages & congrès), port de croisière et city tour. Service 24h/24.",
   keywords:
-    "services taxi marseille, taxi aéroport marseille marignane, taxi gare saint-charles, chauffeur privé marseille",
+    "services taxi marseille, taxi aéroport marseille marignane, taxi gare saint-charles, van 8 places marseille, taxi mariage marseille, taxi congrès marseille, taxi port de croisière marseille, city tour marseille",
 };
 
 export default function Services() {
@@ -26,11 +26,11 @@ export default function Services() {
       href: "/services/taxi-aeroport-marseille",
     },
     {
-      title: "Hôtels & Événements",
-      desc: "Pharo, Chanot, Vélodrome, centres d'affaires et hôtels 4-5*",
-      image: "/taxi-marseille-velodrome-match.jpeg",
-      details: ["Discrétion", "Ponctualité", "Mise à disposition possible"],
-      href: "/services/trajets-hotels-evenements",
+      title: "Mise à disposition (mariage & congrès)",
+      desc: "Chauffeur dédié : cérémonie, navettes invités, Parc Chanot, Pharo",
+      image: "/chauffeur-prive.jpg",
+      details: ["Chauffeur dédié", "Organisation sur mesure", "Devis clair"],
+      href: "/services/mise-a-disposition-mariage-congres",
     },
     {
       title: "Mercedes van 8 places",
@@ -44,15 +44,11 @@ export default function Services() {
       href: "/services/van-8-places",
     },
     {
-      title: "Marseille → Aix & Cassis",
-      desc: "Escapades vers Aix-en-Provence, route des Crêtes, port de Cassis",
-      image: "/saint-tropez-cannes.jpg",
-      details: [
-        "Longue distance",
-        "Itinéraires sur mesure",
-        "Van 8 places pour groupes",
-      ],
-      href: "/services/marseille-aix-cassis",
+      title: "Port de croisières",
+      desc: "Terminaux J4 & MPCT : embarquement, débarquement, bagages",
+      image: "/taxi-marseille-port-de-croisiere.jpeg",
+      details: ["Accès terminaux", "Groupes & bagages", "Coordination escale"],
+      href: "/services/port-de-croisieres",
     },
     {
       title: "Gare Saint-Charles",
@@ -62,15 +58,11 @@ export default function Services() {
       href: "/services/taxi-gare-saint-charles",
     },
     {
-      title: "Chauffeur privé",
-      desc: "Mise à disposition demi-journée ou journée sur la métropole",
-      image: "/chauffeur-prive.jpg",
-      details: [
-        "Planning flexible",
-        "Van 8 places sur demande",
-        "Business & loisirs",
-      ],
-      href: "/services/chauffeur-prive-marseille",
+      title: "City tour : visite de Marseille",
+      desc: "Vieux-Port, Panier, Notre-Dame-de-la-Garde, littoral — sur mesure",
+      image: "/vieux-port-marseille.jpg",
+      details: ["Itinéraire flexible", "Arrêts photos", "Retour à l'heure"],
+      href: "/services/city-tour-visite-marseille",
     },
   ];
 

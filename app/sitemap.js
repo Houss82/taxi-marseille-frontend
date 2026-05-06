@@ -21,7 +21,7 @@ export default function sitemap() {
       changeFrequency: "monthly",
     },
     {
-      path: "/services/trajets-hotels-evenements",
+      path: "/services/mise-a-disposition-mariage-congres",
       priority: 0.85,
       changeFrequency: "monthly",
     },
@@ -31,7 +31,7 @@ export default function sitemap() {
       changeFrequency: "monthly",
     },
     {
-      path: "/services/marseille-aix-cassis",
+      path: "/services/port-de-croisieres",
       priority: 0.85,
       changeFrequency: "monthly",
     },
@@ -41,7 +41,7 @@ export default function sitemap() {
       changeFrequency: "monthly",
     },
     {
-      path: "/services/chauffeur-prive-marseille",
+      path: "/services/city-tour-visite-marseille",
       priority: 0.85,
       changeFrequency: "monthly",
     },

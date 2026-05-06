@@ -6,16 +6,19 @@ import {
   Briefcase,
   CheckCircle,
   Luggage,
+  MapPin,
   Plane,
   Shield,
+  Timer,
   Users,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata = {
   title:
-    "Mercedes van 8 places Marseille | Taxi van Marseille — groupes & transferts | Taxi Marseille",
+    "Taxi van 8 places Marseille | Mercedes van 8 places — groupes & transferts | Taxi Marseille",
   description:
     "Taxi van à Marseille avec chauffeur : Mercedes van 8 places pour l’aéroport MRS, la gare, hôtels et séminaires, Aix-en-Provence, Cassis. Bagages, enfants, PMR sur demande. Devis et réservation.",
   keywords:
@@ -50,50 +53,182 @@ const gallery = [
 ];
 
 export default function Van8PlacesPage() {
+  const faqItems = [
+    {
+      q: "Peut-on réserver un Mercedes van 8 places pour l’aéroport MRS ou la gare Saint-Charles ?",
+      a: "Oui. Indiquez l’heure, le numéro de vol ou de train, le nombre de passagers et les bagages. Nous confirmons rapidement selon disponibilité.",
+    },
+    {
+      q: "Combien de bagages peut-on mettre dans le van ?",
+      a: "Le van est adapté aux groupes avec valises. La capacité exacte dépend du nombre de passagers et du format des bagages (valises cabine, grands formats, poussette).",
+    },
+    {
+      q: "Proposez-vous sièges enfant / rehausseurs ?",
+      a: "Oui, sur demande lors de la réservation (selon disponibilité). Précisez l’âge de l’enfant pour l’équipement adapté.",
+    },
+    {
+      q: "Peut-on réserver le van pour une mise à disposition (mariage, congrès) ?",
+      a: "Oui. Nous pouvons organiser une mise à disposition avec chauffeur pour plusieurs trajets sur la journée ou la soirée, avec un devis clair.",
+    },
+  ];
+
+  const serviceJson = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Taxi van 8 places Marseille (Mercedes van 8 places)",
+    serviceType: "Taxi van / transport de groupes",
+    areaServed: [
+      "Marseille",
+      "Aéroport Marseille Provence (MRS)",
+      "Gare Saint-Charles",
+      "Vieux-Port",
+      "La Joliette",
+      "Euroméditerranée",
+      "Aix-en-Provence",
+      "Cassis",
+    ],
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Taxi Marseille",
+      url: "https://www.taxis-marseille.fr/",
+      telephone: "+33782984200",
+    },
+  };
+
+  const faqJson = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/taxi-marseille-van-interieur-place-8.jpeg"
-            alt="Taxi van Marseille — Mercedes van 8 places, intérieur"
-            fill
-            className="object-cover object-[center_42%] md:object-[center_35%] lg:object-center"
-            priority
-            sizes="100vw"
-          />
-        </div>
-        <div className="absolute inset-0 z-1 bg-linear-to-t from-black/70 via-black/45 to-black/30" />
-        <div className="relative z-10 max-w-4xl px-6 text-center text-white">
-          <p className="mb-4 rounded-full border border-accent/30 bg-blue-200/90 px-4 py-2 text-sm font-bold uppercase tracking-widest text-accent">
-            Transport de groupes
-          </p>
-          <h1 className="mb-6 text-4xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl">
-            Mercedes van 8 places à Marseille
-          </h1>
-          <p className="mx-auto mb-10 max-w-2xl text-pretty text-lg text-white/90 md:text-xl">
-            Pour un taxi van à Marseille fiable et confortable : un seul
-            véhicule pour votre famille, votre équipe ou vos invités — coffre
-            volumineux et chauffeur habitué à la métropole, à l’aéroport
-            Marignane et aux escapades vers Aix ou Cassis.
-          </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button
-              href="/reservation"
-              size="lg"
-              className="bg-accent px-8 py-6 text-lg text-accent-foreground hover:opacity-90"
-            >
-              Réserver le van 8 places
-            </Button>
-            <Button
-              href="/tarifs"
-              size="lg"
-              variant="outline"
-              className="border-2 border-white bg-white/10 px-8 py-6 text-lg text-white backdrop-blur-sm hover:bg-white/20"
-            >
-              Voir les tarifs
-            </Button>
+      <section className="relative min-h-[88vh] flex items-center overflow-hidden pt-20">
+        <Image
+          src="/taxi-marseille-van-interieur-place-8.jpeg"
+          alt="Taxi van Marseille — Mercedes van 8 places, intérieur"
+          fill
+          className="object-cover object-[center_42%] md:object-[center_35%] lg:object-center"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/30" />
+        <div
+          className="pointer-events-none absolute -left-40 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-cyan-500/20 blur-3xl"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl"
+          aria-hidden
+        />
+
+        <div className="relative z-10 w-full">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
+              <div className="text-white">
+                <div className="mb-6 flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
+                    <Users className="h-4 w-4 text-cyan-200" aria-hidden />
+                    Transport de groupes
+                  </span>
+                  <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200/30 bg-emerald-500/15 px-4 py-2 text-xs font-bold uppercase tracking-widest text-emerald-50 backdrop-blur-sm">
+                    <Shield className="h-4 w-4 text-emerald-200" aria-hidden />
+                    Devis clair
+                  </span>
+                </div>
+
+                <h1 className="text-4xl md:text-6xl font-black leading-tight text-balance">
+                  Taxi van 8 places Marseille
+                </h1>
+                <p className="mt-5 max-w-2xl text-lg md:text-xl text-white/90 leading-relaxed">
+                  Un seul véhicule pour toute la famille, l’équipe ou les
+                  invités. <strong>Confort</strong>, <strong>coffre</strong> et
+                  chauffeur habitué à la métropole, à l’aéroport MRS et aux
+                  escapades vers Aix ou Cassis.
+                </p>
+
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <Button
+                    href="/reservation"
+                    size="lg"
+                    className="bg-accent px-8 py-6 text-lg text-accent-foreground hover:opacity-90"
+                  >
+                    Réserver le van 8 places
+                  </Button>
+                  <Button
+                    href="/contact"
+                    variant="outline"
+                    className="border-white/20 text-white bg-linear-to-br from-cyan-500/25 via-white/10 to-blue-600/25 hover:from-cyan-500/30 hover:to-blue-600/30 px-8 py-6 text-lg backdrop-blur-sm shadow-lg shadow-black/10"
+                  >
+                    Question rapide
+                  </Button>
+                </div>
+
+                <ul className="mt-8 grid gap-3 sm:grid-cols-2 max-w-2xl text-sm text-white/85">
+                  {[
+                    { icon: Users, label: "Jusqu’à 8 passagers" },
+                    { icon: Luggage, label: "Bagages volumineux" },
+                    { icon: Plane, label: "Aéroport & gare" },
+                    { icon: Shield, label: "Tarif communiqué avant réservation" },
+                  ].map(({ icon: Icon, label }) => (
+                    <li
+                      key={label}
+                      className="flex items-start gap-3 rounded-2xl border border-white/15 bg-white/5 px-4 py-3 backdrop-blur-sm"
+                    >
+                      <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-cyan-100 ring-1 ring-white/15">
+                        <Icon className="h-4 w-4" aria-hidden />
+                      </span>
+                      <span className="font-medium">{label}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Carte “comment ça marche” */}
+              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 md:p-8 text-white backdrop-blur-sm shadow-2xl shadow-black/20">
+                <h2 className="text-xl md:text-2xl font-bold mb-4">
+                  Comment réserver le van 8 places ?
+                </h2>
+                <ol className="space-y-4 text-white/90">
+                  {[
+                    {
+                      title: "Vous indiquez les détails",
+                      desc: "Date, heure, passagers, bagages et adresses.",
+                    },
+                    {
+                      title: "On confirme",
+                      desc: "Tarif communiqué + véhicule adapté à votre groupe.",
+                    },
+                    {
+                      title: "On vous récupère",
+                      desc: "Au point convenu (aéroport, gare, hôtel, domicile).",
+                    },
+                  ].map((step, idx) => (
+                    <li key={step.title} className="flex gap-4">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-cyan-400/25 to-blue-600/25 ring-1 ring-white/15 font-black">
+                        {idx + 1}
+                      </div>
+                      <div>
+                        <p className="font-semibold">{step.title}</p>
+                        <p className="text-sm text-white/80">{step.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+                <div className="mt-6 rounded-2xl border border-white/15 bg-white/5 p-4 text-sm text-white/85">
+                  Astuce : précisez le <strong>nombre de valises</strong> (et
+                  poussettes / matériel) pour un chargement fluide.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -135,6 +270,128 @@ export default function Van8PlacesPage() {
         </div>
       </section>
 
+      {/* Bento “infos utiles” */}
+      <section className="py-20 bg-white border-b border-slate-100">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-10 text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-cyan-200/70 bg-cyan-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-cyan-800">
+              <MapPin className="h-3.5 w-3.5" aria-hidden />
+              Infos pratiques
+            </span>
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">
+              Un van premium, pensé pour les groupes
+            </h2>
+            <p className="mt-4 text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
+              Aéroport MRS, gare Saint-Charles, hôtels, séminaires, excursions :
+              on simplifie l’organisation avec un seul véhicule et un seul
+              interlocuteur.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            <div className="md:col-span-2 rounded-3xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/40 p-8 shadow-sm">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                Confort + bagages = zéro compromis
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                Le Mercedes van 8 places est idéal quand vous voyagez à plusieurs
+                ou avec des valises. Pour les familles et groupes, nous pouvons
+                prévoir équipements enfants sur demande (selon disponibilité).
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {[
+                  "Jusqu’à 8 passagers",
+                  "Coffre adapté aux valises",
+                  "Sièges enfant sur demande",
+                  "Paiement CB à bord",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white/80 p-4"
+                  >
+                    <span className="mt-1.5 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0" />
+                    <span className="font-medium text-slate-800">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                Trajets fréquents
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                Aéroport, gare, port, événements, excursions : on adapte l’horaire
+                et l’itinéraire selon votre programme.
+              </p>
+              <div className="mt-6 rounded-2xl border border-cyan-200/70 bg-cyan-50 p-5 text-cyan-950">
+                <p className="font-semibold mb-1">Conseil</p>
+                <p className="text-sm leading-relaxed text-cyan-900/90">
+                  Pour les groupes, réservez en avance (notamment weekends et
+                  soirées).
+                </p>
+              </div>
+              <div className="mt-6 space-y-3">
+                <Button
+                  href="/reservation"
+                  className="w-full bg-accent text-accent-foreground hover:opacity-90 py-6 text-base"
+                >
+                  Demander un devis
+                </Button>
+                <Button
+                  href="/tarifs"
+                  variant="outline"
+                  className="w-full border-slate-200 bg-white hover:bg-slate-50 py-6 text-base"
+                >
+                  Voir les tarifs
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Parallax au milieu */}
+      <section
+        className="relative h-[52vh] md:h-[60vh] overflow-hidden bg-center bg-cover bg-no-repeat bg-scroll md:bg-fixed"
+        style={{ backgroundImage: "url(/taxi-marseille-service-coffre.jpeg)" }}
+        aria-label="Taxi Marseille — Mercedes van 8 places"
+      >
+        <div className="absolute inset-0 bg-linear-to-b from-slate-950/70 via-slate-950/45 to-slate-950/65" />
+        <div className="relative z-10 flex h-full items-center">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="max-w-3xl rounded-3xl border border-white/10 bg-white/5 p-7 md:p-9 backdrop-blur-sm shadow-2xl shadow-black/25">
+              <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-white/90">
+                <Timer className="h-4 w-4 text-cyan-200" aria-hidden />
+                Groupes · Bagages · Confort
+              </p>
+              <h2 className="mt-4 text-3xl md:text-4xl font-black text-white">
+                Un seul véhicule, une organisation simple
+              </h2>
+              <p className="mt-4 text-base md:text-lg text-white/85 leading-relaxed">
+                Aéroport, gare, port ou événement : on gère la logistique pour
+                que tout le monde arrive ensemble, à l’heure.
+              </p>
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <Button
+                  href="/reservation"
+                  className="bg-white text-slate-950 hover:bg-white/90 px-6 py-6 text-base"
+                >
+                  Réserver le van 8 places
+                </Button>
+                <Button
+                  href="/contact"
+                  variant="outline"
+                  className="border-white/20 text-white bg-linear-to-br from-cyan-500/25 via-white/10 to-blue-600/25 hover:from-cyan-500/30 hover:to-blue-600/30 px-6 py-6 text-base backdrop-blur-sm shadow-lg shadow-black/10"
+                >
+                  Poser une question
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contenu éditorial + image */}
       <section className="py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
@@ -172,10 +429,10 @@ export default function Van8PlacesPage() {
                 , les hôtels et palais des congrès, ainsi que les{" "}
                 <strong>longues distances</strong> (
                 <Link
-                  href="/services/marseille-aix-cassis"
+                  href="/services/city-tour-visite-marseille"
                   className="font-semibold text-accent underline-offset-2 hover:underline"
                 >
-                  Aix-en-Provence, Cassis, route des Crêtes
+                  city tour / visite de Marseille
                 </Link>
                 , littoral, selon disponibilité).
               </p>
@@ -302,36 +559,107 @@ export default function Van8PlacesPage() {
         </div>
       </section>
 
-      {/* CTA final */}
-      <section className="border-t border-slate-200 bg-slate-900 py-16 text-white">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="mb-4 text-2xl font-bold md:text-3xl">
-            Prêt à réserver votre van 8 places ?
-          </h2>
-          <p className="mb-8 text-lg text-white/85">
-            Indiquez la date, l&apos;heure, le nombre de passagers et le type de
-            véhicule « Mercedes van 8 places » dans notre formulaire : nous vous
-            confirmons rapidement par téléphone ou e-mail.
-          </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button
-              href="/reservation"
-              size="lg"
-              className="bg-accent px-8 py-5 text-accent-foreground hover:opacity-90"
-            >
-              Formulaire de réservation
-            </Button>
-            <Button
-              href="/services"
-              size="lg"
-              variant="outline"
-              className="border-white/40 bg-transparent px-8 py-5 text-white hover:bg-white/10"
-            >
-              Tous nos services
-            </Button>
+      {/* FAQ */}
+      <section className="py-20 bg-linear-to-b from-cyan-50 via-white to-blue-50">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="rounded-3xl border border-blue-200/60 bg-linear-to-b from-white via-white to-blue-50/40 p-8 md:p-10 shadow-sm">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900">
+              Questions fréquentes sur le van 8 places à Marseille
+            </h2>
+            <div className="space-y-6">
+              {faqItems.map((item) => (
+                <details
+                  key={item.q}
+                  className="group rounded-2xl border border-slate-200/70 bg-white/90 p-6 shadow-sm"
+                >
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                    <span className="text-lg md:text-xl font-bold text-slate-900">
+                      {item.q}
+                    </span>
+                    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cyan-50 text-cyan-800 ring-1 ring-cyan-200 transition-transform group-open:rotate-45">
+                      <span className="text-2xl leading-none" aria-hidden>
+                        +
+                      </span>
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-slate-700 leading-relaxed">{item.a}</p>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* CTA final */}
+      <section className="border-t border-slate-200 bg-white py-18">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="rounded-3xl border border-slate-200 bg-slate-950 text-white p-10 shadow-2xl shadow-slate-900/20">
+            <div className="grid gap-8 md:grid-cols-2 md:items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-black">
+                  Prêt à réserver votre van 8 places ?
+                </h2>
+                <p className="mt-4 text-white/80 leading-relaxed">
+                  Indiquez la date, l’heure, passagers et bagages. On confirme
+                  rapidement avec un devis clair.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 md:justify-end">
+                <Button
+                  href="/reservation"
+                  size="lg"
+                  className="bg-white text-slate-950 hover:bg-white/90 px-8 py-6 text-lg"
+                >
+                  Réserver en ligne
+                </Button>
+                <Button
+                  href="/contact"
+                  size="lg"
+                  variant="outline"
+                  className="border-white/20 text-white bg-linear-to-br from-cyan-500/25 via-white/10 to-blue-600/25 hover:from-cyan-500/30 hover:to-blue-600/30 px-8 py-6 text-lg backdrop-blur-sm shadow-lg shadow-black/10"
+                >
+                  Nous contacter
+                </Button>
+              </div>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/70">
+              {[
+                "Aéroport MRS",
+                "Gare Saint-Charles",
+                "Événements & congrès",
+                "Aix · Cassis",
+              ].map((tag) => (
+                <span key={tag} className="inline-flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-cyan-300/80" />
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div className="mt-8 text-sm text-white/70">
+              Besoin d’un autre service ?{" "}
+              <Link
+                href="/services"
+                className="font-semibold text-white underline underline-offset-4 hover:opacity-90"
+              >
+                Voir tous nos services
+              </Link>
+              .
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* JSON-LD (Service + FAQPage) */}
+      <Script
+        id="service-van-8-places"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJson) }}
+      />
+      <Script
+        id="faq-van-8-places"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
+      />
     </main>
   );
 }
