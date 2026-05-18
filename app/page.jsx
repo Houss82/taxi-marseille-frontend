@@ -103,39 +103,47 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white pb-32 md:pb-0">
       {/* Hero Section — transferts gare & aéroport sur réservation */}
-      <section className="relative flex min-h-[88vh] flex-col items-center justify-center overflow-hidden pt-24 pb-10 md:pt-28 md:pb-12 lg:h-[calc(100svh-4.5rem)] lg:min-h-0 lg:max-h-[920px] lg:py-6">
+      <section className="relative flex min-h-[88vh] flex-col items-center justify-center overflow-hidden pt-24 pb-10 md:pt-28 md:pb-12 lg:h-[calc(100svh-4.5rem)] lg:min-h-0 lg:max-h-[920px] lg:py-8">
         <HeroBackgroundSlideshow />
-        <div className="absolute inset-0 z-2 bg-black/55" aria-hidden />
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center lg:grid lg:grid-cols-[1.15fr_0.85fr] lg:gap-8 lg:items-center lg:text-left">
-            <div>
+        <div className="absolute inset-0 z-2 bg-black/55 lg:bg-linear-to-br lg:from-slate-950/90 lg:via-slate-950/55 lg:to-cyan-950/20" aria-hidden />
+        <div
+          className="pointer-events-none absolute -left-32 top-1/4 z-2 hidden h-[28rem] w-[28rem] -translate-y-1/2 rounded-full bg-cyan-500/25 blur-3xl lg:block"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -right-24 bottom-0 z-2 hidden h-80 w-80 rounded-full bg-blue-600/20 blur-3xl lg:block"
+          aria-hidden
+        />
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:max-w-7xl lg:px-10">
+          <div className="text-center lg:grid lg:grid-cols-12 lg:gap-10 lg:items-center lg:text-left">
+            <div className="lg:col-span-7">
               <div className="mb-3 lg:mb-4 flex flex-wrap items-center justify-center gap-2 lg:justify-start">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-white backdrop-blur-sm lg:text-xs">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-white backdrop-blur-sm lg:border-cyan-400/40 lg:bg-cyan-500/15 lg:text-xs lg:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
                   <Plane className="h-3 w-3 text-cyan-200 lg:h-3.5 lg:w-3.5" aria-hidden />
                   Transferts gare &amp; aéroport
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wider text-white backdrop-blur-sm ring-1 ring-white/30 lg:text-xs">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wider text-white backdrop-blur-sm ring-1 ring-white/30 lg:border-white/25 lg:bg-white/10 lg:text-xs">
                   <MapPin className="h-3 w-3 text-cyan-200 lg:h-3.5 lg:w-3.5" aria-hidden />
                   Marseille &amp; métropole
                 </span>
               </div>
 
-              <h1 className="mb-3 lg:mb-4 leading-tight text-balance">
+              <h1 className="mb-3 lg:mb-5 leading-tight text-balance">
                 <span
-                  className={`${fontHeroBrand.className} block bg-linear-to-r from-sky-200 via-blue-400 to-blue-500 bg-clip-text text-4xl font-bold tracking-normal text-transparent sm:text-5xl lg:text-[2.75rem] lg:leading-[1.08] xl:text-5xl`}
+                  className={`${fontHeroBrand.className} block bg-linear-to-r from-sky-200 via-blue-400 to-blue-500 bg-clip-text text-4xl font-bold tracking-normal text-transparent sm:text-5xl lg:text-[3.25rem] lg:leading-[1.05] lg:drop-shadow-[0_2px_24px_rgba(56,189,248,0.35)] xl:text-[3.5rem]`}
                 >
                   Taxi Marseille
                 </span>
-                <span className="mt-1 block text-2xl font-bold text-white sm:text-3xl lg:text-[1.65rem] lg:leading-snug xl:text-4xl">
+                <span className="mt-1 block text-2xl font-bold text-white sm:text-3xl lg:mt-2 lg:text-[1.85rem] lg:leading-tight lg:text-white xl:text-[2.1rem]">
                   Aéroport &amp; Gare Saint-Charles 24h/24
                 </span>
-                <span className="mt-2 block text-base font-semibold text-white/90 sm:text-lg lg:mt-2 lg:text-[1.05rem] lg:font-medium lg:leading-snug">
+                <span className="mt-2 block text-base font-semibold text-white/90 sm:text-lg lg:mt-3 lg:text-lg lg:font-normal lg:text-cyan-100/90 lg:leading-relaxed">
                   Transferts sur réservation avec tarif fixe annoncé à
                   l&apos;avance.
                 </span>
               </h1>
 
-              <p className="mb-4 text-sm text-white/85 leading-relaxed sm:text-base lg:mb-5 lg:max-w-xl lg:text-[0.95rem]">
+              <p className="mb-4 text-sm text-white/85 leading-relaxed sm:text-base lg:mb-6 lg:max-w-xl lg:text-base lg:text-white/80">
                 Gare Saint-Charles, aéroport Marignane (MRS), longues distances
                 et métropole. Chauffeur professionnel,{" "}
                 <span className="font-medium text-white">joignable 7j/7</span>.
@@ -156,11 +164,11 @@ export default function Home() {
                 ))}
               </ul>
 
-              <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap lg:justify-start">
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap lg:flex-col lg:items-stretch lg:gap-4 lg:max-w-md">
                 <a
                   href={PHONE_TEL_HREF}
                   aria-label={`Réservation par téléphone Taxi Marseille au ${PHONE_FR}`}
-                  className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2.5 overflow-hidden rounded-full bg-linear-to-br from-cyan-600 via-blue-600 to-blue-800 px-6 py-4 text-white shadow-xl shadow-blue-900/40 ring-2 ring-white/25 hover:scale-[1.02] transition-transform lg:px-7"
+                  className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2.5 overflow-hidden rounded-full bg-linear-to-br from-cyan-600 via-blue-600 to-blue-800 px-6 py-4 text-white shadow-xl shadow-blue-900/40 ring-2 ring-white/25 hover:scale-[1.02] transition-transform lg:px-8 lg:py-5 lg:shadow-[0_8px_40px_rgba(34,211,238,0.45)] lg:ring-cyan-300/40 lg:hover:shadow-[0_12px_48px_rgba(34,211,238,0.55)]"
                 >
                   <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/20 ring-1 ring-white/40 lg:h-11 lg:w-11">
                     <Phone className="h-5 w-5" strokeWidth={2.5} aria-hidden />
@@ -174,53 +182,66 @@ export default function Home() {
                     </span>
                   </span>
                 </a>
-                <Link
-                  href="/reservation"
-                  className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm hover:bg-white/15"
-                >
-                  Réservation en ligne
-                </Link>
-                <Link
-                  href="/tarifs"
-                  className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-cyan-300/30 bg-cyan-500/15 px-6 py-3 text-sm font-semibold text-cyan-50 hover:bg-cyan-500/25"
-                >
-                  Obtenir un tarif fixe
-                </Link>
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-row lg:gap-3">
+                  <Link
+                    href="/reservation"
+                    className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm hover:bg-white/15 lg:flex-1 lg:border-white/30 lg:bg-white/15 lg:py-3.5 lg:hover:bg-white/20"
+                  >
+                    Réservation en ligne
+                  </Link>
+                  <Link
+                    href="/tarifs"
+                    className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-cyan-300/30 bg-cyan-500/15 px-6 py-3 text-sm font-semibold text-cyan-50 hover:bg-cyan-500/25 lg:flex-1 lg:py-3.5 lg:hover:bg-cyan-500/25"
+                  >
+                    Obtenir un tarif fixe
+                  </Link>
+                </div>
               </div>
             </div>
 
-            <div className="mt-8 lg:mt-0">
-              <ul className="grid gap-2.5 sm:grid-cols-3 lg:grid-cols-1 lg:gap-2">
-                {HERO_PRICES.map(({ route, price }) => (
+            <div className="mt-8 lg:col-span-5 lg:mt-0">
+              <div className="lg:rounded-3xl lg:border lg:border-cyan-400/30 lg:bg-linear-to-br lg:from-white/12 lg:via-white/8 lg:to-cyan-500/10 lg:p-6 lg:backdrop-blur-2xl lg:shadow-[0_24px_80px_rgba(0,0,0,0.45)] lg:ring-1 lg:ring-white/15">
+                <p className="mb-4 hidden text-xs font-bold uppercase tracking-[0.2em] text-cyan-200 lg:block">
+                  Tarifs indicatifs
+                </p>
+                <ul className="grid gap-2.5 sm:grid-cols-3 lg:grid-cols-1 lg:gap-3">
+                {HERO_PRICES.map(({ route, price }, index) => (
                   <li
                     key={route}
-                    className="rounded-xl border border-white/20 bg-white/10 px-3 py-2.5 text-left backdrop-blur-sm lg:flex lg:items-center lg:justify-between lg:gap-4 lg:px-4 lg:py-3"
+                    className={`rounded-xl border px-3 py-2.5 text-left backdrop-blur-sm lg:flex lg:items-center lg:justify-between lg:gap-4 lg:px-5 lg:py-4 lg:transition-colors lg:hover:border-cyan-300/50 lg:hover:bg-cyan-500/10 ${
+                      index === 0
+                        ? "border-cyan-400/40 bg-cyan-500/15 lg:shadow-[0_0_24px_rgba(34,211,238,0.12)]"
+                        : "border-white/20 bg-white/10"
+                    }`}
                   >
-                    <p className="text-[0.65rem] font-semibold uppercase tracking-wide text-white/75 lg:text-xs">
+                    <p className="text-[0.65rem] font-semibold uppercase tracking-wide text-white/75 lg:text-[0.7rem] lg:text-cyan-100/80">
                       {route}
                     </p>
-                    <p className="text-base font-bold text-white lg:text-lg lg:shrink-0">
+                    <p className="text-base font-bold text-white lg:text-xl lg:shrink-0 lg:text-cyan-50">
                       {price}
                     </p>
                   </li>
                 ))}
               </ul>
-              <ul className="mt-4 hidden flex-col gap-2 text-xs text-white/80 lg:flex">
+              <ul className="mt-4 hidden flex-col gap-2.5 border-t border-white/10 pt-4 text-sm text-white/85 lg:flex">
                 {[
                   { icon: Plane, label: "Taxi aéroport Marseille (MRS)" },
                   { icon: Train, label: "Gare Saint-Charles" },
                   { icon: ShieldCheck, label: "Prix fixe · Chauffeur pro" },
                 ].map(({ icon: Icon, label }) => (
-                  <li key={label} className="flex items-center gap-2">
-                    <Icon className="h-3.5 w-3.5 shrink-0 text-cyan-200" aria-hidden />
+                  <li key={label} className="flex items-center gap-2.5">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-500/15 ring-1 ring-cyan-400/25">
+                      <Icon className="h-4 w-4 text-cyan-200" aria-hidden />
+                    </span>
                     {label}
                   </li>
                 ))}
               </ul>
+              </div>
             </div>
           </div>
 
-          <ul className="mt-5 hidden flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-white/75 lg:flex">
+          <ul className="mt-5 hidden max-lg:flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-white/75 lg:hidden">
             {[
               { icon: Plane, label: "Aéroport MRS" },
               { icon: Train, label: "Gare Saint-Charles" },
