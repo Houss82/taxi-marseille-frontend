@@ -76,7 +76,7 @@ export default function MiseADispositionMariageCongres() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero moderne */}
-      <section className="relative min-h-[88vh] flex items-center overflow-hidden pt-20">
+      <section className="service-hero relative min-h-[88vh] flex items-start md:items-center overflow-hidden pt-20 pb-16 md:pb-24">
         <Image
           src="/chauffeur-prive.jpg"
           alt="Mise à disposition taxi Marseille — chauffeur privé journée"
@@ -95,7 +95,7 @@ export default function MiseADispositionMariageCongres() {
           aria-hidden
         />
 
-        <div className="relative z-10 w-full">
+        <div className="service-hero-inner relative z-10 w-full">
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
               <div className="text-white">
@@ -170,7 +170,7 @@ export default function MiseADispositionMariageCongres() {
               </div>
 
               {/* Carte “comment ça marche” */}
-              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 md:p-8 text-white backdrop-blur-sm shadow-2xl shadow-black/20">
+              <div className="service-hero-card rounded-3xl border border-white/15 bg-white/10 p-6 md:p-8 text-white backdrop-blur-sm shadow-2xl shadow-black/20">
                 <h2 className="text-xl md:text-2xl font-bold mb-4">
                   Comment fonctionne la mise à disposition ?
                 </h2>
@@ -248,7 +248,7 @@ export default function MiseADispositionMariageCongres() {
       </section>
 
       {/* Bento “infos utiles” */}
-      <section className="py-20 bg-white border-t border-slate-100">
+      <section className="service-bento py-20 bg-white border-t border-slate-100">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-cyan-200/70 bg-cyan-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-cyan-800">

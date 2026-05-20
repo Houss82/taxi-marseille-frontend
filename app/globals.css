@@ -450,6 +450,157 @@ html {
   @apply bg-gray-50;
 }
 
+/* Pages services — hero : marge basse pour que les cartes ne collent pas à la section suivante */
+.service-hero {
+  box-sizing: border-box;
+}
+
+.service-hero .service-hero-inner {
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .service-hero .service-hero-inner {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.service-hero .service-hero-card {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1023px) {
+  .service-hero .service-hero-card {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Bento services — espace sous le dernier bloc avant la section suivante */
+.service-bento {
+  padding-bottom: 5rem !important;
+}
+
+@media (min-width: 768px) {
+  .service-bento {
+    padding-bottom: 6rem !important;
+  }
+}
+
+/* Tableaux blog — teintes cyan / bleu discrètes */
+.blog-article table.blog-table,
+.prose table.blog-table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  border: 1px solid #bae6fd !important;
+  box-shadow: 0 4px 16px rgba(6, 182, 212, 0.08) !important;
+}
+
+.blog-article table.blog-table thead tr,
+.prose table.blog-table thead tr {
+  background: linear-gradient(
+    135deg,
+    #ecfeff 0%,
+    #e0f2fe 45%,
+    #eef2ff 100%
+  ) !important;
+}
+
+.blog-article table.blog-table th,
+.prose table.blog-table th {
+  padding: 12px 14px !important;
+  text-align: left !important;
+  font-weight: 600 !important;
+  color: #0c4a6e !important;
+  border-bottom: 2px solid #7dd3fc !important;
+  border-right: 1px solid #bae6fd !important;
+  background: transparent !important;
+}
+
+.blog-article table.blog-table th:last-child,
+.prose table.blog-table th:last-child {
+  border-right: none !important;
+}
+
+.blog-article table.blog-table tbody tr:nth-child(odd),
+.prose table.blog-table tbody tr:nth-child(odd) {
+  background-color: #ffffff !important;
+}
+
+.blog-article table.blog-table tbody tr:nth-child(even),
+.prose table.blog-table tbody tr:nth-child(even) {
+  background-color: #f0f9ff !important;
+}
+
+.blog-article table.blog-table td,
+.prose table.blog-table td {
+  padding: 12px 14px !important;
+  border-bottom: 1px solid #e0f2fe !important;
+  border-right: 1px solid #e0f2fe !important;
+  color: #334155 !important;
+}
+
+.blog-article table.blog-table tbody tr:last-child td,
+.prose table.blog-table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+.blog-article table.blog-table td:last-child,
+.prose table.blog-table td:last-child {
+  border-right: none !important;
+}
+
+.blog-article table.blog-table td:first-child,
+.prose table.blog-table td:first-child {
+  color: #0e4a6e !important;
+  font-weight: 500;
+}
+
+.blog-article table.blog-table td:first-child strong,
+.prose table.blog-table td:first-child strong {
+  color: #075985 !important;
+}
+
+/* Colonne « Souvent adapté » / temps taxi — accents discrets */
+.blog-article table.blog-table-choice tbody td:nth-child(2),
+.prose table.blog-table-choice tbody td:nth-child(2) {
+  background-color: rgba(236, 253, 245, 0.65) !important;
+}
+
+.blog-article table.blog-table-choice thead th:nth-child(2),
+.prose table.blog-table-choice thead th:nth-child(2) {
+  color: #065f46 !important;
+  border-bottom-color: #6ee7b7 !important;
+}
+
+.blog-article table.blog-table-choice tbody td:nth-child(3),
+.prose table.blog-table-choice tbody td:nth-child(3) {
+  background-color: rgba(255, 241, 242, 0.45) !important;
+}
+
+.blog-article table.blog-table-choice thead th:nth-child(3),
+.prose table.blog-table-choice thead th:nth-child(3) {
+  color: #9f1239 !important;
+  border-bottom-color: #fda4af !important;
+}
+
+.blog-article table.blog-table-times tbody td:nth-child(3),
+.prose table.blog-table-times tbody td:nth-child(3) {
+  background-color: rgba(224, 242, 254, 0.7) !important;
+  color: #0369a1 !important;
+  font-weight: 500;
+}
+
+.blog-article table.blog-table-times thead th:nth-child(3),
+.prose table.blog-table-times thead th:nth-child(3) {
+  color: #0369a1 !important;
+}
+
 /* Wrapper pour les tableaux responsives */
 .table-wrapper {
   overflow-x: auto;

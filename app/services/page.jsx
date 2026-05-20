@@ -14,6 +14,10 @@ export const metadata = {
     "Services taxi à Marseille : taxi aéroport Marseille (MRS), gare Saint-Charles, Mercedes van 8 places, mise à disposition (mariages & congrès), port de croisière et city tour. Service 24h/24.",
   keywords:
     "services taxi marseille, taxi aéroport marseille marignane, taxi gare saint-charles, van 8 places marseille, taxi mariage marseille, taxi congrès marseille, taxi port de croisière marseille, city tour marseille",
+  alternates: {
+    canonical: "https://www.taxis-marseille.fr/services",
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function Services() {
@@ -33,8 +37,8 @@ export default function Services() {
       href: "/services/mise-a-disposition-mariage-congres",
     },
     {
-      title: "Mercedes van 8 places",
-      desc: "Van pour groupes : aéroport, gare, séminaires, Aix, Cassis",
+      title: "Taxi van Marseille",
+      desc: "Mercedes 8 places — groupes, aéroport, gare, mariages, Aix, Cassis",
       image: "/taxi-marseille-service-8-places.jpeg",
       details: [
         "Jusqu’à 8 passagers",
@@ -53,7 +57,7 @@ export default function Services() {
     {
       title: "Gare Saint-Charles",
       desc: "Correspondances TGV, bus et navettes port",
-      image: "/vieux-port-marseille.jpg",
+      image: "/taxi-marseille-gare-st-charles.png",
       details: ["Prise en charge quai", "Bagages assistés", "Attente train"],
       href: "/services/taxi-gare-saint-charles",
     },
@@ -64,6 +68,42 @@ export default function Services() {
       details: ["Itinéraire flexible", "Arrêts photos", "Retour à l'heure"],
       href: "/services/city-tour-visite-marseille",
     },
+    {
+      title: "Chauffeur privé Marseille",
+      desc: "Transferts sur mesure, grandes distances, ponctualité garantie",
+      image: "/chauffeur-prive.jpg",
+      details: ["À la carte", "Véhicules premium", "Réponse rapide"],
+      href: "/services/chauffeur-prive-marseille",
+    },
+    {
+      title: "Trajets Marseille – Aix – Cassis",
+      desc: "Transferts et excursions vers Aix-en-Provence ou Cassis",
+      image: "/splitshire-car-407165_1920.jpg",
+      details: ["Longue distance", "Temps de trajet maîtrisé", "Van sur demande"],
+      href: "/services/marseille-aix-cassis",
+    },
+    {
+      title: "Hôtels & événements",
+      desc: "Venues, salons, stade, arrivées groupées",
+      image: "/marseille-evenements.jpg",
+      details: ["Planning serré", "Bagages", "Attente sur site"],
+      href: "/services/trajets-hotels-evenements",
+    },
+  ];
+
+  const footerServiceLinks = [
+    { href: "/services/taxi-aeroport-marseille", label: "Taxi aéroport Marseille (MRS)" },
+    { href: "/services/port-de-croisieres", label: "Taxi port de croisière Marseille (J4 / MPCT)" },
+    { href: "/services/van-8-places", label: "Taxi van Marseille — Mercedes 8 places" },
+    { href: "/services/taxi-gare-saint-charles", label: "Taxi gare Saint-Charles" },
+    { href: "/services/city-tour-visite-marseille", label: "City tour Marseille en taxi" },
+    {
+      href: "/services/mise-a-disposition-mariage-congres",
+      label: "Mise à disposition mariage & congrès",
+    },
+    { href: "/services/chauffeur-prive-marseille", label: "Chauffeur privé Marseille" },
+    { href: "/services/marseille-aix-cassis", label: "Trajets Marseille · Aix · Cassis" },
+    { href: "/services/trajets-hotels-evenements", label: "Trajets hôtels & événements" },
   ];
 
   return (
@@ -123,6 +163,31 @@ export default function Services() {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Liens texte : maillage clair pour les crawlers */}
+      <section className="border-t border-slate-200 bg-slate-50 py-12">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <h2 className="text-xl font-bold text-slate-900 md:text-2xl">
+            Tous nos services taxi à Marseille
+          </h2>
+          <p className="mt-2 text-sm text-slate-600">
+            Liens directs vers chaque prestation (pour faciliter la navigation et
+            l’indexation).
+          </p>
+          <ul className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3">
+            {footerServiceLinks.map(({ href, label }) => (
+              <li key={href} className="list-none">
+                <Link
+                  href={href}
+                  className="text-base font-medium text-cyan-800 underline-offset-2 hover:underline"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </main>

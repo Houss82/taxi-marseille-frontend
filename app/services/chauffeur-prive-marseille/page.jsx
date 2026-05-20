@@ -91,7 +91,7 @@ export default function ChauffeurPriveMarseille() {
 
   return (
     <main className="min-h-screen bg-white">
-      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="service-hero relative min-h-[88vh] flex items-start md:items-center justify-center overflow-hidden pt-20 pb-16 md:pb-24">
         <Image
           src="/chauffeur-prive.jpg"
           alt="Chauffeur privé Marseille - mise à disposition et trajets professionnels"

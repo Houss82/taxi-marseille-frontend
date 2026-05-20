@@ -1,18 +1,13 @@
-import { getAllPostSlugs, getAllPosts } from "@/lib/blog";
-
 const baseUrl = "https://www.taxis-marseille.fr";
 
-export default function sitemap() {
-  const now = new Date();
-  const allPosts = getAllPosts();
+/** Génération au build : XML statique servi sans ré-exécuter remark/rehype en prod */
+export const dynamic = "force-static";
 
-  // Créer un map pour accéder rapidement aux dates des articles
-  const postDatesMap = {};
-  allPosts.forEach((post) => {
-    postDatesMap[post.slug] = post.date ? new Date(post.date) : now;
-  });
+export const runtime = "nodejs";
 
-  const staticPages = [
+/** Toutes les URLs hors blog — aucun import de module blog (évite erreur 500 si dépendances FS / parsing) */
+function getStaticUrlEntries(now) {
+  const staticPaths = [
     { path: "", priority: 1.0, changeFrequency: "daily" },
     { path: "/services", priority: 0.9, changeFrequency: "monthly" },
     {
@@ -45,6 +40,21 @@ export default function sitemap() {
       priority: 0.85,
       changeFrequency: "monthly",
     },
+    {
+      path: "/services/chauffeur-prive-marseille",
+      priority: 0.85,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/services/marseille-aix-cassis",
+      priority: 0.85,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/services/trajets-hotels-evenements",
+      priority: 0.85,
+      changeFrequency: "monthly",
+    },
     { path: "/secteurs", priority: 0.9, changeFrequency: "monthly" },
     {
       path: "/secteurs/vieux-port",
@@ -58,6 +68,11 @@ export default function sitemap() {
     },
     {
       path: "/secteurs/le-panier",
+      priority: 0.85,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/secteurs/port-de-croisiere",
       priority: 0.85,
       changeFrequency: "monthly",
     },
@@ -76,19 +91,40 @@ export default function sitemap() {
       changeFrequency: "yearly",
     },
     { path: "/mentions-legales", priority: 0.5, changeFrequency: "yearly" },
-  ].map(({ path, priority, changeFrequency }) => ({
+  ];
+
+  return staticPaths.map(({ path, priority, changeFrequency }) => ({
     url: `${baseUrl}${path}`,
     lastModified: now,
     changeFrequency,
     priority,
   }));
+}
 
-  const blogPosts = getAllPostSlugs().map(({ slug }) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: postDatesMap[slug] || now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+/** Import dynamique : si le blog plante au chargement, le sitemap des services reste valide */
+export default async function sitemap() {
+  const now = new Date();
+  const staticEntries = getStaticUrlEntries(now);
 
-  return [...staticPages, ...blogPosts];
+  try {
+    const { getAllPostSlugs, getAllPosts } = await import("@/lib/blogManifest");
+    const allPosts = getAllPosts();
+    const postDatesMap = {};
+    allPosts.forEach((post) => {
+      const d = post.date ? new Date(post.date) : now;
+      postDatesMap[post.slug] = Number.isNaN(d.getTime()) ? now : d;
+    });
+
+    const blogEntries = getAllPostSlugs().map(({ slug }) => ({
+      url: `${baseUrl}/blog/${slug}`,
+      lastModified: postDatesMap[slug] || now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }));
+
+    return [...staticEntries, ...blogEntries];
+  } catch (e) {
+    console.error("[sitemap] Fallback sans articles blog:", e?.message || e);
+    return staticEntries;
+  }
 }

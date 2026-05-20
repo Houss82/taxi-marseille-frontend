@@ -18,11 +18,11 @@ import Script from "next/script";
 
 export const metadata = {
   title:
-    "Taxi van 8 places Marseille | Mercedes van 8 places — groupes & transferts | Taxi Marseille",
+    "Taxi van Marseille | Mercedes 8 places, groupe & transferts 24h/24",
   description:
-    "Taxi van à Marseille avec chauffeur : Mercedes van 8 places pour l’aéroport MRS, la gare, hôtels et séminaires, Aix-en-Provence, Cassis. Bagages, enfants, PMR sur demande. Devis et réservation.",
+    "Taxi van à Marseille : Mercedes 8 places pour aéroport MRS, gare Saint-Charles, mariages et séminaires. Un seul véhicule pour votre groupe, tarif annoncé à la réservation, bagages inclus. 7j/7.",
   keywords:
-    "mercedes van 8 places marseille, van 8 places marseille, taxi van marseille, van taxi marseille, taxi groupe marseille, navette 8 passagers marseille",
+    "taxi van marseille, taxi van 8 places marseille, van marseille groupe, taxi marseille 8 passagers, transfert van aeroport marseille, mercedes van marseille, navette van marseille",
   alternates: {
     canonical: "https://www.taxis-marseille.fr/services/van-8-places",
   },
@@ -53,30 +53,79 @@ const gallery = [
 ];
 
 export default function Van8PlacesPage() {
+  const vanUseCases = [
+    {
+      title: "Aéroport & gare",
+      desc: "MRS, Saint-Charles : un van pour tout le groupe, sans multiplier les taxis ni les parkings.",
+      href: "/services/taxi-aeroport-marseille",
+      label: "Transfert aéroport",
+    },
+    {
+      title: "Mariage & événements",
+      desc: "Invités, cortège ou navettes entre lieux de réception — mise à disposition possible.",
+      href: "/services/mise-a-disposition-mariage-congres",
+      label: "Mise à disposition",
+    },
+    {
+      title: "Séminaire & entreprise",
+      desc: "Accueil délégations, salons Chanot ou Euroméditerranée, image soignée et ponctualité.",
+      href: "/services/mise-a-disposition-mariage-congres",
+      label: "Service pro",
+    },
+    {
+      title: "Excursions & littoral",
+      desc: "Aix, Cassis, calanques : voyagez ensemble plutôt qu’en plusieurs voitures.",
+      href: "/services/marseille-aix-cassis",
+      label: "Longue distance",
+    },
+  ];
+
   const faqItems = [
     {
-      q: "Peut-on réserver un Mercedes van 8 places pour l’aéroport MRS ou la gare Saint-Charles ?",
-      a: "Oui. Indiquez l’heure, le numéro de vol ou de train, le nombre de passagers et les bagages. Nous confirmons rapidement selon disponibilité.",
+      q: "Quels sont les avantages d’un taxi van à Marseille ?",
+      a: "Un taxi van à Marseille permet de voyager à plusieurs dans un seul véhicule spacieux, avec bagages et chauffeur professionnel. C’est plus simple qu’un bus touristique pour un trajet direct, et souvent plus économique que plusieurs voitures ou taxis séparés.",
+    },
+    {
+      q: "Combien de passagers accueille votre taxi van à Marseille ?",
+      a: "Notre Mercedes van 8 places peut transporter jusqu’à 8 passagers selon la configuration et les bagages. Indiquez le nombre exact d’adultes, d’enfants et de valises lors de la réservation pour confirmer la faisabilité.",
+    },
+    {
+      q: "Peut-on réserver un taxi van depuis l’aéroport ou la gare de Marseille ?",
+      a: "Oui. Nous assurons les transferts en taxi van depuis l’aéroport Marseille Provence (MRS) et la gare Saint-Charles, avec possibilité de pancarte nominative et adaptation en cas de retard de vol ou de train.",
+    },
+    {
+      q: "Pourquoi choisir un taxi van plutôt que plusieurs voitures ?",
+      a: "Un seul taxi van regroupe tout le monde, réduit les frais de parking, évite de coordonner plusieurs véhicules et simplifie les trajets avec bagages volumineux ou enfants.",
+    },
+    {
+      q: "Quel est le prix d’un taxi van à Marseille pour un groupe ?",
+      a: "Le tarif dépend de la distance, de l’horaire, de la durée (transfert simple ou mise à disposition) et du nombre de passagers. Le montant ou le forfait est communiqué avant confirmation — pas de surprise au compteur si vous avez validé le devis.",
+    },
+    {
+      q: "Le taxi van Marseille est-il disponible 24h/24 ?",
+      a: "Nous intervenons 7j/7 sur réservation, y compris tôt le matin, tard le soir et les week-ends, selon disponibilité du véhicule.",
     },
     {
       q: "Combien de bagages peut-on mettre dans le van ?",
-      a: "Le van est adapté aux groupes avec valises. La capacité exacte dépend du nombre de passagers et du format des bagages (valises cabine, grands formats, poussette).",
+      a: "Le van est adapté aux groupes avec valises. La capacité exacte dépend du nombre de passagers et du format des bagages (cabine, soutes, poussettes, matériel pro).",
     },
     {
       q: "Proposez-vous sièges enfant / rehausseurs ?",
-      a: "Oui, sur demande lors de la réservation (selon disponibilité). Précisez l’âge de l’enfant pour l’équipement adapté.",
+      a: "Oui, sur demande à la réservation (selon disponibilité). Précisez l’âge de l’enfant pour l’équipement adapté.",
     },
     {
-      q: "Peut-on réserver le van pour une mise à disposition (mariage, congrès) ?",
-      a: "Oui. Nous pouvons organiser une mise à disposition avec chauffeur pour plusieurs trajets sur la journée ou la soirée, avec un devis clair.",
+      q: "Peut-on réserver un taxi van pour un mariage ou un séminaire ?",
+      a: "Oui. Mise à disposition sur plusieurs heures, navettes invités ou trajets ponctuels : nous établissons un devis adapté à votre planning.",
     },
   ];
 
   const serviceJson = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Taxi van 8 places Marseille (Mercedes van 8 places)",
-    serviceType: "Taxi van / transport de groupes",
+    name: "Taxi van Marseille — Mercedes van 8 places",
+    serviceType: "Taxi van Marseille / transport de groupes",
+    description:
+      "Taxi van à Marseille avec chauffeur : Mercedes 8 places pour aéroport, gare, événements et longues distances. Tarif annoncé à la réservation.",
     areaServed: [
       "Marseille",
       "Aéroport Marseille Provence (MRS)",
@@ -111,7 +160,7 @@ export default function Van8PlacesPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative min-h-[88vh] flex items-center overflow-hidden pt-20">
+      <section className="service-hero relative min-h-[88vh] flex items-start md:items-center overflow-hidden pt-20 pb-16 md:pb-24">
         <Image
           src="/taxi-marseille-van-interieur-place-8.jpeg"
           alt="Taxi van Marseille — Mercedes van 8 places, intérieur"
@@ -130,7 +179,7 @@ export default function Van8PlacesPage() {
           aria-hidden
         />
 
-        <div className="relative z-10 w-full">
+        <div className="service-hero-inner relative z-10 w-full">
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
               <div className="text-white">
@@ -146,13 +195,16 @@ export default function Van8PlacesPage() {
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-black leading-tight text-balance">
-                  Taxi van 8 places Marseille
+                  Taxi van Marseille
                 </h1>
-                <p className="mt-5 max-w-2xl text-lg md:text-xl text-white/90 leading-relaxed">
-                  Un seul véhicule pour toute la famille, l’équipe ou les
-                  invités. <strong>Confort</strong>, <strong>coffre</strong> et
-                  chauffeur habitué à la métropole, à l’aéroport MRS et aux
-                  escapades vers Aix ou Cassis.
+                <p className="mt-3 text-lg md:text-xl font-semibold text-cyan-100/95">
+                  Mercedes 8 places · groupes, bagages & transferts 24h/24
+                </p>
+                <p className="mt-4 max-w-2xl text-lg md:text-xl text-white/90 leading-relaxed">
+                  Réservez un <strong>taxi van à Marseille</strong> pour voyager
+                  ensemble : famille, amis, collègues ou invités. Un seul
+                  véhicule, <strong>tarif annoncé</strong>, chauffeur local
+                  (MRS, gare, port, Aix, Cassis).
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -161,7 +213,7 @@ export default function Van8PlacesPage() {
                     size="lg"
                     className="bg-accent px-8 py-6 text-lg text-accent-foreground hover:opacity-90"
                   >
-                    Réserver le van 8 places
+                    Réserver un taxi van
                   </Button>
                   <Button
                     href="/contact"
@@ -193,7 +245,7 @@ export default function Van8PlacesPage() {
               </div>
 
               {/* Carte “comment ça marche” */}
-              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 md:p-8 text-white backdrop-blur-sm shadow-2xl shadow-black/20">
+              <div className="service-hero-card rounded-3xl border border-white/15 bg-white/10 p-6 md:p-8 text-white backdrop-blur-sm shadow-2xl shadow-black/20">
                 <h2 className="text-xl md:text-2xl font-bold mb-4">
                   Comment réserver le van 8 places ?
                 </h2>
@@ -270,8 +322,92 @@ export default function Van8PlacesPage() {
         </div>
       </section>
 
+      {/* SEO — intention « taxi van marseille » */}
+      <section className="py-16 bg-linear-to-b from-cyan-50 via-white to-blue-50 border-b border-slate-100">
+        <div className="max-w-4xl mx-auto px-6 text-lg leading-relaxed text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            Taxi van Marseille : un seul véhicule pour tout votre groupe
+          </h2>
+          <p className="mb-4">
+            Vous recherchez un <strong>taxi van à Marseille</strong> pour un
+            transfert aéroport, une arrivée en gare, un mariage, un séminaire ou
+            une excursion sur la Côte d&apos;Azur ? Notre{" "}
+            <strong>Mercedes van 8 places</strong> réunit confort, volume de
+            coffre et chauffeur connaissant la métropole — sans multiplier les
+            courses ni les places de parking.
+          </p>
+          <p className="mb-4">
+            Le <strong>taxi van Marseille</strong> est particulièrement pertinent
+            lorsque vous êtes plus de quatre passagers, lorsque vous voyagez
+            avec des <strong>bagages volumineux</strong> ou lorsque vous
+            souhaitez un <strong>tarif fixe annoncé</strong> avant le départ.
+            C&apos;est souvent plus simple et plus lisible que de réserver
+            plusieurs berlines ou que de venir en deux voitures particulières.
+          </p>
+          <p>
+            Nous desservons Marseille centre, l&apos;
+            <Link
+              href="/services/taxi-aeroport-marseille"
+              className="font-semibold text-cyan-700 underline-offset-2 hover:underline"
+            >
+              aéroport Marseille Provence (MRS)
+            </Link>
+            , la{" "}
+            <Link
+              href="/services/taxi-gare-saint-charles"
+              className="font-semibold text-cyan-700 underline-offset-2 hover:underline"
+            >
+              gare Saint-Charles
+            </Link>
+            , le{" "}
+            <Link
+              href="/services/port-de-croisieres"
+              className="font-semibold text-cyan-700 underline-offset-2 hover:underline"
+            >
+              port de croisière
+            </Link>{" "}
+            et les communes alentour (Aix, Cassis, Aubagne, La Ciotat selon
+            devis).
+          </p>
+        </div>
+      </section>
+
+      {/* Occasions — taxi van marseille */}
+      <section className="py-16 bg-white border-b border-slate-100">
+        <div className="mx-auto max-w-6xl px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4">
+            À quelle occasion réserver un taxi van à Marseille ?
+          </h2>
+          <p className="text-center text-slate-600 max-w-2xl mx-auto mb-10 text-lg">
+            Le van groupe évite la dispersion : un créneau, un chauffeur, un
+            devis clair.
+          </p>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {vanUseCases.map(({ title, desc, href, label }) => (
+              <div
+                key={title}
+                className="flex flex-col rounded-2xl border border-cyan-200/70 bg-linear-to-b from-white to-cyan-50/30 p-6 shadow-sm"
+              >
+                <h3 className="text-lg font-bold text-slate-900 mb-2">
+                  {title}
+                </h3>
+                <p className="text-sm leading-relaxed text-slate-600 flex-1">
+                  {desc}
+                </p>
+                <Link
+                  href={href}
+                  className="mt-4 text-sm font-semibold text-cyan-700 underline-offset-2 hover:underline"
+                >
+                  {label} →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Bento “infos utiles” */}
-      <section className="py-20 bg-white border-b border-slate-100">
+      <section className="service-bento py-20 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-cyan-200/70 bg-cyan-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-cyan-800">
@@ -377,7 +513,7 @@ export default function Van8PlacesPage() {
                   href="/reservation"
                   className="bg-white text-slate-950 hover:bg-white/90 px-6 py-6 text-base"
                 >
-                  Réserver le van 8 places
+                  Réserver un taxi van
                 </Button>
                 <Button
                   href="/contact"
@@ -397,7 +533,7 @@ export default function Van8PlacesPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <div className="order-2 lg:order-1">
             <h2 className="mb-6 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-              Pourquoi choisir notre Mercedes van 8 places avec Taxi Marseille ?
+              Pourquoi choisir notre taxi van à Marseille ?
             </h2>
             <div className="space-y-4 text-lg leading-relaxed text-slate-700">
               <p>
@@ -564,7 +700,7 @@ export default function Van8PlacesPage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="rounded-3xl border border-blue-200/60 bg-linear-to-b from-white via-white to-blue-50/40 p-8 md:p-10 shadow-sm">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900">
-              Questions fréquentes sur le van 8 places à Marseille
+              FAQ — taxi van Marseille & van 8 places
             </h2>
             <div className="space-y-6">
               {faqItems.map((item) => (
@@ -597,7 +733,7 @@ export default function Van8PlacesPage() {
             <div className="grid gap-8 md:grid-cols-2 md:items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-black">
-                  Prêt à réserver votre van 8 places ?
+                  Prêt à réserver votre taxi van à Marseille ?
                 </h2>
                 <p className="mt-4 text-white/80 leading-relaxed">
                   Indiquez la date, l’heure, passagers et bagages. On confirme

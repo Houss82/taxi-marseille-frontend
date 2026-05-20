@@ -1,5 +1,13 @@
+import BlogPagination from "@/app/components/BlogPagination";
 import SEOBreadcrumb from "@/app/components/SEOBreadcrumb";
 import { getAllPosts } from "@/lib/blog";
+import {
+  BLOG_POSTS_PER_PAGE,
+  getSafePage,
+  getTotalPages,
+  paginatePosts,
+  parseBlogPage,
+} from "@/lib/blogPagination";
 import blogCategories, {
   getCategoryById,
   getCategoryIdFromArticleCategory,
@@ -45,9 +53,14 @@ export default async function BlogPage({ searchParams }) {
     });
   }
 
-  const displayedPosts = selectedCategory
-    ? filteredPosts
-    : filteredPosts.slice(0, 9);
+  const requestedPage = parseBlogPage(resolvedSearchParams?.page);
+  const totalPages = getTotalPages(filteredPosts.length);
+  const currentPage = getSafePage(requestedPage, totalPages);
+  const displayedPosts = paginatePosts(
+    filteredPosts,
+    currentPage,
+    BLOG_POSTS_PER_PAGE
+  );
 
   const breadcrumbItems = [
     {
@@ -206,7 +219,7 @@ export default async function BlogPage({ searchParams }) {
         </div>
       </section>
 
-      <section className="py-16">
+      <section id="articles" className="py-16 scroll-mt-28">
         <div className="max-w-7xl mx-auto px-4">
           {displayedPosts.length === 0 ? (
             <div className="text-center py-20">
@@ -299,6 +312,14 @@ export default async function BlogPage({ searchParams }) {
               })}
             </div>
           )}
+
+          <BlogPagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            totalItems={filteredPosts.length}
+            categoryId={selectedCategoryId}
+            perPage={BLOG_POSTS_PER_PAGE}
+          />
         </div>
       </section>
 
