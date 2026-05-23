@@ -1,5 +1,7 @@
 // app/politique-confidentialite/page.jsx — POLITIQUE DE CONFIDENTIALITÉ
 
+import { CONTACT_EMAIL, CONTACT_MAILTO_HREF } from "../lib/email";
+
 export const metadata = {
   title: "Politique de confidentialité | Taxi Marseille",
   description:
@@ -303,10 +305,10 @@ export default function PolitiqueConfidentialite() {
                       <Mail className="w-4 h-4 inline mr-2 text-accent" />
                       Pour exercer vos droits, contactez-nous à{" "}
                       <a
-                        href="mailto:contact@taxis-marseille.fr"
+                        href={CONTACT_MAILTO_HREF}
                         className="text-accent font-bold hover:underline"
                       >
-                        contact@taxis-marseille.fr
+                        {CONTACT_EMAIL}
                       </a>
                     </p>
                   </div>

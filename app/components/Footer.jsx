@@ -3,6 +3,7 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { CONTACT_EMAIL, CONTACT_MAILTO_HREF } from "../lib/email";
 import { GOOGLE_BUSINESS_MAPS_URL } from "../lib/google-business";
 import { PHONE_FR, PHONE_TEL_HREF } from "../lib/phone";
 
@@ -100,11 +101,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:contact@taxis-marseille.fr"
+                  href={CONTACT_MAILTO_HREF}
                   className={contactLink}
                 >
                   <Mail className="w-4 h-4 shrink-0 pointer-events-none" />
-                  contact@taxis-marseille.fr
+                  {CONTACT_EMAIL}
                 </a>
               </li>
               <li className="flex items-start gap-2">

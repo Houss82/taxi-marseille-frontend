@@ -11,6 +11,7 @@ export const metadata = {
 
 import { Building2, FileText, Globe, Mail, MapPin, Phone } from "lucide-react";
 import { GOOGLE_BUSINESS_MAPS_URL } from "../lib/google-business";
+import { CONTACT_EMAIL, CONTACT_MAILTO_HREF } from "../lib/email";
 import { PHONE_FR, PHONE_INTL, PHONE_TEL_HREF } from "../lib/phone";
 
 export default function MentionsLegales() {
@@ -102,10 +103,10 @@ export default function MentionsLegales() {
                       <div>
                         <p className="font-bold mb-1">Email :</p>
                         <a
-                          href="mailto:contact@taxis-marseille.fr"
+                          href={CONTACT_MAILTO_HREF}
                           className="text-accent hover:underline font-bold"
                         >
-                          contact@taxis-marseille.fr
+                          {CONTACT_EMAIL}
                         </a>
                       </div>
                     </div>

@@ -6,7 +6,8 @@ export default function robots() {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/_next/"],
+        // Ne pas bloquer /_next/ : Google a besoin de /_next/static et /_next/image pour le rendu
+        disallow: ["/api/"],
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,

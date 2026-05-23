@@ -6,7 +6,8 @@ import Link from "next/link"
 import Button from "../components/ui/Button"
 import Card from "../components/ui/Card"
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react"
-import ContactForm from "../components/client/ContactForm"
+import ContactForm from "../components/client/ContactForm";
+import { CONTACT_EMAIL, CONTACT_MAILTO_HREF } from "../lib/email";
 import { GOOGLE_BUSINESS_MAPS_URL } from "../lib/google-business"
 import {
   PHONE_FR,
@@ -42,9 +43,9 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      info: "contact@taxis-marseille.fr",
+      info: CONTACT_EMAIL,
       action: "Écrire",
-      href: "mailto:contact@taxis-marseille.fr",
+      href: CONTACT_MAILTO_HREF,
     },
   ]
 

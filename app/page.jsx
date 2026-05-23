@@ -43,6 +43,7 @@ import VehicleCarousel from "./components/client/VehicleCarousel";
 import Button from "./components/ui/Button";
 import Card from "./components/ui/Card";
 import { GOOGLE_BUSINESS_MAPS_URL } from "./lib/google-business";
+import { CONTACT_EMAIL } from "./lib/email";
 import { PHONE_FR, PHONE_SCHEMA, PHONE_TEL_HREF } from "./lib/phone";
 
 /** Serif élégante pour le nom de marque — lisible, premium, sobre (hôtellerie / transport) */
@@ -1036,6 +1037,7 @@ export default function Home() {
             name: "Taxi Marseille",
             url: "https://www.taxis-marseille.fr/",
             telephone: PHONE_SCHEMA,
+            email: CONTACT_EMAIL,
             image: "https://www.taxis-marseille.fr/taxi-Marseille-logo.png",
             logo: "https://www.taxis-marseille.fr/taxi-Marseille-logo.png",
             areaServed: [
