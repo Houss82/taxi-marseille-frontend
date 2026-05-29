@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Blog Taxi Marseille | Conseils & Actualités Transport | Taxi Marseille",
+  title: "Blog Taxi Marseille | Conseils & Actualités Transport",
   description:
     "Découvrez nos conseils pour vos transports à Marseille et Provence. Guides pratiques, actualités et informations sur nos services de taxi premium. Articles sur transferts aéroport, excursions et spots photo.",
   keywords: [

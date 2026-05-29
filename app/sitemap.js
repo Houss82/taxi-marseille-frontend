@@ -36,6 +36,11 @@ function getStaticUrlEntries(now) {
       changeFrequency: "monthly",
     },
     {
+      path: "/services/taxi-vieux-port",
+      priority: 0.85,
+      changeFrequency: "monthly",
+    },
+    {
       path: "/services/city-tour-visite-marseille",
       priority: 0.85,
       changeFrequency: "monthly",

@@ -23,7 +23,7 @@ Objectif : vous **orienter en quelques minutes**, choisir le **bon mode de trans
 <div class="highlight-box">
 <h2>Besoin d'un transfert réservé depuis la gare ?</h2>
 <p>Si vous préférez un <strong>point de rendez-vous confirmé</strong>, un <strong>tarif annoncé avant le trajet</strong> et une prise en charge adaptée à votre <strong>train</strong> (retard possible), consultez notre page service — réservation téléphone ou en ligne.</p>
-<p class="mb-0"><a href="/services/taxi-gare-saint-charles"><strong>Transferts gare Saint-Charles (réservation)</strong></a> · <a href="/reservation">Réserver en ligne</a> · <a href="/tarifs">Tarifs indicatifs</a></p>
+<p class="mb-0"><a href="/services/taxi-gare-saint-charles"><strong>Transferts gare Saint-Charles (réservation)</strong></a> · <a href="/reservation">Réserver en ligne</a> · <a href="/tarifs">Tarifs indicatifs</a> · <a href="/services/taxi-aeroport-marseille">Taxi aéroport MRS</a> · <a href="/services/taxi-vieux-port">Taxi Vieux-Port</a></p>
 </div>
 
 ---

@@ -62,6 +62,13 @@ export default function Services() {
       href: "/services/taxi-gare-saint-charles",
     },
     {
+      title: "Taxi Vieux-Port",
+      desc: "Dépose quais, hôtels et restaurants — transferts port, gare et aéroport",
+      image: "/vieux-port-marseille.jpg",
+      details: ["Dépose au plus près", "Centre historique", "Ferries & croisières"],
+      href: "/services/taxi-vieux-port",
+    },
+    {
       title: "City tour : visite de Marseille",
       desc: "Vieux-Port, Panier, Notre-Dame-de-la-Garde, littoral — sur mesure",
       image: "/vieux-port-marseille.jpg",
@@ -96,6 +103,7 @@ export default function Services() {
     { href: "/services/port-de-croisieres", label: "Taxi port de croisière Marseille (J4 / MPCT)" },
     { href: "/services/van-8-places", label: "Taxi van Marseille — Mercedes 8 places" },
     { href: "/services/taxi-gare-saint-charles", label: "Taxi gare Saint-Charles" },
+    { href: "/services/taxi-vieux-port", label: "Taxi Vieux-Port Marseille" },
     { href: "/services/city-tour-visite-marseille", label: "City tour Marseille en taxi" },
     {
       href: "/services/mise-a-disposition-mariage-congres",

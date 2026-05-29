@@ -25,7 +25,7 @@ Ci-dessous : nos **transferts depuis et vers les terminaux croisière**, les **p
 <div class="highlight-box">
 <h2>Réserver un taxi pour le port de croisière de Marseille</h2>
 <p>Nous assurons les <strong>courses depuis et vers les terminaux croisière de Marseille</strong> <strong>24 h/24 et 7 j/7</strong>, avec <strong>tarif annoncé à la réservation</strong>, <strong>dépose au plus près</strong> des zones d'accès passagers ou de votre hébergement, et <strong>chauffeurs locaux</strong> habitués aux <strong>créneaux d'escale</strong> et aux entrées du port. Mercedes GLC ou <strong>Mercedes van 8 places</strong> pour familles, groupes et bagages volumineux.</p>
-<p class="mb-0"><a href="/reservation">Réserver en ligne</a> · <a href="/tarifs">Consulter les tarifs</a> · <a href="/secteurs/joliette-euromediterranee">Secteur Joliette & Euroméditerranée</a></p>
+<p class="mb-0"><a href="/reservation">Réserver en ligne</a> · <a href="/tarifs">Consulter les tarifs</a> · <a href="/services/port-de-croisieres">Service taxi port de croisière</a> · <a href="/secteurs/joliette-euromediterranee">Secteur Joliette & Euroméditerranée</a> · <a href="/services/taxi-vieux-port">Taxi Vieux-Port</a></p>
 </div>
 
 ---

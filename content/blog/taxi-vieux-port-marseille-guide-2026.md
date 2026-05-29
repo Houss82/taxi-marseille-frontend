@@ -25,7 +25,7 @@ Ci-dessous : nos **transferts depuis et vers le Vieux-Port**, les **zones de dé
 <div class="highlight-box">
 <h2>Réserver un taxi pour le Vieux-Port de Marseille</h2>
 <p>Nous assurons les <strong>courses depuis et vers le Vieux-Port de Marseille</strong> <strong>24 h/24 et 7 j/7</strong>, avec <strong>tarif annoncé à la réservation</strong>, <strong>dépose au plus près</strong> de votre hôtel, restaurant ou quai d'embarquement, et <strong>chauffeurs locaux</strong> qui connaissent les voies autorisées. Mercedes GLC ou <strong>Mercedes van 8 places</strong> pour groupes, croisiéristes et familles avec bagages.</p>
-<p class="mb-0"><a href="/reservation">Réserver en ligne</a> · <a href="/tarifs">Consulter les tarifs</a> · <a href="/secteurs/vieux-port">Secteur Vieux-Port</a></p>
+<p class="mb-0"><a href="/reservation">Réserver en ligne</a> · <a href="/tarifs">Consulter les tarifs</a> · <a href="/services/taxi-vieux-port">Service taxi Vieux-Port</a> · <a href="/secteurs/vieux-port">Secteur Vieux-Port</a></p>
 </div>
 
 ---

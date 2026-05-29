@@ -329,7 +329,7 @@ export default function Home() {
                 label: "Marseille → Vieux-Port",
                 desc: "Ferries Corse/Maghreb, croisières, hôtels du port.",
                 meta: "Centre-ville",
-                href: "/secteurs/vieux-port",
+                href: "/services/taxi-vieux-port",
               },
               {
                 icon: Building2,
@@ -393,6 +393,82 @@ export default function Home() {
                 </Card>
               );
             })}
+          </div>
+
+          {/* Repères locaux — détails utiles + liens forts */}
+          <div className="mt-12 lg:mt-14">
+            <div className="mx-auto max-w-4xl text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900">
+                Repères locaux utiles (Marseille)
+              </h3>
+              <p className="mt-2 text-sm md:text-base text-slate-600">
+                Des infos concrètes (où, comment, quoi indiquer) pour éviter les
+                pertes de temps aux points chauds.
+              </p>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                {
+                  icon: Train,
+                  title: "Gare Saint-Charles",
+                  desc: "Correspondance TGV/TER : indiquez l’heure d’arrivée et le nombre de bagages.",
+                  href: "/services/taxi-gare-saint-charles",
+                  secondaryHref:
+                    "/blog/arriver-train-marseille-gare-saint-charles-guide-2026",
+                  secondaryLabel: "Guide arrivée en train",
+                },
+                {
+                  icon: Compass,
+                  title: "Port de croisière (J4 / MPCT)",
+                  desc: "Affluence + accès filtrés : précisez terminal, compagnie et heure d’embarquement.",
+                  href: "/services/port-de-croisieres",
+                  secondaryHref: "/blog/taxi-marseille-port-croisiere-guide-2026",
+                  secondaryLabel: "Guide croisière 2026",
+                },
+                {
+                  icon: Anchor,
+                  title: "Vieux-Port",
+                  desc: "Zones piétonnes + événements : dépose au plus près des axes autorisés.",
+                  href: "/services/taxi-vieux-port",
+                  secondaryHref: "/blog/taxi-vieux-port-marseille-guide-2026",
+                  secondaryLabel: "Guide Vieux-Port 2026",
+                },
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Card key={item.title} className="p-6">
+                    <div className="flex items-start gap-3">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                        <Icon className="h-5 w-5" aria-hidden />
+                      </span>
+                      <div className="min-w-0">
+                        <p className="text-lg font-bold text-slate-900">
+                          {item.title}
+                        </p>
+                        <p className="mt-1 text-sm text-slate-600">
+                          {item.desc}
+                        </p>
+                        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                          <Link
+                            href={item.href}
+                            className="font-semibold text-accent underline-offset-2 hover:underline"
+                          >
+                            Voir la page service
+                          </Link>
+                          <Link
+                            href={item.secondaryHref}
+                            className="font-semibold text-slate-700 underline-offset-2 hover:underline"
+                          >
+                            {item.secondaryLabel}
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>

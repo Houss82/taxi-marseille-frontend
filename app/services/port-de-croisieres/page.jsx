@@ -13,7 +13,9 @@ export const metadata = {
 import Button from "@/app/components/ui/Button";
 import {
   Anchor,
+  BookOpen,
   CheckCircle,
+  ChevronRight,
   Clock,
   Luggage,
   MapPin,
@@ -396,6 +398,67 @@ export default function PortDeCroisieres() {
       </section>
 
       {/* FAQ SEO */}
+      {/* Guides utiles — maillage services → articles */}
+      <section className="py-16 bg-white border-t border-slate-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="rounded-3xl border border-slate-200/70 bg-slate-50/60 p-8 md:p-10">
+            <div className="flex items-start gap-3 mb-6">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                <BookOpen className="h-5 w-5" aria-hidden />
+              </span>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+                  Guides utiles
+                </h2>
+                <p className="mt-1 text-slate-600 text-sm md:text-base">
+                  Terminaux J4 et MPCT, accès passagers et conseils avant
+                  embarquement ou débarquement.
+                </p>
+              </div>
+            </div>
+            <ul className="space-y-3">
+              {[
+                {
+                  href: "/blog/taxi-marseille-port-croisiere-guide-2026",
+                  title: "Port de croisière Marseille — guide 2026",
+                  desc: "J4, MPCT, affluence, dépose et correspondances depuis la ville.",
+                },
+                {
+                  href: "/blog/taxi-aeroport-marseille-mrs-guide-2026",
+                  title: "Taxi aéroport Marseille (MRS) — guide 2026",
+                  desc: "Trajet MRS ↔ port : durée, bagages, créneaux d'escale.",
+                },
+                {
+                  href: "/blog/taxi-vieux-port-marseille-guide-2026",
+                  title: "Taxi Vieux-Port Marseille — guide 2026",
+                  desc: "Lien centre-ville ↔ Joliette : ferries, hôtels et accès quais.",
+                },
+              ].map((guide) => (
+                <li key={guide.href}>
+                  <Link
+                    href={guide.href}
+                    className="group flex items-start justify-between gap-4 rounded-2xl border border-slate-200/80 bg-white p-5 transition-shadow hover:shadow-md"
+                  >
+                    <span>
+                      <span className="font-semibold text-slate-900 group-hover:text-accent">
+                        {guide.title}
+                      </span>
+                      <span className="mt-1 block text-sm text-slate-600">
+                        {guide.desc}
+                      </span>
+                    </span>
+                    <ChevronRight
+                      className="mt-1 h-5 w-5 shrink-0 text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-accent"
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-linear-to-b from-cyan-50 via-white to-blue-50">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900">

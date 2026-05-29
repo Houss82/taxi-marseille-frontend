@@ -32,6 +32,10 @@ const navItems = [
         href: "/services/taxi-gare-saint-charles",
       },
       {
+        label: "Taxi Vieux-Port",
+        href: "/services/taxi-vieux-port",
+      },
+      {
         label: "City tour : visite de Marseille",
         href: "/services/city-tour-visite-marseille",
       },
