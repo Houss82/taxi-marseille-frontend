@@ -415,8 +415,8 @@ export default function Home() {
                   desc: "Correspondance TGV/TER : indiquez l’heure d’arrivée et le nombre de bagages.",
                   href: "/services/taxi-gare-saint-charles",
                   secondaryHref:
-                    "/blog/arriver-train-marseille-gare-saint-charles-guide-2026",
-                  secondaryLabel: "Guide arrivée en train",
+                    "/blog/gare-saint-charles-sortie-honnorat-taxi-depose-rendezvous-2026",
+                  secondaryLabel: "Honnorat vs station taxi",
                 },
                 {
                   icon: Compass,

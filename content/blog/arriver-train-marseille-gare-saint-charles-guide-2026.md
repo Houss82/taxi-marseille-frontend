@@ -2,7 +2,7 @@
 title: "Arriver en train à Marseille : guide pratique Gare Saint-Charles (sorties, métro, bus)"
 date: "2026-05-19"
 excerpt: "Première arrivée en TGV ou TER à Saint-Charles ? Sorties, métro M1/M2, bus, temps vers le Vieux-Port ou l'aéroport, et quand privilégier un transfert réservé plutôt qu'un taxi en file d'attente."
-image: "/taxi-marseille-gare-st-charles.png"
+image: "/taxi-marseille-gare-st-charles.jpeg"
 category: "Guides Pratiques"
 author: "Taxi Marseille"
 language: "fr"
@@ -224,6 +224,7 @@ La **station taxi** de Saint-Charles fonctionne bien pour un trajet simple en jo
 
 ## 🔗 Pour aller plus loin
 
+- **[Sortie Honnorat, station taxi & rendez-vous](/blog/gare-saint-charles-sortie-honnorat-taxi-depose-rendezvous-2026)** — repérage terrain : Halle Honnorat (bus) vs taxis niveau -1.
 - **[Transferts gare Saint-Charles](/services/taxi-gare-saint-charles)** — réservation, prise en charge, van 8 places.
 - **[Guide aéroport MRS](/blog/taxi-aeroport-marseille-mrs-guide-2026)** — arrivée en avion puis train, ou l'inverse.
 - **[Guide Vieux-Port](/blog/taxi-vieux-port-marseille-guide-2026)** — quais, ferries, déposes.

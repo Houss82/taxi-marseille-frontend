@@ -95,7 +95,7 @@ export default function TaxiGareSaintCharles() {
       {/* Hero moderne */}
       <section className="service-hero relative min-h-[88vh] flex items-start md:items-center overflow-hidden pt-20 pb-16 md:pb-24">
         <Image
-          src="/taxi-marseille-gare-st-charles.png"
+          src="/taxi-marseille-gare-st-charles.jpeg"
           alt="Taxi Gare Saint-Charles Marseille - centre-ville et accès gare TGV"
           fill
           className="object-cover"
@@ -332,7 +332,7 @@ export default function TaxiGareSaintCharles() {
       {/* Parallax au milieu */}
       <section
         className="relative h-[52vh] md:h-[60vh] overflow-hidden bg-center bg-cover bg-no-repeat bg-scroll md:bg-fixed"
-        style={{ backgroundImage: "url(/taxi-marseille-gare-st-charles.png)" }}
+        style={{ backgroundImage: "url(/taxi-marseille-gare-st-charles.jpeg)" }}
         aria-label="Taxi Marseille — transferts depuis Saint-Charles"
       >
         <div className="absolute inset-0 bg-linear-to-b from-slate-950/70 via-slate-950/45 to-slate-950/65" />
@@ -454,6 +454,11 @@ export default function TaxiGareSaintCharles() {
             </div>
             <ul className="space-y-3">
               {[
+                {
+                  href: "/blog/gare-saint-charles-sortie-honnorat-taxi-depose-rendezvous-2026",
+                  title: "Sortie Honnorat, station taxi & rendez-vous — guide terrain",
+                  desc: "Halle Honnorat vs sous-sol Bourdet : où attendre votre chauffeur avec vos valises.",
+                },
                 {
                   href: "/blog/arriver-train-marseille-gare-saint-charles-guide-2026",
                   title: "Arriver en train à Saint-Charles — guide 2026",
