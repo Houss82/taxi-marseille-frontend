@@ -125,6 +125,18 @@ export default function Footer() {
                   Voir notre fiche Google
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://hoodspot.fr/taxi/taxi-marseille-89957515300015/"
+                  title="Taxi-Marseille (Hoodspot)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={contactLink}
+                >
+                  <MapPin className="w-4 h-4 shrink-0 pointer-events-none" />
+                  Fiche entreprise (Hoodspot)
+                </a>
+              </li>
               <li className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
                 <span>24/7 disponible</span>
