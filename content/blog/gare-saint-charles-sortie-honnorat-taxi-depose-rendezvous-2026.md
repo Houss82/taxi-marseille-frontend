@@ -2,7 +2,7 @@
 title: "Gare Saint-Charles : sortie Halle Honnorat, station taxi (sous-sol) et point de rendez-vous"
 date: "2026-05-29"
 excerpt: "Où attendre votre taxi à Saint-Charles ? Halle Honnorat (bus), station officielle niveau -1 dépose Bourdet, ou point de rendez-vous réservé : repères précis pour ne plus tourner en rond avec vos valises."
-image: "/taxi-marseille-gare-st-charles.jpeg"
+image: "/taxi-marseille-gare-st-charles.png"
 category: "Guides Pratiques"
 author: "Taxi Marseille"
 language: "fr"
@@ -36,14 +36,14 @@ Ce n’est **pas** un « guide taxi Marseille » générique : c’est un **rep�
 
 ## ⚠️ L’erreur la plus fréquente : « sortie Honnorat » ≠ taxi
 
-Sur les panneaux RTM et dans les applis, vous voyez souvent **« Gare routière – Sortie Honnorat »** (lignes **82**, **521** de nuit, etc.). Beaucoup de voyageurs en déduisent : *« mon chauffeur m’attend à la sortie Honnorat »*.
+Sur les panneaux RTM et dans les applis, vous voyez souvent **« Gare routière – Sortie Honnorat »** (lignes **82**, **521** de nuit, etc.). Beaucoup de voyageurs en déduisent : _« mon chauffeur m’attend à la sortie Honnorat »_.
 
 **En pratique :**
 
 - La **Halle Honnorat** (hall d’extension inauguré en **2007**, ~**6 400 m²**) sert surtout de **liaison** vers la **gare routière** (**rue Honnorat**, **13003**), les **cars** (Flixbus, BlaBlaCar Bus, Cartreize, Zou !…) et une partie des **commerces**.
 - La **station taxi officielle** SNCF n’est **pas** sur le parvis Honnorat : elle est au **niveau -1**, sur la **dépose-minute « Bourdet »**, **3ᵉ voie** — comme l’indique l’[Office de Tourisme de Marseille](https://www.marseille-tourisme.com/organisez-votre-sejour/acces-et-infos-pratiques/arriver-a-marseille/) pour les voyageurs en train.
 
-**Conséquence terrain :** si votre message dit seulement *« devant la gare »* ou *« sortie Honnorat »* sans précision, le chauffeur peut être au **sous-sol** pendant que vous êtes sur la **rue Honnorat** côté bus — ou l’inverse.
+**Conséquence terrain :** si votre message dit seulement _« devant la gare »_ ou _« sortie Honnorat »_ sans précision, le chauffeur peut être au **sous-sol** pendant que vous êtes sur la **rue Honnorat** côté bus — ou l’inverse.
 
 ---
 
@@ -161,7 +161,7 @@ Avec un **transfert réservé** (taxi ou VTC professionnel), le point de rendez-
 - **Numéro de train** + **heure prévue** (TER / TGV / Intercités).
 - **Wagon** si connu (prise en charge plus fluide sur les longs quais).
 - **Nombre de passagers** et **grandes valises** (van 8 places ?).
-- **Sortie convenue** : *« Hall pancarte »* ou *« Bourdet -1 voie 3 »* — **pas** seulement *« gare Saint-Charles »*.
+- **Sortie convenue** : _« Hall pancarte »_ ou _« Bourdet -1 voie 3 »_ — **pas** seulement _« gare Saint-Charles »_.
 
 <div class="info-box">
 <strong>🧳 Bagages :</strong> Entre quais et hall, prévoyez souvent **escaliers** ou **ascenseurs** peu visibles au premier passage. Ajoutez **10–15 min** si vous avez deux grosses valises et que vous devez encore descendre au **-1**.
@@ -225,12 +225,37 @@ En **dépose** ponctuelle parfois, mais ce n’est **pas** la station ni le poin
 
 ### Différence entre taxi sur place et transfert réservé ?
 
-| | **Station -1** | **Réservé** |
-| --- | --- | --- |
-| Prix | Compteur | **Annoncé à l’avance** (selon offre) |
-| Attente | File | **Créneau convenu** |
-| Rendez-vous | File commune | **Hall / Bourdet précisé** |
-| Train en retard | Vous gérez | **Numéro de train** transmis |
+<table class="blog-table">
+  <thead>
+    <tr>
+      <th>Critère</th>
+      <th>Station -1</th>
+      <th>Réservé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Prix</strong></td>
+      <td>Compteur</td>
+      <td><strong>Annoncé à l'avance</strong> (selon offre)</td>
+    </tr>
+    <tr>
+      <td><strong>Attente</strong></td>
+      <td>File</td>
+      <td><strong>Créneau convenu</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Rendez-vous</strong></td>
+      <td>File commune</td>
+      <td><strong>Hall / Bourdet précisé</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Train en retard</strong></td>
+      <td>Vous gérez</td>
+      <td><strong>Numéro de train</strong> transmis</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Où prendre le métro si je n’ai qu’un sac à dos ?
 

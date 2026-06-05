@@ -423,8 +423,9 @@ export default function Home() {
                   title: "Port de croisière (J4 / MPCT)",
                   desc: "Affluence + accès filtrés : précisez terminal, compagnie et heure d’embarquement.",
                   href: "/services/port-de-croisieres",
-                  secondaryHref: "/blog/taxi-marseille-port-croisiere-guide-2026",
-                  secondaryLabel: "Guide croisière 2026",
+                  secondaryHref:
+                    "/blog/terminal-j4-marseille-retrouver-chauffeur-taxi-rendezvous-2026",
+                  secondaryLabel: "Retrouver chauffeur J4",
                 },
                 {
                   icon: Anchor,

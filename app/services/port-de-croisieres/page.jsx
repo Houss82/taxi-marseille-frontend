@@ -419,6 +419,11 @@ export default function PortDeCroisieres() {
             <ul className="space-y-3">
               {[
                 {
+                  href: "/blog/terminal-j4-marseille-retrouver-chauffeur-taxi-rendezvous-2026",
+                  title: "Terminal J4 — où retrouver son chauffeur",
+                  desc: "Esplanade J4, pancarte sortie terminal, station Joliette : repères terrain.",
+                },
+                {
                   href: "/blog/taxi-marseille-port-croisiere-guide-2026",
                   title: "Port de croisière Marseille — guide 2026",
                   desc: "J4, MPCT, affluence, dépose et correspondances depuis la ville.",
