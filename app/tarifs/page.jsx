@@ -47,8 +47,16 @@ export default function Pricing() {
                 className="text-accent font-semibold underline-offset-2 hover:underline"
               >
                 transfert aéroport Marseille Provence
+              </Link>
+              {" · "}
+              pour Aix :{" "}
+              <Link
+                href="/blog/taxi-marseille-aix-en-provence-guide-2026"
+                className="text-accent font-semibold underline-offset-2 hover:underline"
+              >
+                taxi Marseille ↔ Aix-en-Provence
               </Link>{" "}
-              (durées, zones et conseils pratiques).
+              (durées, tarifs et conseils).
             </p>
           </div>
 
