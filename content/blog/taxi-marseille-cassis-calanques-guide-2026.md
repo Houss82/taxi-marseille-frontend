@@ -108,7 +108,7 @@ Retour vers **hôtel**, **Vieux-Port**, **Saint-Charles**, **port de croisière*
 
 ### Port & centre-ville
 
-<img src="/taxi-marseille-cassis-port.jpeg" alt="Taxi Marseille Mercedes van au port de Cassis, calanques en arrière-plan" />
+<img src="/taxi-marseille-cassis.jpeg" alt="Taxi Marseille Mercedes van au port de Cassis, calanques en arrière-plan" />
 
 Le **port de Cassis** concentre restaurants, départs bateaux et animation. Votre chauffeur vise la **dépose au plus près** selon les accès autorisés (quais, rues adjacentes, hôtels du centre). En haute saison, indiquer clairement **« port »**, **« centre »** ou le **nom de l’hôtel** évite les allers-retours inutiles.
 
