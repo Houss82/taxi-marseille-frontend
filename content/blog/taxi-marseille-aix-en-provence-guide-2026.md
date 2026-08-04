@@ -7,15 +7,6 @@ category: "Guides Pratiques"
 author: "Taxi Marseille"
 language: "fr"
 published: true
-keywords:
-  [
-    "taxi marseille aix",
-    "taxi aix en provence marseille",
-    "transfert marseille aix",
-    "prix taxi marseille aix",
-    "taxi gare tgv aix",
-    "taxi aix les milles",
-  ]
 ---
 
 **Aix-en-Provence** est l’une des destinations les plus demandées depuis **Marseille** : week-end touristique, rendez-vous professionnel, correspondance **TGV**, spectacle au **Grand Théâtre de Provence**, ou transfert depuis l’**aéroport Marseille Provence (MRS)**. Entre embouteillages sur l’**A7** puis l’**A51**, stationnement difficile en centre-ville et horaires de train serrés, un **taxi Marseille ↔ Aix-en-Provence** évite le stress et les changements de moyen de transport.
@@ -83,8 +74,6 @@ Ci-dessous : nos **trajets dans les deux sens**, l’**itinéraire type**, les *
 
 Sur le terrain, le choix exact des sorties dépend de votre adresse : **centre historique**, **gare TGV** (hors ville), ou **pôles d’activités** au sud-ouest d’Aix. Indiquez toujours l’**adresse complète** pour que le chauffeur anticipe le bon accès.
 
-<img src="/taxi-marseille-vieux-port.jpeg" alt="Départ en taxi depuis le Vieux-Port de Marseille vers Aix-en-Provence" />
-
 ---
 
 ## 🚖 Nos trajets Marseille ↔ Aix-en-Provence
@@ -97,13 +86,9 @@ Depuis le **Vieux-Port**, la **Canebière**, **Prado**, **Castellane** ou **Euro
 
 ### Gare Saint-Charles → Aix
 
-<img src="/taxi-marseille-gare-st-charles.jpeg" alt="Transfert taxi depuis la gare Saint-Charles de Marseille vers Aix" />
-
 Arrivée en **TGV** ou **TER** à **Saint-Charles** : un **transfert direct** vers Aix évite les correspondances. Dépose possible au **centre**, à votre **hôtel**, au **Grand Théâtre de Provence**, ou à la **gare TGV Aix-en-Provence** si vous enchaînez un autre train.
 
 ### Aéroport MRS → Aix-en-Provence
-
-<img src="/taxi-aeroport-marseille-marignane.jpeg" alt="Transfert taxi aéroport Marseille Provence MRS vers Aix-en-Provence" />
 
 Depuis **Marignane (MRS)**, le trajet vers **Aix** est souvent plus direct que via le centre de Marseille. Indiquez votre **numéro de vol** : nous adaptons le rendez-vous en **salle des arrivées** (suivi de vol lorsque possible). Voir aussi notre [guide taxi aéroport Marseille Provence](/blog/taxi-aeroport-marseille-mrs-guide-2026).
 
@@ -266,22 +251,8 @@ Sur notre grille, le trajet **Marseille → Aix-en-Provence** est affiché à **
 - **Coordination** avec votre **train**, **vol** ou **horaire de rendez-vous**.
 
 <div class="info-box">
-<strong>💰 Transparence :</strong> Pour un <strong>devis précis</strong>, passez par la <a href="/reservation">réservation en ligne</a> ou la page <a href="/tarifs">tarifs</a>. Les trajets en <strong>van 8 places</strong>, avec attente ou multi-arrêts, sont en général <strong>sur devis</strong>.
+<strong>💰 Transparence :</strong> Pour un <strong>devis précis</strong>, passez par la <a href="/reservation">réservation en ligne</a> ou la page <a href="/tarifs">tarifs</a>. Les trajets en <strong>van 8 places</strong>, avec attente ou multi-arrêts, sont en général <strong>sur devis</strong> — détail flotte sur la page <a href="/services/van-8-places">van 8 places</a>.
 </div>
-
----
-
-## 🚗 Véhicules pour le trajet Marseille – Aix
-
-### Mercedes GLC : 1 à 4 passagers
-
-<img src="/suv-marseille.png" alt="Mercedes SUV Taxi Marseille pour transfert vers Aix-en-Provence" />
-
-Confortable pour un **transfert business**, un **couple** ou une **petite famille** : coffre pour les valises, climatisation, tenue de route adaptée à l’autoroute et aux accès urbains d’Aix.
-
-### Mercedes van 8 places : groupes & familles
-
-Idéal pour **jusqu’à 8 passagers** : amis, famille élargie, équipe pro — **un seul véhicule** plutôt que plusieurs taxis. Notre van (photo ci-dessus à la **Rotonde d’Aix**) est pensé pour les transferts Marseille ↔ Aix avec bagages. Voir aussi le [service van 8 places](/services/van-8-places).
 
 ---
 

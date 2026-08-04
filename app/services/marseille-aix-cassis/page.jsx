@@ -90,15 +90,22 @@ export default function MarseilleAixCassis() {
               nous vous déposons au cœur d&apos;
               <strong>Aix-en-Provence</strong>, au port de{" "}
               <strong>Cassis</strong> pour embarquer vers les calanques, ou sur
-              les points de vue de la <strong>route des Crêtes</strong>. Guide
-              détaillé :{" "}
+              les points de vue de la <strong>route des Crêtes</strong>. Guides
+              détaillés :{" "}
               <Link
                 href="/blog/taxi-marseille-aix-en-provence-guide-2026"
                 className="font-semibold text-accent underline-offset-2 hover:underline"
               >
                 taxi Marseille ↔ Aix-en-Provence
+              </Link>
+              {" · "}
+              <Link
+                href="/blog/taxi-marseille-cassis-calanques-guide-2026"
+                className="font-semibold text-accent underline-offset-2 hover:underline"
+              >
+                taxi Marseille ↔ Cassis &amp; Calanques
               </Link>{" "}
-              (durée, tarifs, gare TGV).
+              (durée, tarifs, déposes).
             </p>
             <p className="text-base text-gray-700">
               Pour les groupes jusqu&apos;à 8 passagers, voir notre page dédiée{" "}

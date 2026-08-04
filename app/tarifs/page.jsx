@@ -55,6 +55,14 @@ export default function Pricing() {
                 className="text-accent font-semibold underline-offset-2 hover:underline"
               >
                 taxi Marseille ↔ Aix-en-Provence
+              </Link>
+              {" · "}
+              pour Cassis :{" "}
+              <Link
+                href="/blog/taxi-marseille-cassis-calanques-guide-2026"
+                className="text-accent font-semibold underline-offset-2 hover:underline"
+              >
+                taxi Marseille ↔ Cassis &amp; Calanques
               </Link>{" "}
               (durées, tarifs et conseils).
             </p>
