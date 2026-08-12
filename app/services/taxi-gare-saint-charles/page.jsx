@@ -43,7 +43,7 @@ export default function TaxiGareSaintCharles() {
     },
     {
       q: "Peut-on réserver un taxi depuis la gare vers l’aéroport Marseille Provence ?",
-      a: "Oui, vous pouvez réserver un transfert depuis la gare Saint-Charles vers l’aéroport Marseille Provence à Marignane.",
+      a: "Oui, vous pouvez réserver un transfert depuis la gare Saint-Charles vers l’aéroport Marseille Provence à Marignane via notre service taxi aéroport.",
     },
     {
       q: "Le taxi attend-il en cas de retard du train ?",
@@ -228,7 +228,14 @@ export default function TaxiGareSaintCharles() {
             pour votre arrivée en TGV, votre départ en train ou une
             correspondance ? Notre service vous accompagne depuis la gare vers
             le Vieux-Port, La Joliette, Euroméditerranée, Prado, les hôtels du
-            centre-ville ou l&apos;aéroport Marseille Provence.
+            centre-ville ou l&apos;
+            <Link
+              href="/services/taxi-aeroport-marseille"
+              className="font-semibold text-accent underline-offset-2 hover:underline"
+            >
+              aéroport Marseille Provence
+            </Link>
+            .
           </p>
           <p className="mb-4">
             Le chauffeur peut vous récupérer à la sortie de la gare, vous aider
@@ -306,7 +313,13 @@ export default function TaxiGareSaintCharles() {
                 Connexions rapides
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                Vieux-Port, Joliette/Euromed, terminaux croisière, aéroport MRS
+                Vieux-Port, Joliette/Euromed, terminaux croisière,{" "}
+                <Link
+                  href="/services/taxi-aeroport-marseille"
+                  className="font-semibold text-accent underline-offset-2 hover:underline"
+                >
+                  aéroport MRS
+                </Link>{" "}
                 : on optimise l’itinéraire selon l’heure et la circulation.
               </p>
               <div className="mt-6 rounded-2xl border border-cyan-200/70 bg-cyan-50 p-5 text-cyan-950">
@@ -465,9 +478,14 @@ export default function TaxiGareSaintCharles() {
                   desc: "Sorties, repères, station taxis et conseils avec bagages.",
                 },
                 {
+                  href: "/services/taxi-aeroport-marseille",
+                  title: "Taxi aéroport Marseille Provence",
+                  desc: "Réserver un transfert gare Saint-Charles ↔ aéroport MRS.",
+                },
+                {
                   href: "/blog/taxi-aeroport-marseille-mrs-guide-2026",
-                  title: "Taxi aéroport Marseille (MRS) — guide 2026",
-                  desc: "Correspondance gare ↔ aéroport : durée, horaires, point de rendez-vous.",
+                  title: "Aéroport MRS — guide pratique 2026",
+                  desc: "Correspondance gare ↔ aéroport : durée, horaires, conseils.",
                 },
                 {
                   href: "/blog/taxi-vieux-port-marseille-guide-2026",

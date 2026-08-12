@@ -16,28 +16,36 @@ const navItems = [
         href: "/services/taxi-aeroport-marseille",
       },
       {
-        label: "Mise à disposition (mariage & congrès)",
-        href: "/services/mise-a-disposition-mariage-congres",
+        label: "Gare Saint-Charles",
+        href: "/services/taxi-gare-saint-charles",
       },
       {
         label: "Mercedes van 8 places",
         href: "/services/van-8-places",
       },
       {
-        label: "Port de croisières",
-        href: "/services/port-de-croisieres",
+        label: "Mise à disposition (mariage & congrès)",
+        href: "/services/mise-a-disposition-mariage-congres",
       },
       {
-        label: "Gare Saint-Charles",
-        href: "/services/taxi-gare-saint-charles",
+        label: "Taxi Parc Chanot Marseille",
+        href: "/services/taxi-parc-chanot-marseille",
       },
       {
-        label: "Taxi Vieux-Port",
-        href: "/services/taxi-vieux-port",
+        label: "Hôtels & événements",
+        href: "/services/trajets-hotels-evenements",
       },
       {
         label: "City tour : visite de Marseille",
         href: "/services/city-tour-visite-marseille",
+      },
+      {
+        label: "Chauffeur privé Marseille",
+        href: "/services/chauffeur-prive-marseille",
+      },
+      {
+        label: "Trajets Marseille · Aix · Cassis",
+        href: "/services/marseille-aix-cassis",
       },
     ],
   },
@@ -54,6 +62,10 @@ const navItems = [
         href: "/secteurs/joliette-euromediterranee",
       },
       { label: "Le Panier", href: "/secteurs/le-panier" },
+      {
+        label: "Port de croisière",
+        href: "/secteurs/port-de-croisiere",
+      },
     ],
   },
   { label: "Tarifs", href: "/tarifs" },

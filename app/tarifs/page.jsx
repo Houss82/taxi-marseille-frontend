@@ -41,12 +41,12 @@ export default function Pricing() {
               </span>
             </p>
             <p className="mt-5 text-base text-muted-foreground max-w-2xl mx-auto">
-              Pour le trajet aéroport :{" "}
+              Pour organiser votre trajet aéroport :{" "}
               <Link
-                href="/blog/taxi-aeroport-marseille-mrs-guide-2026"
+                href="/services/taxi-aeroport-marseille"
                 className="text-accent font-semibold underline-offset-2 hover:underline"
               >
-                transfert aéroport Marseille Provence
+                taxi aéroport Marseille Provence
               </Link>
               {" · "}
               pour Aix :{" "}
@@ -63,8 +63,18 @@ export default function Pricing() {
                 className="text-accent font-semibold underline-offset-2 hover:underline"
               >
                 taxi Marseille ↔ Cassis &amp; Calanques
-              </Link>{" "}
-              (durées, tarifs et conseils).
+              </Link>
+              .
+            </p>
+            <p className="mt-3 text-sm text-muted-foreground max-w-2xl mx-auto">
+              Guide pratique (terminaux, durées, conseils) :{" "}
+              <Link
+                href="/blog/taxi-aeroport-marseille-mrs-guide-2026"
+                className="text-accent font-medium underline-offset-2 hover:underline"
+              >
+                aéroport MRS — guide 2026
+              </Link>
+              .
             </p>
           </div>
 

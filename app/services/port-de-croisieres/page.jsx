@@ -222,8 +222,14 @@ export default function PortDeCroisieres() {
             Vous recherchez un <strong>taxi port de croisière Marseille</strong>{" "}
             pour rejoindre les terminaux <strong>J4</strong>, <strong>MPCT</strong>{" "}
             ou le <strong>port de croisière La Joliette</strong> ? Notre service
-            assure vos transferts depuis l&apos;aéroport Marseille Provence, la
-            gare Saint-Charles, votre hôtel ou le centre-ville.
+            assure vos transferts depuis l&apos;
+            <Link
+              href="/services/taxi-aeroport-marseille"
+              className="font-semibold text-cyan-700 underline-offset-2 hover:underline"
+            >
+              aéroport Marseille Provence
+            </Link>
+            , la gare Saint-Charles, votre hôtel ou le centre-ville.
           </p>
           <p className="mb-4">
             Nos chauffeurs connaissent les accès aux différents terminaux de{" "}
@@ -419,6 +425,11 @@ export default function PortDeCroisieres() {
             <ul className="space-y-3">
               {[
                 {
+                  href: "/services/taxi-aeroport-marseille",
+                  title: "Taxi aéroport Marseille Provence",
+                  desc: "Réserver un transfert MRS ↔ port de croisière (J4, MPCT).",
+                },
+                {
                   href: "/blog/terminal-j4-marseille-retrouver-chauffeur-taxi-rendezvous-2026",
                   title: "Terminal J4 — où retrouver son chauffeur",
                   desc: "Esplanade J4, pancarte sortie terminal, station Joliette : repères terrain.",
@@ -430,8 +441,8 @@ export default function PortDeCroisieres() {
                 },
                 {
                   href: "/blog/taxi-aeroport-marseille-mrs-guide-2026",
-                  title: "Taxi aéroport Marseille (MRS) — guide 2026",
-                  desc: "Trajet MRS ↔ port : durée, bagages, créneaux d'escale.",
+                  title: "Aéroport MRS — guide pratique 2026",
+                  desc: "Terminaux, durées, bagages et conseils pour préparer le trajet.",
                 },
                 {
                   href: "/blog/taxi-vieux-port-marseille-guide-2026",

@@ -96,6 +96,13 @@ export default function Services() {
       details: ["Planning serré", "Bagages", "Attente sur site"],
       href: "/services/trajets-hotels-evenements",
     },
+    {
+      title: "Taxi Parc Chanot Marseille",
+      desc: "Salons, congrès et transferts professionnels au Parc Chanot",
+      image: "/marseille-evenements.jpg",
+      details: ["Salons & congrès", "Gare & aéroport", "Groupes & van"],
+      href: "/services/taxi-parc-chanot-marseille",
+    },
   ];
 
   const footerServiceLinks = [
@@ -112,6 +119,7 @@ export default function Services() {
     { href: "/services/chauffeur-prive-marseille", label: "Chauffeur privé Marseille" },
     { href: "/services/marseille-aix-cassis", label: "Trajets Marseille · Aix · Cassis" },
     { href: "/services/trajets-hotels-evenements", label: "Trajets hôtels & événements" },
+    { href: "/services/taxi-parc-chanot-marseille", label: "Taxi Parc Chanot Marseille" },
   ];
 
   return (

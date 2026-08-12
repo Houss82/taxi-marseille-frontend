@@ -173,7 +173,7 @@ export default async function SecteurPage({ params }) {
                   <div className="text-xs text-gray-500 font-semibold">
                     Note
                   </div>
-                  <div className="text-lg font-black text-gray-900">4,9/5</div>
+                  <div className="text-lg font-black text-gray-900">5/5</div>
                 </div>
               </div>
             </div>

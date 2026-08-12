@@ -60,6 +60,11 @@ function getStaticUrlEntries(now) {
       priority: 0.85,
       changeFrequency: "monthly",
     },
+    {
+      path: "/services/taxi-parc-chanot-marseille",
+      priority: 0.85,
+      changeFrequency: "monthly",
+    },
     { path: "/secteurs", priority: 0.9, changeFrequency: "monthly" },
     {
       path: "/secteurs/vieux-port",

@@ -92,6 +92,12 @@ export default function ServicesLayout({ children }) {
                 name: "Trajets hôtels et événements",
                 url: `${site}/services/trajets-hotels-evenements`,
               },
+              {
+                "@type": "ListItem",
+                position: 11,
+                name: "Taxi Parc Chanot Marseille",
+                url: `${site}/services/taxi-parc-chanot-marseille`,
+              },
             ],
           }),
         }}

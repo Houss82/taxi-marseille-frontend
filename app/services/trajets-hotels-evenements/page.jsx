@@ -14,6 +14,7 @@ export const metadata = {
 import Button from "@/app/components/ui/Button";
 import { Building2, CheckCircle, Clock, Shield, Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TrajetsHotelsEvenements() {
   return (
@@ -82,11 +83,28 @@ export default function TrajetsHotelsEvenements() {
           </h2>
           <div className="space-y-8 text-lg text-gray-800 leading-relaxed">
             <p>
-              Salons professionnels au <strong>Parc Chanot</strong>, séminaires
-              vue mer au <strong>Palais du Pharo</strong>, matchs à l&apos;
+              Salons professionnels au{" "}
+              <Link
+                href="/services/taxi-parc-chanot-marseille"
+                className="font-semibold text-accent underline-offset-2 hover:underline"
+              >
+                Parc Chanot
+              </Link>
+              , séminaires vue mer au <strong>Palais du Pharo</strong>, matchs à
+              l&apos;
               <strong>Orange Vélodrome</strong> ou soirées dans les hôtels du
               centre : nous planifions les déposes et prises en charge aux accès
               autorisés.
+            </p>
+            <p className="text-base text-gray-700">
+              Transfert dédié salon / congrès :{" "}
+              <Link
+                href="/services/taxi-parc-chanot-marseille"
+                className="font-semibold text-accent underline-offset-2 hover:underline"
+              >
+                taxi Parc Chanot Marseille
+              </Link>
+              .
             </p>
             <ul className="space-y-3">
               {[

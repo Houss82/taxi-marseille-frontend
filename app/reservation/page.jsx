@@ -31,10 +31,17 @@ export default function Reservation() {
             <p className="mt-4 text-sm text-muted-foreground max-w-xl mx-auto">
               Course depuis ou vers l&apos;aéroport ?{" "}
               <Link
+                href="/services/taxi-aeroport-marseille"
+                className="text-accent font-semibold underline-offset-2 hover:underline"
+              >
+                Service taxi aéroport Marseille Provence
+              </Link>
+              {" · "}
+              <Link
                 href="/blog/taxi-aeroport-marseille-mrs-guide-2026"
                 className="text-accent font-medium underline-offset-2 hover:underline"
               >
-                Chauffeur aéroport Marseille — infos utiles
+                guide pratique MRS
               </Link>
             </p>
           </div>

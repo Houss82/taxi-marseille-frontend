@@ -54,11 +54,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/mise-a-disposition-mariage-congres"
-                  className={navLink}
-                >
-                  Mise à disposition (mariage &amp; congrès)
+                <Link href="/services/taxi-gare-saint-charles" className={navLink}>
+                  Gare Saint-Charles
                 </Link>
               </li>
               <li>
@@ -67,18 +64,29 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/port-de-croisieres" className={navLink}>
-                  Port de croisières
+                <Link
+                  href="/services/mise-a-disposition-mariage-congres"
+                  className={navLink}
+                >
+                  Mise à disposition (mariage &amp; congrès)
                 </Link>
               </li>
               <li>
-                <Link href="/services/taxi-gare-saint-charles" className={navLink}>
-                  Gare Saint-Charles
+                <Link
+                  href="/services/taxi-parc-chanot-marseille"
+                  className={navLink}
+                >
+                  Taxi Parc Chanot Marseille
                 </Link>
               </li>
               <li>
                 <Link href="/services/city-tour-visite-marseille" className={navLink}>
                   City tour : visite de Marseille
+                </Link>
+              </li>
+              <li>
+                <Link href="/secteurs" className={navLink}>
+                  Nos secteurs
                 </Link>
               </li>
               <li>
