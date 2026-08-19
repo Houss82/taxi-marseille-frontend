@@ -3,7 +3,7 @@ title: "Taxi Orange Vélodrome Marseille : match OM, concerts et accès 2026"
 date: "2026-08-11"
 excerpt: "Comment organiser un trajet en taxi vers l’Orange Vélodrome à Marseille pour un match de l’OM, un concert ou un événement : accès, circulation, prise en charge et conseils pratiques."
 image: "/taxi-marseille-velodrome-match.jpeg"
-category: "Guides Pratiques"
+category: "Marseille & Actualités"
 author: "Taxi Marseille"
 language: "fr"
 published: true
@@ -91,7 +91,7 @@ Pour un **concert** :
 - gardez le même principe : **aller réservé** + **retour avec point de RDV** ;
 - si vous venez d’un hôtel ou d’un dîner en centre-ville, précisez les **deux adresses** dès la réservation.
 
-Le **Parc Chanot** (salons, foires) se situe à proximité immédiate du secteur : certains visiteurs enchaînent hôtel → Chanot → soirée au stade, ou l’inverse. Dans ce cas, une [mise à disposition](/services/mise-a-disposition-mariage-congres) ou un devis multi-arrêts peut être plus adapté qu’une seule course.
+Le **Parc Chanot** (salons, foires) se situe à proximité immédiate du secteur : certains visiteurs enchaînent hôtel → Chanot → soirée au stade, ou l’inverse. Dans ce cas, une [mise à disposition](/services/mise-a-disposition-mariage-congres) ou un devis multi-arrêts peut être plus adapté qu’une seule course. Pour un congrès côté Vieux-Port, voir aussi [taxi Palais du Pharo](/blog/taxi-palais-du-pharo-marseille-congres-acces).
 
 ---
 

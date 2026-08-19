@@ -3,7 +3,7 @@ title: "Terminal J4 Marseille : où retrouver son chauffeur (esplanade, Major, M
 date: "2026-06-02"
 excerpt: "Votre navire accoste au terminal J4 ? Repères précis pour retrouver votre taxi ou chauffeur réservé : esplanade J4, accès voiture, différence avec le MPCT (Porte 4) et points de rendez-vous à convenir."
 image: "/taxi-marseille-port-terminale-j4.jpeg"
-category: "Guides Pratiques"
+category: "Marseille & Actualités"
 author: "Taxi Marseille"
 language: "fr"
 published: true

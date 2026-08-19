@@ -3,7 +3,7 @@ title: "Taxi Marseille ↔ Aix-en-Provence : Trajets, Durée, Tarifs & Guide 202
 date: "2026-07-21"
 excerpt: "Taxi Marseille vers Aix-en-Provence : durée réelle selon trafic, tarifs, gare TGV Aix, Les Milles, Rotonde, aéroport MRS. Chauffeurs locaux, Mercedes, prix annoncé à la réservation."
 image: "/taxi-marseille-aix-en-provence.jpeg"
-category: "Guides Pratiques"
+category: "Taxi"
 author: "Taxi Marseille"
 language: "fr"
 published: true

@@ -268,8 +268,14 @@ export default function TaxiAeroportMarseille() {
               <p className="text-slate-700 leading-relaxed">
                 À l’arrivée : prise en charge au terminal / salle des arrivées
                 selon votre réservation. Nous aidons avec les bagages et
-                proposons un <strong>van 8 places</strong> pour groupes (selon
-                disponibilité).
+                proposons un{" "}
+                <Link
+                  href="/services/van-8-places"
+                  className="font-semibold text-accent underline-offset-2 hover:underline"
+                >
+                  van 8 places
+                </Link>{" "}
+                pour groupes (selon disponibilité).
               </p>
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 {[

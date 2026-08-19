@@ -98,6 +98,12 @@ export default function ServicesLayout({ children }) {
                 name: "Taxi Parc Chanot Marseille",
                 url: `${site}/services/taxi-parc-chanot-marseille`,
               },
+              {
+                "@type": "ListItem",
+                position: 12,
+                name: "Taxi Marseille La Ciotat",
+                url: `${site}/services/taxi-marseille-la-ciotat`,
+              },
             ],
           }),
         }}

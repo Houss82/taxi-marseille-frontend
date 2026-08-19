@@ -384,7 +384,13 @@ export default function MiseADispositionMariageCongres() {
             Cette solution est idéale pour un mariage, un congrès, une journée
             professionnelle, un événement au{" "}
             <strong>Parc Chanot Marseille</strong>, une réception au{" "}
-            <strong>Pharo</strong>, un transfert vers le{" "}
+            <Link
+              href="/blog/taxi-palais-du-pharo-marseille-congres-acces"
+              className="font-semibold text-cyan-700 underline-offset-2 hover:underline"
+            >
+              Palais du Pharo
+            </Link>
+            , un transfert vers le{" "}
             <strong>Vélodrome</strong> ou l’organisation de navettes pour vos
             invités.
           </p>

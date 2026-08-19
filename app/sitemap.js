@@ -65,6 +65,11 @@ function getStaticUrlEntries(now) {
       priority: 0.85,
       changeFrequency: "monthly",
     },
+    {
+      path: "/services/taxi-marseille-la-ciotat",
+      priority: 0.85,
+      changeFrequency: "monthly",
+    },
     { path: "/secteurs", priority: 0.9, changeFrequency: "monthly" },
     {
       path: "/secteurs/vieux-port",

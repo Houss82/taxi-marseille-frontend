@@ -3,7 +3,7 @@ title: "Taxi Marseille ↔ Cassis & Calanques : Trajets, Durée, Tarifs & Guide 
 date: "2026-08-04"
 excerpt: "Taxi Marseille vers Cassis et les Calanques : durée réelle, tarifs, dépose port, route des Crêtes, Cap Canaille. Chauffeurs locaux, Mercedes, van 8 places, prix annoncé à la réservation."
 image: "/taxi-marseille-cassis-port.jpeg"
-category: "Guides Pratiques"
+category: "Taxi"
 author: "Taxi Marseille"
 language: "fr"
 published: true
@@ -129,7 +129,7 @@ Les **calanques de Cassis** (Port-Miou, Port-Pin, En-Vau) se rejoignent à pied,
   <li>Hôtels et restaurants du <strong>centre</strong></li>
   <li><strong>Presqu’île / Bestouan</strong></li>
   <li>Points de départ vers la <strong>route des Crêtes</strong> / <strong>Cap Canaille</strong></li>
-  <li>Correspondance vers <strong>La Ciotat</strong> (sur devis)</li>
+  <li>Correspondance vers <a href="/services/taxi-marseille-la-ciotat"><strong>La Ciotat</strong></a> (transfert dédié)</li>
 </ul>
 </div>
 
@@ -256,7 +256,7 @@ Depuis **J4** ou **MPCT**, excursion Cassis avec **retour garanti avant l’heur
 
 ### Scénario 4 : Route des Crêtes & Cap Canaille
 
-**Mise à disposition** : arrêts photo aux belvédères, éventuellement prolongement vers **La Ciotat**, puis retour Marseille.
+**Mise à disposition** : arrêts photo aux belvédères, éventuellement prolongement vers **[La Ciotat](/services/taxi-marseille-la-ciotat)**, puis retour Marseille.
 
 ### Scénario 5 : Groupe / famille
 

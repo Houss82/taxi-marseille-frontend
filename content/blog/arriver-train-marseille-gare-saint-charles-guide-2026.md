@@ -3,7 +3,7 @@ title: "Arriver en train à Marseille : guide pratique Gare Saint-Charles (sorti
 date: "2026-05-19"
 excerpt: "Première arrivée en TGV ou TER à Saint-Charles ? Sorties, métro M1/M2, bus, temps vers le Vieux-Port ou l'aéroport, et quand privilégier un transfert réservé plutôt qu'un taxi en file d'attente."
 image: "/taxi-marseille-gare-st-charles.jpeg"
-category: "Guides Pratiques"
+category: "Transport"
 author: "Taxi Marseille"
 language: "fr"
 published: true

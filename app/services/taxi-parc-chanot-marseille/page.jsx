@@ -187,7 +187,14 @@ export default function TaxiParcChanotMarseille() {
                 </ul>
 
                 <p className="mt-6 text-sm text-white/80 max-w-2xl">
-                  Vue d’ensemble hôtels, Pharo, Vélodrome et autres lieux :{" "}
+                  Vue d’ensemble hôtels,{" "}
+                  <Link
+                    href="/blog/taxi-palais-du-pharo-marseille-congres-acces"
+                    className="font-semibold underline-offset-2 hover:underline"
+                  >
+                    Palais du Pharo
+                  </Link>
+                  , Vélodrome et autres lieux :{" "}
                   <Link
                     href="/services/trajets-hotels-evenements"
                     className="font-semibold underline-offset-2 hover:underline"

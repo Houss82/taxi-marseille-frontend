@@ -19,9 +19,24 @@ export default function Pricing() {
   const routes = [
     { from: "Aéroport MRS", to: "Marseille centre", price: 65 },
     { from: "Aéroport MRS", to: "Gare Saint-Charles", price: 70 },
-    { from: "Marseille", to: "Aix-en-Provence", price: 85 },
-    { from: "Marseille", to: "Cassis", price: 95 },
-    { from: "Marseille", to: "La Ciotat", price: 90 },
+    {
+      from: "Marseille",
+      to: "Aix-en-Provence",
+      price: 85,
+      href: "/services/marseille-aix-cassis",
+    },
+    {
+      from: "Marseille",
+      to: "Cassis",
+      price: 95,
+      href: "/services/marseille-aix-cassis",
+    },
+    {
+      from: "Marseille",
+      to: "La Ciotat",
+      price: 90,
+      href: "/services/taxi-marseille-la-ciotat",
+    },
     { from: "Gare TGV", to: "Vieux-Port", price: 35 },
   ];
 
@@ -49,30 +64,44 @@ export default function Pricing() {
                 taxi aéroport Marseille Provence
               </Link>
               {" · "}
-              pour Aix :{" "}
+              pour Aix ou Cassis :{" "}
               <Link
-                href="/blog/taxi-marseille-aix-en-provence-guide-2026"
+                href="/services/marseille-aix-cassis"
                 className="text-accent font-semibold underline-offset-2 hover:underline"
               >
-                taxi Marseille ↔ Aix-en-Provence
+                taxi Marseille → Aix &amp; Cassis
               </Link>
               {" · "}
-              pour Cassis :{" "}
+              pour La Ciotat :{" "}
               <Link
-                href="/blog/taxi-marseille-cassis-calanques-guide-2026"
+                href="/services/taxi-marseille-la-ciotat"
                 className="text-accent font-semibold underline-offset-2 hover:underline"
               >
-                taxi Marseille ↔ Cassis &amp; Calanques
+                taxi Marseille → La Ciotat
               </Link>
               .
             </p>
             <p className="mt-3 text-sm text-muted-foreground max-w-2xl mx-auto">
-              Guide pratique (terminaux, durées, conseils) :{" "}
+              Guides pratiques :{" "}
               <Link
                 href="/blog/taxi-aeroport-marseille-mrs-guide-2026"
                 className="text-accent font-medium underline-offset-2 hover:underline"
               >
-                aéroport MRS — guide 2026
+                aéroport MRS
+              </Link>
+              {" · "}
+              <Link
+                href="/blog/taxi-marseille-aix-en-provence-guide-2026"
+                className="text-accent font-medium underline-offset-2 hover:underline"
+              >
+                Aix-en-Provence
+              </Link>
+              {" · "}
+              <Link
+                href="/blog/taxi-marseille-cassis-calanques-guide-2026"
+                className="text-accent font-medium underline-offset-2 hover:underline"
+              >
+                Cassis &amp; Calanques
               </Link>
               .
             </p>
@@ -96,7 +125,18 @@ export default function Pricing() {
                       className="border-b border-border last:border-b-0 hover:bg-secondary transition-colors"
                     >
                       <td className="px-6 py-4">{route.from}</td>
-                      <td className="px-6 py-4">{route.to}</td>
+                      <td className="px-6 py-4">
+                        {route.href ? (
+                          <Link
+                            href={route.href}
+                            className="font-medium text-accent underline-offset-2 hover:underline"
+                          >
+                            {route.to}
+                          </Link>
+                        ) : (
+                          route.to
+                        )}
+                      </td>
                       <td className="px-6 py-4 text-right font-bold text-accent">
                         {route.price}€
                       </td>

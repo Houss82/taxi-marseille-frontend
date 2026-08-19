@@ -239,8 +239,14 @@ export default function PortDeCroisieres() {
           </p>
           <p>
             Pour les familles, groupes ou voyageurs avec plusieurs valises, un{" "}
-            <strong>van 8 places</strong> peut être proposé selon disponibilité
-            afin de faciliter votre arrivée au <strong>port de croisière de Marseille</strong>.
+            <Link
+              href="/services/van-8-places"
+              className="font-semibold text-cyan-700 underline-offset-2 hover:underline"
+            >
+              van 8 places
+            </Link>{" "}
+            peut être proposé selon disponibilité afin de faciliter votre
+            arrivée au <strong>port de croisière de Marseille</strong>.
           </p>
         </div>
       </section>

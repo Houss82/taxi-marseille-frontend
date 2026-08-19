@@ -3,7 +3,12 @@ title: "Votre titre d'article"
 date: "2025-01-20"
 excerpt: "Description courte de l'article qui apparaîtra dans la liste des articles"
 image: "/votre-image.jpg"
-category: "Guides Pratiques"
+category: "Taxi"
+# Catégories utiles → rubrique blog :
+# "Taxi" | "Transport" | "Transferts Aéroport" → Transferts & Déplacements
+# "Marseille & Actualités" → Marseille & Actualités
+# "Excursions" | "Tourisme" → Découvertes & Activités
+# "Guides Pratiques" → Conseils & Astuces (réservé aux checklists / RDV purement pratiques)
 author: "Taxi Marseille"
 keywords: ["mot1", "mot2", "mot3"]
 ---

@@ -782,8 +782,14 @@ export default function Home() {
                     <span className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></span>
                   </span>
                 </Link>{" "}
-                vers Aix-en-Provence, Cassis, l&apos;aéroport ou toute autre
-                destination.
+                vers{" "}
+                <Link
+                  href="/services/marseille-aix-cassis"
+                  className="text-accent font-bold hover:text-primary transition-colors"
+                >
+                  Aix-en-Provence et Cassis
+                </Link>
+                , l&apos;aéroport ou toute autre destination.
               </p>
             </div>
 
@@ -873,7 +879,12 @@ export default function Home() {
             <p className="text-lg text-muted-foreground">
               Véhicules haut de gamme :{" "}
               <strong className="text-foreground">SUV Mercedes</strong> et{" "}
-              <strong className="text-foreground">Mercedes van 8 places</strong>{" "}
+              <Link
+                href="/services/van-8-places"
+                className="font-semibold text-foreground underline-offset-2 hover:underline"
+              >
+                Mercedes van 8 places
+              </Link>{" "}
               pour familles et groupes.
             </p>
           </div>

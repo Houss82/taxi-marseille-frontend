@@ -241,8 +241,14 @@ export default function TaxiGareSaintCharles() {
             Le chauffeur peut vous récupérer à la sortie de la gare, vous aider
             avec vos bagages et vous conduire rapidement vers votre destination.
             Pour les familles, les groupes ou les voyageurs avec plusieurs
-            valises, un <strong>van 8 places</strong> peut être proposé selon
-            disponibilité.
+            valises, un{" "}
+            <Link
+              href="/services/van-8-places"
+              className="font-semibold text-accent underline-offset-2 hover:underline"
+            >
+              van 8 places
+            </Link>{" "}
+            peut être proposé selon disponibilité.
           </p>
           <p>
             Réservez votre <strong>taxi à la gare Saint-Charles</strong> en

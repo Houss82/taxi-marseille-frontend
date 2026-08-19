@@ -90,6 +90,13 @@ export default function Services() {
       href: "/services/marseille-aix-cassis",
     },
     {
+      title: "Taxi Marseille → La Ciotat",
+      desc: "Transfert porte à porte vers le port, le centre ou la gare",
+      image: "/taxi-marseille-cassis-calanques-cretes.jpeg",
+      details: ["Dès 90 € indicatif", "Aller-retour possible", "Van sur demande"],
+      href: "/services/taxi-marseille-la-ciotat",
+    },
+    {
       title: "Hôtels & événements",
       desc: "Venues, salons, stade, arrivées groupées",
       image: "/marseille-evenements.jpg",
@@ -118,6 +125,7 @@ export default function Services() {
     },
     { href: "/services/chauffeur-prive-marseille", label: "Chauffeur privé Marseille" },
     { href: "/services/marseille-aix-cassis", label: "Trajets Marseille · Aix · Cassis" },
+    { href: "/services/taxi-marseille-la-ciotat", label: "Taxi Marseille → La Ciotat" },
     { href: "/services/trajets-hotels-evenements", label: "Trajets hôtels & événements" },
     { href: "/services/taxi-parc-chanot-marseille", label: "Taxi Parc Chanot Marseille" },
   ];

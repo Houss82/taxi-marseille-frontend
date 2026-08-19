@@ -65,10 +65,26 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/services/chauffeur-prive-marseille"
+                  className={navLink}
+                >
+                  Chauffeur privé Marseille
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/services/mise-a-disposition-mariage-congres"
                   className={navLink}
                 >
                   Mise à disposition (mariage &amp; congrès)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/trajets-hotels-evenements"
+                  className={navLink}
+                >
+                  Hôtels &amp; événements
                 </Link>
               </li>
               <li>
@@ -82,6 +98,19 @@ export default function Footer() {
               <li>
                 <Link href="/services/city-tour-visite-marseille" className={navLink}>
                   City tour : visite de Marseille
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/marseille-aix-cassis" className={navLink}>
+                  Trajets Marseille · Aix · Cassis
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/taxi-marseille-la-ciotat"
+                  className={navLink}
+                >
+                  Taxi Marseille → La Ciotat
                 </Link>
               </li>
               <li>

@@ -24,28 +24,32 @@ const navItems = [
         href: "/services/van-8-places",
       },
       {
-        label: "Mise à disposition (mariage & congrès)",
-        href: "/services/mise-a-disposition-mariage-congres",
+        label: "Chauffeur privé Marseille",
+        href: "/services/chauffeur-prive-marseille",
       },
       {
-        label: "Taxi Parc Chanot Marseille",
-        href: "/services/taxi-parc-chanot-marseille",
+        label: "Mise à disposition (mariage & congrès)",
+        href: "/services/mise-a-disposition-mariage-congres",
       },
       {
         label: "Hôtels & événements",
         href: "/services/trajets-hotels-evenements",
       },
       {
+        label: "Taxi Parc Chanot Marseille",
+        href: "/services/taxi-parc-chanot-marseille",
+      },
+      {
         label: "City tour : visite de Marseille",
         href: "/services/city-tour-visite-marseille",
       },
       {
-        label: "Chauffeur privé Marseille",
-        href: "/services/chauffeur-prive-marseille",
-      },
-      {
         label: "Trajets Marseille · Aix · Cassis",
         href: "/services/marseille-aix-cassis",
+      },
+      {
+        label: "Taxi Marseille → La Ciotat",
+        href: "/services/taxi-marseille-la-ciotat",
       },
     ],
   },

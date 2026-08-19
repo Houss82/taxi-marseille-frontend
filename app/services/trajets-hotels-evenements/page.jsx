@@ -90,11 +90,22 @@ export default function TrajetsHotelsEvenements() {
               >
                 Parc Chanot
               </Link>
-              , séminaires vue mer au <strong>Palais du Pharo</strong>, matchs à
-              l&apos;
-              <strong>Orange Vélodrome</strong> ou soirées dans les hôtels du
-              centre : nous planifions les déposes et prises en charge aux accès
-              autorisés.
+              , séminaires vue mer au{" "}
+              <Link
+                href="/blog/taxi-palais-du-pharo-marseille-congres-acces"
+                className="font-semibold text-accent underline-offset-2 hover:underline"
+              >
+                Palais du Pharo
+              </Link>
+              , matchs à l&apos;
+              <Link
+                href="/blog/taxi-orange-velodrome-marseille-match-om-concerts-acces-2026"
+                className="font-semibold text-accent underline-offset-2 hover:underline"
+              >
+                Orange Vélodrome
+              </Link>{" "}
+              ou soirées dans les hôtels du centre : nous planifions les déposes
+              et prises en charge aux accès autorisés.
             </p>
             <p className="text-base text-gray-700">
               Transfert dédié salon / congrès :{" "}
