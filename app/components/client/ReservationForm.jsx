@@ -4,7 +4,7 @@ import { AlertCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { createReservation } from "../../lib/api";
-import { FORMSPREE_RESERVATION_URL } from "../../lib/formspree";
+import { emailService } from "../../lib/email-service";
 import { setReservationConfirmationFlag } from "../../lib/reservation-confirmation";
 import Button from "../ui/Button";
 import Card from "../ui/Card";
@@ -88,43 +88,12 @@ export default function ReservationForm() {
         commentaires: formData.notes || undefined, // Optionnel
       };
 
-      // Appeler l'API backend (code existant)
+      // Appeler l'API backend (comme Taxi Nice)
       const result = await createReservation(reservationData);
 
       if (result.result) {
-        // Envoyer également à Formspree pour recevoir les emails (en parallèle, sans bloquer)
-        try {
-          const formspreeData = {
-            type: "Réservation Taxi Marseille",
-            name: formData.name,
-            phone: `${indicatifPays} ${telephone}`,
-            email: formData.email || "Non renseigné",
-            from: formData.from,
-            to: formData.to,
-            date: formData.date,
-            time: formData.time,
-            passengers: formData.passengers,
-            luggage: formData.luggage,
-            vehicle:
-              formData.vehicle === "glc"
-                ? "Mercedes SUV"
-                : formData.vehicle === "vito"
-                  ? "Mercedes van 8 places"
-                  : formData.vehicle,
-            notes: formData.notes || "Aucune note",
-          };
-
-          await fetch(FORMSPREE_RESERVATION_URL, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formspreeData),
-          });
-        } catch (formspreeError) {
-          // Ne pas bloquer le processus si Formspree échoue
-          console.warn("Erreur Formspree (non bloquant):", formspreeError);
-        }
+        // Email via Resend (/api/email) — même système que Taxi Nice Côte d'Azur
+        await emailService.sendReservation(reservationData);
 
         const flagOk = setReservationConfirmationFlag();
         if (flagOk) {

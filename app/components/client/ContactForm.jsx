@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { CheckCircle, AlertCircle } from "lucide-react"
-import { FORMSPREE_URL } from "../../lib/formspree"
+import { emailService } from "../../lib/email-service"
 import Card from "../ui/Card"
 import Button from "../ui/Button"
 import Input from "../ui/Input"
@@ -25,24 +25,12 @@ export default function ContactForm() {
     setLoading(true)
 
     try {
-      // Envoyer à Formspree
-      const response = await fetch(FORMSPREE_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          type: "Contact Taxi Marseille",
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }),
+      await emailService.sendContact({
+        nom: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
       })
-
-      if (!response.ok) {
-        throw new Error("Erreur lors de l'envoi du message")
-      }
 
       setSubmitted(true)
       // Réinitialiser le formulaire après 5 secondes
