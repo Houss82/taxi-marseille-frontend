@@ -110,41 +110,48 @@ export const sectorData = {
   "joliette-euromediterranee": {
     slug: "joliette-euromediterranee",
     cityName: "Joliette & Euroméditerranée",
+    metaDescription:
+      "Taxi Joliette & Euroméditerranée à Marseille : Docks, bureaux CMA CGM, J4, ferries. Transferts MRS, Saint-Charles, Vieux-Port. Réservation 24h/24.",
     hero: {
       title: "Taxi Joliette & Euroméditerranée",
       highlight: "Docks, bureaux & gare maritime",
       subtitle:
         "Quartier d’affaires, musées et accès terminaux croisière et ferries",
-      image: "/cannes-hotels.jpg",
-      imageAlt: "Taxi dans le quartier Joliette & Euroméditerranée",
+      image: "/taxi-marseille-port-terminale-j4.jpeg",
+      imageAlt:
+        "Taxi près du terminal J4 à La Joliette — Euroméditerranée, Marseille",
     },
     introduction: [
-      "Le quartier Joliette & Euroméditerranée concentre les Docks, les tours de bureaux, les musées du J4 et les accès vers les terminaux ferries et croisière. Les plans de circulation y évoluent souvent avec les travaux et opérations portuaires.",
-      "En taxi, vous rejoignez rapidement vos rendez-vous d’affaires, hébergements ou embarquements sans avoir à gérer les zones en chantier ou les parkings parfois saturés.",
+      "La Joliette et Euroméditerranée forment le grand front de mer nord du centre de Marseille : Les Docks Village, les Terrasses du Port, les tours CMA CGM et La Marseillaise, les hôtels d’affaires, puis les accès vers le J4, le Mucem et les terminaux ferries / croisière. La circulation y change souvent avec les travaux, les arrivées de navires et les filtrages portuaires.",
+      "Réserver un taxi Joliette Marseille évite de chercher une place aux Docks ou de traverser des zones en chantier à pied avec des bagages. Votre chauffeur gère les accès autorisés jusqu’à l’adresse utile : bureau, hôtel, gare maritime ou point de rendez-vous proche du terminal.",
     ],
     secondaryIntro: [
-      "Nous desservons quotidiennement les bureaux, hôtels, centres de congrès et terminaux passagers du secteur. Les temps de trajet sont adaptés selon les créneaux de forte affluence (matin / soir, arrivées de navires).",
+      "Nous desservons quotidiennement les sièges d’entreprise, séminaires, hôtels du secteur et correspondances vers l’aéroport Marseille Provence (MRS) ou la gare Saint-Charles. Les créneaux matin / soir et les jours d’escale demandent un peu plus de marge : indiquez-nous l’horaire exact à la réservation.",
+      "Ce secteur est distinct de la page service « port de croisière » : ici l’enjeu est le quartier (bureaux, Docks, hôtels, ferries). Pour un embarquement paquebot avec bagages et numéro de navire, privilégiez le service dédié terminaux J4 / MPCT.",
     ],
     servicesTitle: "Services taxi Joliette & Euroméditerranée",
     services: [
-      "Transferts aéroport MRS ↔ Joliette / Docks",
-      "Transferts gare Saint-Charles ↔ quartier d’affaires",
-      "Accès terminaux ferries et croisière (J4 / MPCT via La Joliette)",
+      "Transferts aéroport MRS ↔ Joliette / Docks / tours d’affaires",
+      "Transferts gare Saint-Charles ↔ quartier Euroméditerranée",
+      "Accès gare maritime, quais ferries et approches J4 / MPCT",
       "Déplacements professionnels, séminaires et soirées d’entreprise",
-      "Liaisons Vieux-Port ↔ Joliette / Euroméditerranée",
+      "Liaisons Vieux-Port ↔ Joliette (réunions, dîners, hôtels)",
+      "Van 8 places pour équipes, familles ou bagages volumineux",
     ],
     coverageDescription:
       "Zones couvertes autour de Joliette & Euroméditerranée :",
     coverageAreas: [
-      "✓ Docks Village & Terrasses du Port",
-      "✓ Tours de bureaux (CMA CGM, La Marseillaise…)",
-      "✓ J4, Mucem & esplanade",
-      "✓ Quais ferries & accès portuaires",
+      "✓ Les Docks Village & Terrasses du Port",
+      "✓ Tours CMA CGM, La Marseillaise & bureaux Euromed",
+      "✓ Hôtels d’affaires du front de mer nord",
+      "✓ Esplanade du J4, Mucem & Fort Saint-Jean (accès proches)",
+      "✓ Quais ferries & approches portuaires",
+      "✓ Cathédrale de la Major (liaison Panier / Joliette)",
     ],
     map: {
       description:
         "Carte de la zone Joliette / Euroméditerranée et des accès principaux.",
-      info: "Depuis Joliette, nous rejoignons facilement le Vieux-Port, la gare Saint-Charles, l’aéroport MRS et les quartiers nord par les axes A7/A55.",
+      info: "Depuis Joliette, nous rejoignons le Vieux-Port, la gare Saint-Charles, l’aéroport MRS et les axes A7 / A55. En jour d’escale, anticipez le trafic vers le J4.",
       embedUrl:
         "https://maps.google.com/maps?q=Joliette%20Marseille&t=&z=14&ie=UTF8&iwloc=&output=embed",
     },
@@ -152,55 +159,133 @@ export const sectorData = {
       {
         title: "Quartier d’affaires",
         description:
-          "Transferts réguliers pour les bureaux, réunions, formations et séminaires.",
+          "Prise en charge pour réunions, formations, séminaires et transferts hôtel ↔ siège dans Euroméditerranée.",
       },
       {
-        title: "Accès port & croisière",
+        title: "Port, ferries & J4",
         description:
-          "Connaissance des terminaux ferries et croisière via La Joliette.",
+          "Connaissance des approches Joliette vers gare maritime, ferries et terminaux croisière selon les consignes du jour.",
+      },
+      {
+        title: "Correspondances MRS & Saint-Charles",
+        description:
+          "Trajets planifiés avec marge pour TGV, vols tôt / tard et bagages — idéal après une journée de rendez-vous aux Docks.",
       },
     ],
     sellingPoints: [
       {
-        title: "✓ Connaissance des flux portuaires",
+        title: "✓ Flux portuaires & chantiers",
         description:
-          "Adaptation des trajectoires selon arrivées/départs de navires et travaux.",
+          "Itinéraires adaptés aux arrivées de navires, filtrages et travaux fréquents sur le front de mer Euromed.",
       },
       {
         title: "✓ Service entreprises",
         description:
-          "Facturation possible pour sociétés et organisateurs de séminaires.",
+          "Véhicule berline / SUV ou van ; facturation possible pour sociétés et organisateurs.",
+      },
+    ],
+    useCasesTitle: "Cas d’usage fréquents à La Joliette",
+    useCases: [
+      {
+        title: "Réunion aux Docks ou en tour d’affaires",
+        description:
+          "Dépose au plus près de l’entrée utile, puis reprise vers un autre site Euromed, le Vieux-Port ou l’aéroport.",
+      },
+      {
+        title: "Hôtel ↔ aéroport ou gare",
+        description:
+          "Transfert bagages inclus depuis les hôtels du secteur vers MRS ou Saint-Charles, sans gérer le parking.",
+      },
+      {
+        title: "Approche terminal croisière / ferry",
+        description:
+          "Point de rendez-vous clair côté Joliette, puis accès autorisé vers J4, MPCT ou gare maritime selon votre embarquement.",
       },
     ],
     faq: [
       {
         question:
-          "Pouvez-vous me déposer au plus près du terminal croisière depuis Joliette ?",
+          "Où le taxi peut-il me déposer à La Joliette / Euroméditerranée ?",
         answer:
-          "Oui, nous empruntons les accès autorisés vers J4 ou MPCT en fonction des consignes portuaires du jour et de votre compagnie.",
+          "Selon l’adresse, nous privilégions les accès autorisés autour des Docks, des Terrasses du Port, des tours d’affaires et des hôtels du secteur. Les zones piétonnes ou sécurisées imposent parfois quelques mètres à pied.",
+      },
+      {
+        question:
+          "Pouvez-vous me déposer au terminal croisière depuis Joliette ?",
+        answer:
+          "Oui. Nous empruntons les accès autorisés vers J4 ou MPCT selon les consignes portuaires du jour et votre compagnie. Indiquez le terminal et l’heure d’embarquement à la réservation.",
+      },
+      {
+        question: "Combien de temps jusqu’à l’aéroport MRS ou Saint-Charles ?",
+        answer:
+          "Les durées varient fortement avec le trafic (A7 / A55, heures de pointe, jours d’escale). Demandez une confirmation d’horaire à la réservation ; nous partons avec la marge adaptée.",
+      },
+      {
+        question: "Proposez-vous un van pour une équipe ou des bagages ?",
+        answer:
+          "Oui, un Mercedes van jusqu’à 8 places est disponible pour les équipes, familles ou bagages volumineux (croisère, ferry, séminaire).",
+      },
+      {
+        question: "Comment réserver un taxi Joliette Marseille ?",
+        answer:
+          "Appelez-nous ou réservez en ligne en précisant adresse exacte (Dock, tour, hôtel), horaire et nombre de passagers. Nous confirmons le véhicule et le point de rendez-vous.",
       },
     ],
     specialties: [
       {
-        title: "Transferts pro & congrès",
+        title: "Transferts pro & séminaires",
         description:
-          "Trajets vers les tours de bureaux, séminaires et événements d’entreprise.",
+          "Trajets vers les tours de bureaux, Docks Village et événements d’entreprise Euromed.",
       },
     ],
+    pricingTitle: "Repères de trajets (indicatif)",
     pricing: [
-      "Gare Saint-Charles ↔ Joliette : 15–25€ (indicatif)",
-      "Vieux-Port ↔ Joliette : 12–20€ (indicatif)",
+      "Gare Saint-Charles ↔ Joliette : tarif à confirmer selon horaire et trafic",
+      "Vieux-Port ↔ Joliette : trajet court centre — confirmation à la réservation",
+      "Aéroport MRS ↔ Joliette / Docks : transfert sur réservation, marge selon vol",
+    ],
+    pricingNote:
+      "Aucun prix inventé ici : le montant exact est confirmé avant départ selon horaire, véhicule et contraintes du jour.",
+    relatedServicesTitle: "Services utiles depuis ce secteur",
+    relatedServices: [
+      {
+        href: "/services/port-de-croisieres",
+        label: "Taxi port de croisière (J4 & MPCT)",
+      },
+      {
+        href: "/services/taxi-aeroport-marseille",
+        label: "Taxi aéroport Marseille Provence (MRS)",
+      },
+      {
+        href: "/services/taxi-gare-saint-charles",
+        label: "Taxi Gare Saint-Charles",
+      },
+      {
+        href: "/services/taxi-vieux-port",
+        label: "Taxi Vieux-Port",
+      },
+      {
+        href: "/services/van-8-places",
+        label: "Van 8 places Marseille",
+      },
+      {
+        href: "/services/chauffeur-prive-marseille",
+        label: "Chauffeur privé Marseille",
+      },
+      { href: "/tarifs", label: "Tarifs indicatifs" },
+      { href: "/reservation", label: "Réservation en ligne" },
     ],
     commitments: [
       {
         title: "Souplesse",
         description:
-          "Ajustement en temps réel aux contraintes de circulation du quartier.",
+          "Ajustement en temps réel aux contraintes de circulation du front de mer Euromed.",
       },
     ],
     localBusiness: {
       name: "Taxi Joliette & Euroméditerranée Marseille",
-      image: "https://www.taxis-marseille.fr/cannes-hotels.jpg",
+      image:
+        "https://www.taxis-marseille.fr/taxi-marseille-port-terminale-j4.jpeg",
       telephone: "+33782984200",
       locality: "Marseille",
       region: "Provence-Alpes-Côte d'Azur",

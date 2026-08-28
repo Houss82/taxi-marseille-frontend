@@ -261,7 +261,7 @@ Nous **anticipons** le **trafic** aux abords du **grand port** et les **files** 
 - **[Terminal J4 — où retrouver son chauffeur](/blog/terminal-j4-marseille-retrouver-chauffeur-taxi-rendezvous-2026)** : esplanade, pancarte, station Joliette (repérage terrain).
 - **[Secteur Joliette & Euroméditerranée](/secteurs/joliette-euromediterranee)** : port, affaires et accès aux quais.
 - **[Taxi Vieux-Port Marseille](/blog/taxi-vieux-port-marseille-guide-2026)** : centre historique et ferries / escales.
-- **[Joliette en taxi — article](/blog/joliette-euromediterranee-taxi-2026)** : quartier Docks et gare maritime.
+- **[Gare maritime ferries — accès & rendez-vous taxi](/blog/gare-maritime-marseille-ferries-corse-maghreb-acces-taxi-rendezvous-2026)** : embarquement Corse / Maghreb à Joliette (≠ croisière J4).
 - **[Taxi aéroport Marseille Marignane (MRS)](/blog/taxi-aeroport-marseille-mrs-guide-2026)** : guide des transferts aéroport.
 - **[Mercedes van 8 places](/services/van-8-places)** : groupes et bagages.
 - **[Réservation en ligne](/reservation)** · **[Grille tarifaire](/tarifs)** · **[Accueil](/)**.

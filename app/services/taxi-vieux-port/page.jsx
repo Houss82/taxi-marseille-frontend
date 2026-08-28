@@ -327,7 +327,14 @@ export default function TaxiVieuxPortService() {
             >
               gare Saint-Charles
             </Link>
-            , un ferry ou l&apos;
+            , un ferry, le{" "}
+            <Link
+              href="/secteurs/joliette-euromediterranee"
+              className="font-semibold text-cyan-700 underline-offset-2 hover:underline"
+            >
+              quartier de la Joliette
+            </Link>{" "}
+            ou l&apos;
             <Link
               href="/services/taxi-aeroport-marseille"
               className="font-semibold text-cyan-700 underline-offset-2 hover:underline"

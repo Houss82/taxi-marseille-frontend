@@ -70,6 +70,8 @@ Depuis la **gare Saint-Charles**, comptez **10 à 20 minutes** en taxi pour rejo
 
 Pour les **embarquements** vers la **Corse** (Corsica Linea, La Méridionale), la **Tunisie**, l'**Algérie** ou le **Maroc**, nos chauffeurs vous déposent à la **gare maritime passagers** correspondante à **La Joliette** — **5 à 10 minutes** depuis le Vieux-Port — en tenant compte de votre **horaire d'embarquement** et du **contrôle passagers**.
 
+Repérage détaillé (ferry ≠ croisière J4, points de rendez-vous, marge) : [gare maritime Marseille — ferries Corse & Maghreb](/blog/gare-maritime-marseille-ferries-corse-maghreb-acces-taxi-rendezvous-2026).
+
 ### 🌙 Retours de soirée & nuit
 
 **Restaurants** du Vieux-Port, **bars du Panier**, **spectacles** à la **Criée** ou à l'**Opéra** : notre **service 24/7** assure la prise en charge **nuit, week-ends** et **jours fériés**, même après la fermeture du métro **M1**.

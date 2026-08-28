@@ -176,7 +176,7 @@ Durées **à titre indicatif** (trafic, correspondances et affluence non inclus)
   </tbody>
 </table>
 
-Pour l'**aéroport**, notre guide dédié détaille les **terminaux** et les **temps depuis MRS** : [taxi aéroport Marseille Marignane (MRS) – guide](/blog/taxi-aeroport-marseille-mrs-guide-2026). Pour le **Vieux-Port** (quais, ferries, déposes) : [guide Vieux-Port](/blog/taxi-vieux-port-marseille-guide-2026).
+Pour l'**aéroport**, notre guide dédié détaille les **terminaux** et les **temps depuis MRS** : [taxi aéroport Marseille Marignane (MRS) – guide](/blog/taxi-aeroport-marseille-mrs-guide-2026). Pour le **Vieux-Port** (quais, ferries, déposes) : [guide Vieux-Port](/blog/taxi-vieux-port-marseille-guide-2026). Pour **Joliette / Docks / Euroméditerranée** (quartier d'affaires) : [secteur Joliette & Euroméditerranée](/secteurs/joliette-euromediterranee).
 
 ---
 
@@ -228,7 +228,7 @@ La **station taxi** de Saint-Charles fonctionne bien pour un trajet simple en jo
 - **[Transferts gare Saint-Charles](/services/taxi-gare-saint-charles)** — réservation, prise en charge, van 8 places.
 - **[Guide aéroport MRS](/blog/taxi-aeroport-marseille-mrs-guide-2026)** — arrivée en avion puis train, ou l'inverse.
 - **[Guide Vieux-Port](/blog/taxi-vieux-port-marseille-guide-2026)** — quais, ferries, déposes.
-- **[Joliette & Euroméditerranée](/blog/joliette-euromediterranee-taxi-2026)** — quartier d'affaires et Docks.
+- **[Gare maritime ferries Corse & Maghreb](/blog/gare-maritime-marseille-ferries-corse-maghreb-acces-taxi-rendezvous-2026)** — accès, rendez-vous taxi, confusion avec le J4.
 - **[Réservation en ligne](/reservation)** · **[Tarifs](/tarifs)**.
 
 ---

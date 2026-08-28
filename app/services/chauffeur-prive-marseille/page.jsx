@@ -187,22 +187,34 @@ export default function ChauffeurPriveMarseille() {
           </p>
           <ul className="grid gap-3 sm:grid-cols-2 text-gray-800">
             {[
-              "Vieux-Port",
-              "Le Panier",
-              "Joliette & Euroméditerranée",
-              "Prado & Castellane",
-              "Parc Chanot (congrès)",
-              "Palais du Pharo",
-              "Gare Saint-Charles",
-              "Aéroport Marseille Provence (MRS)",
-              "Port de croisière (J4 / MPCT)",
+              { label: "Vieux-Port" },
+              { label: "Le Panier" },
+              {
+                label: "Joliette & Euroméditerranée",
+                href: "/secteurs/joliette-euromediterranee",
+              },
+              { label: "Prado & Castellane" },
+              { label: "Parc Chanot (congrès)" },
+              { label: "Palais du Pharo" },
+              { label: "Gare Saint-Charles" },
+              { label: "Aéroport Marseille Provence (MRS)" },
+              { label: "Port de croisière (J4 / MPCT)" },
             ].map((zone) => (
               <li
-                key={zone}
+                key={zone.label}
                 className="flex items-start gap-3 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3"
               >
                 <span className="mt-1 h-2.5 w-2.5 rounded-full bg-accent shrink-0" />
-                <span className="font-medium">{zone}</span>
+                {zone.href ? (
+                  <Link
+                    href={zone.href}
+                    className="font-medium text-accent underline-offset-2 hover:underline"
+                  >
+                    {zone.label}
+                  </Link>
+                ) : (
+                  <span className="font-medium">{zone.label}</span>
+                )}
               </li>
             ))}
           </ul>

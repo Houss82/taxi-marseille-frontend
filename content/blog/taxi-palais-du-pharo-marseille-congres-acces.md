@@ -99,7 +99,7 @@ Arrivée à **Marignane** puis suite vers le Pharo (ou hôtel puis Pharo) : pré
 
 ### Joliette / Euroméditerranée
 
-Depuis les hôtels d’affaires, les **Docks** ou les bureaux d’Euromed, le trajet rejoint ensuite le secteur sud / Vieux-Port vers le Pharo. Utile pour les délégations qui enchaînent réunion business et session au centre de congrès.
+Depuis les hôtels d’affaires, les **Docks** ou les bureaux d’Euromed, le trajet rejoint ensuite le secteur sud / Vieux-Port vers le Pharo. Utile pour les délégations qui enchaînent réunion business et session au centre de congrès. Voir aussi le [secteur Joliette et Euroméditerranée](/secteurs/joliette-euromediterranee).
 
 ### Prado / sud
 

@@ -228,8 +228,13 @@ export default function TaxiAeroportMarseille() {
           <p className="mb-4">
             Nous desservons les principaux quartiers de Marseille :{" "}
             <strong>Vieux-Port</strong>, <strong>Prado</strong>,{" "}
-            <strong>La Joliette</strong>, <strong>Euroméditerranée</strong>,{" "}
-            <strong>Castellane</strong>, <strong>La Timone</strong>,{" "}
+            <Link
+              href="/secteurs/joliette-euromediterranee"
+              className="font-semibold text-accent underline-offset-2 hover:underline"
+            >
+              La Joliette / Euroméditerranée
+            </Link>
+            , <strong>Castellane</strong>, <strong>La Timone</strong>,{" "}
             <strong>Saint-Charles</strong>, ainsi que les hôtels, ports et zones
             professionnelles.
           </p>

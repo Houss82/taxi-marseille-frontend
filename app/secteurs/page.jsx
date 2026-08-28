@@ -16,7 +16,7 @@ const sectors = [
     name: "Joliette & Euroméditerranée",
     description:
       "Docks Village, tours de bureaux, gare maritime et terminaux croisière : accès riverains et transferts pro.",
-    image: "/cannes-hotels.jpg",
+    image: "/taxi-marseille-port-terminale-j4.jpeg",
   },
   {
     slug: "le-panier",

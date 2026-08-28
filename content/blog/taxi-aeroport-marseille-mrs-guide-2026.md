@@ -244,7 +244,8 @@ Vol international tôt : **prise en charge** à domicile ou hôtel avec **marge*
 
 - **[Service taxi aéroport Marseille](/services/taxi-aeroport-marseille)** : présentation des transferts **MRS**.
 - **[Taxi Vieux-Port Marseille : guide](/blog/taxi-vieux-port-marseille-guide-2026)** : se déplacer depuis le port et le centre historique.
-- **[Taxi Joliette & Euroméditerranée](/blog/joliette-euromediterranee-taxi-2026)** : quartier d'affaires et Docks.
+- **[Gare maritime ferries Corse & Maghreb](/blog/gare-maritime-marseille-ferries-corse-maghreb-acces-taxi-rendezvous-2026)** : accès et rendez-vous taxi vers la gare maritime.
+- **[Secteur Joliette & Euroméditerranée](/secteurs/joliette-euromediterranee)** : quartier d'affaires, Docks et approches portuaires.
 - **[Réservation en ligne](/reservation)** : réserver en quelques clics.
 - **[Grille tarifaire](/tarifs)** : détail des options.
 - **[Accueil](/)** : tous nos services à Marseille.

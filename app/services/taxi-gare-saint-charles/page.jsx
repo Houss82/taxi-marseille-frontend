@@ -227,8 +227,14 @@ export default function TaxiGareSaintCharles() {
             Vous cherchez un <strong>taxi gare Saint-Charles Marseille</strong>{" "}
             pour votre arrivée en TGV, votre départ en train ou une
             correspondance ? Notre service vous accompagne depuis la gare vers
-            le Vieux-Port, La Joliette, Euroméditerranée, Prado, les hôtels du
-            centre-ville ou l&apos;
+            le Vieux-Port,{" "}
+            <Link
+              href="/secteurs/joliette-euromediterranee"
+              className="font-semibold text-accent underline-offset-2 hover:underline"
+            >
+              La Joliette et Euroméditerranée
+            </Link>
+            , Prado, les hôtels du centre-ville ou l&apos;
             <Link
               href="/services/taxi-aeroport-marseille"
               className="font-semibold text-accent underline-offset-2 hover:underline"

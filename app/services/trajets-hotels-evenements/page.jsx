@@ -39,7 +39,13 @@ export default function TrajetsHotelsEvenements() {
             Hôtels & Événements
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 text-balance">
-            Pharo, Chanot, Vélodrome, centres d&apos;affaires Euroméditerranée
+            Pharo, Chanot, Vélodrome, centres d&apos;affaires{" "}
+            <Link
+              href="/secteurs/joliette-euromediterranee"
+              className="text-white underline decoration-white/50 underline-offset-4 hover:decoration-white"
+            >
+              Euroméditerranée
+            </Link>
           </p>
           <Button
             href="/reservation"

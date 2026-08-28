@@ -4,6 +4,7 @@ import { getAllPosts } from "@/lib/blog";
 import { Car, CheckCircle, MapPin, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { notFound } from "next/navigation";
 import { sectorData, sectorSlugs } from "./data";
 
@@ -24,7 +25,8 @@ export async function generateMetadata({ params }) {
   const baseTitle = data.hero?.title || `Taxi ${data.cityName} Marseille`;
   const title = `${baseTitle} | Taxi Marseille`;
   const description =
-    data.introduction?.[0]?.slice(0, 155) ??
+    data.metaDescription ||
+    data.introduction?.[0]?.slice(0, 155) ||
     `Taxi Marseille — service taxi pour ${data.cityName}.`;
   const canonical = `https://www.taxis-marseille.fr/secteurs/${data.slug}`;
 
@@ -112,6 +114,46 @@ export default async function SecteurPage({ params }) {
     },
   ];
 
+  const faqJson =
+    Array.isArray(data.faq) && data.faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: data.faq.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        }
+      : null;
+
+  // Service (zone desservie) — pas de LocalBusiness géolocalisé au quartier
+  // pour éviter d’impliquer une agence physique sur place.
+  const serviceJson = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: data.hero?.title || `Taxi ${data.cityName} Marseille`,
+    serviceType: `Taxi — secteur ${data.cityName}`,
+    description:
+      data.metaDescription ||
+      data.introduction?.[0] ||
+      `Service taxi Taxi Marseille pour ${data.cityName}.`,
+    provider: {
+      "@type": "Organization",
+      name: "Taxi Marseille",
+      url: "https://www.taxis-marseille.fr/",
+      telephone: "+33782984200",
+    },
+    areaServed: {
+      "@type": "Place",
+      name: `${data.cityName}, Marseille`,
+    },
+    url: `https://www.taxis-marseille.fr/secteurs/${data.slug}`,
+  };
+
   return (
     <main className="min-h-screen bg-gray-50">
       <div className="bg-white border-b mt-20 sm:mt-0">
@@ -131,12 +173,12 @@ export default async function SecteurPage({ params }) {
             <h1 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4 leading-tight">
               {data.hero.title}
             </h1>
-            <h2 className="text-3xl lg:text-4xl font-black bg-gradient-to-r from-accent via-sky-600 to-amber-500 bg-clip-text text-transparent mb-4 leading-tight">
+            <p className="text-3xl lg:text-4xl font-black bg-gradient-to-r from-accent via-sky-600 to-amber-500 bg-clip-text text-transparent mb-4 leading-tight">
               {data.hero.highlight}
-            </h2>
-            <h2 className="text-2xl text-accent font-bold mb-6">
+            </p>
+            <p className="text-2xl text-accent font-bold mb-6">
               {data.hero.subtitle}
-            </h2>
+            </p>
 
             {data.introduction.map((paragraph, index) => (
               <p
@@ -311,6 +353,91 @@ export default async function SecteurPage({ params }) {
         </div>
       </section>
 
+      {Array.isArray(data.useCases) && data.useCases.length > 0 && (
+        <section className="max-w-6xl mx-auto px-6 mt-14">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            {data.useCasesTitle || "Cas d’usage fréquents"}
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {data.useCases.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6"
+              >
+                <h3 className="text-xl font-semibold text-accent mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {Array.isArray(data.pricing) &&
+        data.pricing.length > 0 &&
+        data.pricingTitle && (
+        <section className="max-w-6xl mx-auto px-6 mt-14">
+          <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {data.pricingTitle || "Repères de trajets"}
+            </h2>
+            <ul className="space-y-3 text-gray-700 text-lg">
+              {data.pricing.map((line, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+            {data.pricingNote && (
+              <p className="mt-4 text-sm text-gray-600">{data.pricingNote}</p>
+            )}
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="/tarifs"
+                className="inline-flex px-5 py-3 rounded-xl border-2 border-accent text-accent font-semibold hover:bg-accent hover:text-white transition-colors"
+              >
+                Voir les tarifs
+              </Link>
+              <Link
+                href="/reservation"
+                className="inline-flex px-5 py-3 rounded-xl bg-accent text-white font-semibold hover:opacity-90 transition-opacity"
+              >
+                Demander un devis
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {Array.isArray(data.relatedServices) &&
+        data.relatedServices.length > 0 && (
+          <section className="max-w-6xl mx-auto px-6 mt-14">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {data.relatedServicesTitle || "Services liés"}
+            </h2>
+            <p className="text-gray-600 mb-6 max-w-3xl">
+              Pages utiles pour organiser un trajet depuis ce secteur — sans
+              confondre quartier et service dédié.
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {data.relatedServices.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="block bg-white border border-gray-200 rounded-xl px-5 py-4 text-accent font-semibold shadow-sm hover:border-accent hover:shadow-md transition-all"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
       <section className="max-w-6xl mx-auto px-6 mt-14">
         <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-10">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -454,6 +581,21 @@ export default async function SecteurPage({ params }) {
           </div>
         </div>
       </section>
+
+      <Script
+        id={`service-${data.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceJson),
+        }}
+      />
+      {faqJson && (
+        <Script
+          id={`faq-${data.slug}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
+        />
+      )}
     </main>
   );
 }
