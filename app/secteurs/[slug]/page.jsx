@@ -195,7 +195,7 @@ export default async function SecteurPage({ params }) {
               src={data.hero.image}
               alt={data.hero.imageAlt}
               fill
-              className="object-cover"
+              className={data.hero.imageClassName || "object-cover"}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 540px"
               priority
             />

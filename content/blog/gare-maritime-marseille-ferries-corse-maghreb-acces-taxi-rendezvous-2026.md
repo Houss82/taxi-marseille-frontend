@@ -7,12 +7,6 @@ category: "Guides Pratiques"
 author: "Taxi Marseille"
 language: "fr"
 published: true
-keywords:
-  - gare maritime marseille ferry
-  - ferry corse marseille taxi
-  - ferry maghreb marseille
-  - rendez-vous taxi gare maritime
-  - ferry joliette marseille accès
 ---
 
 Vous partez en **ferry** depuis Marseille vers la **Corse** ou le **Maghreb** : la réservation mentionne souvent « port de Marseille », « Joliette » ou « gare maritime »… sans préciser **où exactement** attendre un taxi avec des valises.

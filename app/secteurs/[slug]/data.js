@@ -117,9 +117,10 @@ export const sectorData = {
       highlight: "Docks, bureaux & gare maritime",
       subtitle:
         "Quartier d’affaires, musées et accès terminaux croisière et ferries",
-      image: "/taxi-marseille-port-terminale-j4.jpeg",
+      image: "/taxi-marseille-Cathedrale-Sainte-Marie-Majeure.jpeg",
       imageAlt:
-        "Taxi près du terminal J4 à La Joliette — Euroméditerranée, Marseille",
+        "Taxi Marseille devant la cathédrale de la Major, secteur Joliette et Euroméditerranée",
+      imageClassName: "object-cover object-[center_42%]",
     },
     introduction: [
       "La Joliette et Euroméditerranée forment le grand front de mer nord du centre de Marseille : Les Docks Village, les Terrasses du Port, les tours CMA CGM et La Marseillaise, les hôtels d’affaires, puis les accès vers le J4, le Mucem et les terminaux ferries / croisière. La circulation y change souvent avec les travaux, les arrivées de navires et les filtrages portuaires.",
@@ -285,7 +286,7 @@ export const sectorData = {
     localBusiness: {
       name: "Taxi Joliette & Euroméditerranée Marseille",
       image:
-        "https://www.taxis-marseille.fr/taxi-marseille-port-terminale-j4.jpeg",
+        "https://www.taxis-marseille.fr/taxi-marseille-Cathedrale-Sainte-Marie-Majeure.jpeg",
       telephone: "+33782984200",
       locality: "Marseille",
       region: "Provence-Alpes-Côte d'Azur",
