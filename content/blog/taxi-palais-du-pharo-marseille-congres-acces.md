@@ -128,7 +128,7 @@ Le **Vélodrome** et le **Parc Chanot** relèvent d’autres logiques d’accès
 
 ## Venir au Pharo en groupe ou en délégation
 
-Équipe commerciale, invités d’un symposium, famille élargie pour une cérémonie : un seul véhicule évite de se disperser entre plusieurs courses.
+Équipe commerciale, invités d’un symposium, famille élargie pour une cérémonie : un seul véhicule évite de se disperser entre plusieurs courses. Pour plusieurs arrivées décalées (vols, trains, hôtels), voir aussi [organiser les transferts d’un groupe pour un congrès à Marseille](/blog/organiser-transferts-groupe-congres-marseille).
 
 - Indiquez le **nombre de passagers** et le volume de **bagages**.
 - Un [Mercedes van jusqu’à 8 places](/services/van-8-places) peut être proposé selon configuration et disponibilité.

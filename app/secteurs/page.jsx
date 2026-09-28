@@ -23,7 +23,7 @@ const sectors = [
     name: "Le Panier",
     description:
       "Quartier historique, Major, Vieille Charité : dépose aux accès piétons et liaisons hôtels / aéroport.",
-    image: "/taxi-cannes-le-suquet.png",
+    image: "/taxi-marseille-Cathedrale-Sainte-Marie-Majeure.jpeg",
   },
   {
     slug: "port-de-croisiere",

@@ -303,8 +303,9 @@ export const sectorData = {
       highlight: "Quartier historique & ruelles piétonnes",
       subtitle:
         "Dépose aux accès proches de la Major, de la Vieille Charité et des belvédères",
-      image: "/taxi-cannes-le-suquet.png",
-      imageAlt: "Taxi près du quartier Le Panier à Marseille",
+      image: "/taxi-marseille-Cathedrale-Sainte-Marie-Majeure.jpeg",
+      imageAlt:
+        "Taxi Marseille près de la cathédrale de la Major — accès au quartier du Panier",
     },
     introduction: [
       "Le Panier est l’un des plus anciens quartiers de Marseille, très majoritairement piéton, avec des ruelles étroites, des escaliers et des belvédères offrant des vues sur le port.",
@@ -374,7 +375,8 @@ export const sectorData = {
     ],
     localBusiness: {
       name: "Taxi Le Panier Marseille",
-      image: "https://www.taxis-marseille.fr/taxi-cannes-le-suquet.png",
+      image:
+        "https://www.taxis-marseille.fr/taxi-marseille-Cathedrale-Sainte-Marie-Majeure.jpeg",
       telephone: "+33782984200",
       locality: "Marseille",
       region: "Provence-Alpes-Côte d'Azur",

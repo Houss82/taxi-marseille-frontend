@@ -176,7 +176,7 @@ Le retour est souvent **plus critique** que l’aller. Checklist concrète :
 
 ## Venir au Vélodrome en groupe
 
-Famille, amis, supporters venus à plusieurs, équipe d’entreprise : un seul véhicule évite de se perdre entre plusieurs voitures à la sortie.
+Famille, amis, supporters venus à plusieurs, équipe d’entreprise : un seul véhicule évite de se perdre entre plusieurs voitures à la sortie. Pour une délégation avec plusieurs arrivées (hôtel, gare, aéroport), le guide [transferts de groupe pour un congrès à Marseille](/blog/organiser-transferts-groupe-congres-marseille) détaille la coordination.
 
 Selon le nombre de passagers et les bagages, nous proposons une berline / SUV ou un **[Mercedes van jusqu’à 8 places](/services/van-8-places)** (sous réserve de la configuration et du volume de bagages — à préciser à la réservation).
 
