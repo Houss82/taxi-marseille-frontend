@@ -570,7 +570,23 @@ export default function Van8PlacesPage() {
                 >
                   city tour / visite de Marseille
                 </Link>
-                , littoral, selon disponibilité).
+                , littoral, selon disponibilité). Pour un{" "}
+                <Link
+                  href="/blog/visite-marseille-van-8-places-circuit"
+                  className="font-semibold text-accent underline-offset-2 hover:underline"
+                >
+                  circuit touristique en van 8 places
+                </Link>{" "}
+                (Pharo, Auffes, Bonne Mère, Major, Panier, Vieux-Port), voir
+                aussi notre guide d&apos;itinéraire. Pour une journée
+                multi-rendez-vous avec chauffeur dédié :{" "}
+                <Link
+                  href="/services/chauffeur-prive-marseille"
+                  className="font-semibold text-accent underline-offset-2 hover:underline"
+                >
+                  chauffeur privé Marseille
+                </Link>
+                .
               </p>
             </div>
             <ul className="mt-8 space-y-3">

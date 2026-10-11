@@ -437,6 +437,16 @@ export default function TrajetsHotelsEvenements() {
               >
                 Voir la mise à disposition
               </Link>
+              <p className="mt-3 text-sm text-gray-600">
+                Journée d’affaires ou multi-rendez-vous hors événement :{" "}
+                <Link
+                  href="/services/chauffeur-prive-marseille"
+                  className="font-semibold text-accent underline-offset-2 hover:underline"
+                >
+                  chauffeur privé Marseille
+                </Link>
+                .
+              </p>
             </div>
           </div>
         </div>

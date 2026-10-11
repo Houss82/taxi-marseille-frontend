@@ -403,7 +403,16 @@ export default function MiseADispositionMariageCongres() {
           </p>
           <p className="mt-4 text-sm text-muted-foreground">
             Requête associée :{" "}
-            <strong>chauffeur privé journée Marseille</strong>.
+            <strong>chauffeur privé journée Marseille</strong>. Pour un
+            chauffeur dédié hors cadre mariage / congrès (affaires,
+            multi-rendez-vous, journée organisée), voir aussi{" "}
+            <Link
+              href="/services/chauffeur-prive-marseille"
+              className="font-semibold text-cyan-700 underline-offset-2 hover:underline"
+            >
+              chauffeur privé Marseille
+            </Link>
+            .
           </p>
         </div>
       </section>

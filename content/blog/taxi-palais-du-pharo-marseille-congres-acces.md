@@ -24,7 +24,7 @@ Ci-dessous : comment **préparer le transfert**, ce qu’il faut indiquer à la 
 
 <div class="highlight-box">
 <h2>Réserver un trajet pour le Palais du Pharo</h2>
-<p>Nous organisons des <strong>prises en charge et déposes</strong> pour vos rendez-vous au Pharo, avec <strong>horaire convenu</strong>, <strong>point de rendez-vous</strong> adapté aux conditions du jour, et véhicule selon le nombre de passagers. Organisation globale : <a href="/services/trajets-hotels-evenements">hôtels &amp; événements</a> · <a href="/reservation">réserver en ligne</a>. Pour une journée multi-lieux (hôtel → Pharo → dîner), une <a href="/services/mise-a-disposition-mariage-congres">mise à disposition</a> peut être plus adaptée.</p>
+<p>Nous organisons des <strong>prises en charge et déposes</strong> pour vos rendez-vous au Pharo, avec <strong>horaire convenu</strong>, <strong>point de rendez-vous</strong> adapté aux conditions du jour, et véhicule selon le nombre de passagers. Organisation globale : <a href="/services/trajets-hotels-evenements">hôtels &amp; événements</a> · <a href="/reservation">réserver en ligne</a>. Pour une journée multi-lieux (hôtel → Pharo → dîner), une <a href="/services/mise-a-disposition-mariage-congres">mise à disposition</a> ou un <a href="/services/chauffeur-prive-marseille">chauffeur privé à Marseille</a> peut être plus adaptée selon le contexte (événement vs agenda d’affaires).</p>
 </div>
 
 <img src="/taxi-marseille-hotel.jpeg" alt="Taxi Marseille Mercedes van 8 places — transfert congrès et événements à Marseille" />
