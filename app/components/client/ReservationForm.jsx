@@ -72,12 +72,19 @@ export default function ReservationForm() {
         return;
       }
 
+      const email = (formData.email || "").trim();
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setError("Veuillez indiquer une adresse email valide.");
+        setLoading(false);
+        return;
+      }
+
       // Préparer les données pour l'API backend
       const reservationData = {
         nom: formData.name,
         indicatifPays: indicatifPays,
         telephone: telephone,
-        email: formData.email || undefined, // Optionnel
+        email,
         date: formData.date,
         heure: formData.time,
         adresseDepart: formData.from,
@@ -158,11 +165,13 @@ export default function ReservationForm() {
               </div>
               <div className="mt-4">
                 <label className="block text-sm font-medium mb-2">
-                  Email (optionnel)
+                  Email
                 </label>
                 <Input
                   type="email"
                   placeholder="votre@email.com"
+                  required
+                  autoComplete="email"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })

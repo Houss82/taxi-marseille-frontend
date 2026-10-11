@@ -34,7 +34,7 @@ export function formatReservationEmail(data) {
 
   const rows = [
     row("Nom", data.nom || data.name),
-    row("Email", data.email || "Non renseigné"),
+    row("Email", data.email),
     row("Téléphone", telephone),
     row("Date", data.date),
     row("Heure", data.heure || data.time),

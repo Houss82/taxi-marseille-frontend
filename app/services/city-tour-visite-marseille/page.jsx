@@ -290,6 +290,14 @@ export default function CityTourVisiteMarseille() {
             >
               guide port de croisière
             </Link>
+            . Exemple d&apos;itinéraire en van :{" "}
+            <Link
+              href="/blog/visite-marseille-van-8-places-circuit"
+              className="font-semibold text-cyan-700 underline-offset-2 hover:underline"
+            >
+              circuit Pharo, Vallon des Auffes, Bonne Mère, Major, Panier et
+              Vieux-Port
+            </Link>
             .
           </p>
         </div>

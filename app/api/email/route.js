@@ -33,6 +33,15 @@ export async function POST(request) {
       return NextResponse.json({ success: true });
     }
 
+    const email = typeof data.email === "string" ? data.email.trim() : "";
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json(
+        { error: "Adresse email obligatoire" },
+        { status: 400 }
+      );
+    }
+    data.email = email;
+
     const { subject, html, replyTo } = formatEmailByType(type, data);
 
     const payload = {

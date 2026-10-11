@@ -251,7 +251,7 @@ Vous atterrissez à **MRS**, votre hôtel est **Quai du Port** ou **Quai de Rive
 
 ### Scénario 4 : Escale de croisière à La Joliette
 
-Votre bateau fait **escale à Marseille** (**terminal J4** ou **MPCT**). Nous organisons une **demi-journée** ou **journée** : Vieux-Port, **Notre-Dame-de-la-Garde**, **Panier**, **Calanques** — retour garanti **avant l'heure de rappel** du navire.
+Votre bateau fait **escale à Marseille** (**terminal J4** ou **MPCT**). Nous organisons une **demi-journée** ou **journée** : Vieux-Port, **Notre-Dame-de-la-Garde**, **Panier**, **Calanques** — retour garanti **avant l'heure de rappel** du navire. Pour un parcours type en van (Pharo, Vallon des Auffes, Bonne Mère, Major, Panier, puis temps libre au Vieux-Port), voir le [circuit visite Marseille en van 8 places](/blog/visite-marseille-van-8-places-circuit).
 
 ### Scénario 5 : Groupe, séminaire, mariage
 

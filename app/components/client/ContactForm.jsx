@@ -24,10 +24,17 @@ export default function ContactForm() {
     setError("")
     setLoading(true)
 
+    const email = (formData.email || "").trim()
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError("Veuillez indiquer une adresse email valide.")
+      setLoading(false)
+      return
+    }
+
     try {
       await emailService.sendContact({
         nom: formData.name,
-        email: formData.email,
+        email,
         subject: formData.subject,
         message: formData.message,
       })
@@ -90,6 +97,7 @@ export default function ContactForm() {
                 type="email"
                 placeholder="votre@email.com"
                 required
+                autoComplete="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 disabled={loading}

@@ -264,6 +264,7 @@ Nous **anticipons** le **trafic** aux abords du **grand port** et les **files** 
 - **[Gare maritime ferries — accès & rendez-vous taxi](/blog/gare-maritime-marseille-ferries-corse-maghreb-acces-taxi-rendezvous-2026)** : embarquement Corse / Maghreb à Joliette (≠ croisière J4).
 - **[Taxi aéroport Marseille Marignane (MRS)](/blog/taxi-aeroport-marseille-mrs-guide-2026)** : guide des transferts aéroport.
 - **[Mercedes van 8 places](/services/van-8-places)** : groupes et bagages.
+- **[Circuit visite Marseille en van 8 places](/blog/visite-marseille-van-8-places-circuit)** : itinéraire Pharo → Auffes → Bonne Mère → Major / Panier → Vieux-Port (idéal escale).
 - **[Réservation en ligne](/reservation)** · **[Grille tarifaire](/tarifs)** · **[Accueil](/)**.
 
 ---
