@@ -555,6 +555,13 @@ export default function MarseilleAixCassis() {
             >
               taxi Marseille → La Ciotat
             </Link>
+            . Plus loin encore, vers la Côte d&apos;Azur :{" "}
+            <Link
+              href="/blog/taxi-marseille-nice-transfert"
+              className="font-semibold text-accent underline-offset-2 hover:underline"
+            >
+              transfert en taxi Marseille – Nice
+            </Link>
             .
           </p>
         </div>

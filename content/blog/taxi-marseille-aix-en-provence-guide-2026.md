@@ -287,6 +287,7 @@ Rendez-vous en entreprise ou séminaire sur le **pôle d’activités d’Aix-le
 ## 🔗 Liens utiles
 
 - **[Service Marseille → Aix & Cassis](/services/marseille-aix-cassis)** : page dédiée aux trajets longue distance.
+- **[Taxi Marseille – Nice : transfert](/blog/taxi-marseille-nice-transfert)** : organiser un trajet longue distance vers Nice ou NCE.
 - **[Taxi aéroport Marseille (MRS)](/blog/taxi-aeroport-marseille-mrs-guide-2026)** : guide transferts Marignane.
 - **[Gare Saint-Charles : guide pratique](/blog/arriver-train-marseille-gare-saint-charles-guide-2026)** : arriver en train à Marseille.
 - **[Taxi Vieux-Port](/blog/taxi-vieux-port-marseille-guide-2026)** : dépose centre historique et ferries.

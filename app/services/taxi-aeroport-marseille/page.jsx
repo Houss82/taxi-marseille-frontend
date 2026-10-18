@@ -496,6 +496,11 @@ export default function TaxiAeroportMarseille() {
                   title: "Taxi Vieux-Port Marseille — guide 2026",
                   desc: "Destination fréquente depuis MRS : accès, dépose et circulation au port.",
                 },
+                {
+                  href: "/blog/taxi-marseille-nice-transfert",
+                  title: "Taxi Marseille – Nice : organiser votre transfert",
+                  desc: "Longue distance vers Nice ou l’aéroport Nice Côte d’Azur : organisation et réservation.",
+                },
               ].map((guide) => (
                 <li key={guide.href}>
                   <Link
