@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 export default function PortDeCroisieres() {
   const popularTrips = [
@@ -547,16 +547,8 @@ export default function PortDeCroisieres() {
       </section>
 
       {/* JSON-LD (Service + FAQPage) */}
-      <Script
-        id="service-port-de-croisiere-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJson) }}
-      />
-      <Script
-        id="faq-port-de-croisiere-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
-      />
+      <JsonLd id="service-port-de-croisiere-marseille" data={serviceJson} />
+      <JsonLd id="faq-port-de-croisiere-marseille" data={faqJson} />
     </main>
   );
 }

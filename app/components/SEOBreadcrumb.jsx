@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 // Composant Server Component pour le breadcrumb SEO
 export default function SEOBreadcrumb({ items = [], hideVisual = false }) {
@@ -35,13 +35,7 @@ export default function SEOBreadcrumb({ items = [], hideVisual = false }) {
 
   return (
     <>
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbStructuredData),
-        }}
-      />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbStructuredData} />
       {!hideVisual && (
         <nav
           aria-label="Fil d'Ariane"

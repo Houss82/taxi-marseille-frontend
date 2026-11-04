@@ -30,15 +30,13 @@ export const metadata = {
     "taxi Vieux-Port",
     "taxi gare Saint-Charles",
   ],
-  alternates: {
-    canonical: "/", // la home a en plus son canonical absolu dans page.jsx
-  },
+  // Pas de canonical / og:url ici : ils seraient hérités par les pages
+  // sans alternates propres (ex. réservation, contact, tarifs).
   openGraph: {
     title:
       "Taxi Marseille | Aéroport Marignane, Gare Saint-Charles & Vieux-Port",
     description:
       "Taxi Marseille 24h/24 : aéroport Marignane, gare Saint-Charles, Vieux-Port, hôtels et congrès. Mercedes van 8 places.",
-    url: "/",
     siteName: "Taxi Marseille",
     locale: "fr_FR",
     type: "website",

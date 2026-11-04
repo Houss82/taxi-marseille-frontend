@@ -1,7 +1,7 @@
 // app/conditions-utilisation/page.jsx — CONDITIONS D'UTILISATION
 
 export const metadata = {
-  title: "Conditions d'utilisation | Taxi Marseille",
+  title: "Conditions d'utilisation",
   description:
     "Consultez les conditions d'utilisation du service Taxi Marseille. Règles et modalités pour l'utilisation de nos services de transport.",
   alternates: {

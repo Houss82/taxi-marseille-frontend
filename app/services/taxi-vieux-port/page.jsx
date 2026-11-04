@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 export const metadata = {
   title: "Taxi Vieux-Port Marseille | Dépose quais, ferries & hôtels 24h/24",
@@ -798,16 +798,8 @@ export default function TaxiVieuxPortService() {
         </div>
       </section>
 
-      <Script
-        id="service-taxi-vieux-port-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJson) }}
-      />
-      <Script
-        id="faq-taxi-vieux-port-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
-      />
+      <JsonLd id="service-taxi-vieux-port-marseille" data={serviceJson} />
+      <JsonLd id="faq-taxi-vieux-port-marseille" data={faqJson} />
     </main>
   );
 }

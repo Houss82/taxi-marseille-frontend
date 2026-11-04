@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 export const metadata = {
   title: "Taxi Parc Chanot Marseille | Salons, congrès & transferts",
@@ -693,16 +693,8 @@ export default function TaxiParcChanotMarseille() {
         </div>
       </section>
 
-      <Script
-        id="service-taxi-parc-chanot-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJson) }}
-      />
-      <Script
-        id="faq-taxi-parc-chanot-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
-      />
+      <JsonLd id="service-taxi-parc-chanot-marseille" data={serviceJson} />
+      <JsonLd id="faq-taxi-parc-chanot-marseille" data={faqJson} />
     </main>
   );
 }

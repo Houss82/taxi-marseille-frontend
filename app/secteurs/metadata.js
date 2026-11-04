@@ -1,5 +1,7 @@
 export const metadata = {
-  title: "Nos secteurs | Taxi Marseille | Quartiers & liaisons clés",
+  title: {
+    absolute: "Nos secteurs | Taxi Marseille | Quartiers & liaisons clés",
+  },
   description:
     "Découvrez les secteurs desservis par Taxi Marseille : Vieux-Port, Joliette & Euroméditerranée, Le Panier, aéroport Marignane (MRS), gare Saint-Charles et port de croisière. Mercedes GLC & van 8 places, 24h/24.",
   keywords:

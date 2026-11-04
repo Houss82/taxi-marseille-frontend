@@ -4,7 +4,7 @@ import { getAllPosts } from "@/lib/blog";
 import { Car, CheckCircle, MapPin, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 import { notFound } from "next/navigation";
 import { sectorData, sectorSlugs } from "./data";
 
@@ -582,20 +582,8 @@ export default async function SecteurPage({ params }) {
         </div>
       </section>
 
-      <Script
-        id={`service-${data.slug}`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceJson),
-        }}
-      />
-      {faqJson && (
-        <Script
-          id={`faq-${data.slug}`}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
-        />
-      )}
+      <JsonLd id={`service-${data.slug}`} data={serviceJson} />
+      {faqJson && <JsonLd id={`faq-${data.slug}`} data={faqJson} />}
     </main>
   );
 }

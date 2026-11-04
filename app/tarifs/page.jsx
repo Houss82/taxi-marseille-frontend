@@ -8,11 +8,20 @@ import Button from "../components/ui/Button";
 import Card from "../components/ui/Card";
 
 export const metadata = {
-  title: "Tarifs - Taxi Marseille",
+  title: "Tarifs",
   description:
     "Tarifs indicatifs pour transferts aéroport Marignane (MRS), gare Saint-Charles, Aix-en-Provence et Cassis. Devis sur mesure.",
   keywords:
     "tarifs taxi marseille, prix transfert aéroport mrs, tarif taxi aix, prix taxi cassis",
+  alternates: {
+    canonical: "https://www.taxis-marseille.fr/tarifs",
+  },
+  openGraph: {
+    url: "https://www.taxis-marseille.fr/tarifs",
+    title: "Tarifs | Taxi Marseille",
+    description:
+      "Tarifs indicatifs pour transferts aéroport Marignane (MRS), gare Saint-Charles, Aix-en-Provence et Cassis. Devis sur mesure.",
+  },
 };
 
 export default function Pricing() {

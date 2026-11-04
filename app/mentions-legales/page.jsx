@@ -1,7 +1,7 @@
 // app/mentions-legales/page.jsx — MENTIONS LÉGALES
 
 export const metadata = {
-  title: "Mentions légales | Taxi Marseille",
+  title: "Mentions légales",
   description:
     "Mentions légales du site Taxi Marseille. Informations sur l'éditeur, l'hébergeur et les conditions d'utilisation.",
   alternates: {

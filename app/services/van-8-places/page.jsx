@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 export const metadata = {
   title:
@@ -802,16 +802,8 @@ export default function Van8PlacesPage() {
       </section>
 
       {/* JSON-LD (Service + FAQPage) */}
-      <Script
-        id="service-van-8-places"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJson) }}
-      />
-      <Script
-        id="faq-van-8-places"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
-      />
+      <JsonLd id="service-van-8-places" data={serviceJson} />
+      <JsonLd id="faq-van-8-places" data={faqJson} />
     </main>
   );
 }

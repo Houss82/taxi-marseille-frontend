@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 export default function TaxiAeroportMarseille() {
   const priceCards = [
@@ -589,16 +589,8 @@ export default function TaxiAeroportMarseille() {
       </section>
 
       {/* JSON-LD (Service + FAQPage) */}
-      <Script
-        id="service-taxi-aeroport-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJson) }}
-      />
-      <Script
-        id="faq-taxi-aeroport-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
-      />
+      <JsonLd id="service-taxi-aeroport-marseille" data={serviceJson} />
+      <JsonLd id="faq-taxi-aeroport-marseille" data={faqJson} />
     </main>
   );
 }

@@ -3,7 +3,7 @@
 import { CONTACT_EMAIL, CONTACT_MAILTO_HREF } from "../lib/email";
 
 export const metadata = {
-  title: "Politique de confidentialité | Taxi Marseille",
+  title: "Politique de confidentialité",
   description:
     "Découvrez comment Taxi Marseille protège vos données personnelles. Politique de confidentialité conforme au RGPD.",
   alternates: {

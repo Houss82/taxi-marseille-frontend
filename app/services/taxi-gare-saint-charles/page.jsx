@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 export default function TaxiGareSaintCharles() {
   const popularTrips = [
@@ -594,16 +594,8 @@ export default function TaxiGareSaintCharles() {
       </section>
 
       {/* JSON-LD (Service + FAQPage) */}
-      <Script
-        id="service-taxi-gare-saint-charles"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJson) }}
-      />
-      <Script
-        id="faq-taxi-gare-saint-charles"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
-      />
+      <JsonLd id="service-taxi-gare-saint-charles" data={serviceJson} />
+      <JsonLd id="faq-taxi-gare-saint-charles" data={faqJson} />
     </main>
   );
 }

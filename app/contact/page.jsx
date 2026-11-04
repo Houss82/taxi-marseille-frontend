@@ -17,11 +17,20 @@ import {
 } from "../lib/phone"
 
 export const metadata = {
-  title: "Contact - Taxi Marseille",
+  title: "Contact",
   description:
     "Contactez Taxi Marseille 24/7. Téléphone, WhatsApp, Email. Service client réactif. Disponible pour tous vos besoins de transport sur la Provence.",
   keywords:
     "contact taxi marseille, téléphone taxi marseille, whatsapp taxi, email taxi marseille",
+  alternates: {
+    canonical: "https://www.taxis-marseille.fr/contact",
+  },
+  openGraph: {
+    url: "https://www.taxis-marseille.fr/contact",
+    title: "Contact | Taxi Marseille",
+    description:
+      "Contactez Taxi Marseille 24/7. Téléphone, WhatsApp, Email. Service client réactif. Disponible pour tous vos besoins de transport sur la Provence.",
+  },
 }
 
 export default function Contact() {

@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 export default function TrajetsHotelsEvenements() {
   const faqItems = [
@@ -548,16 +548,8 @@ export default function TrajetsHotelsEvenements() {
         </div>
       </section>
 
-      <Script
-        id="service-hotels-evenements-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJson) }}
-      />
-      <Script
-        id="faq-hotels-evenements-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
-      />
+      <JsonLd id="service-hotels-evenements-marseille" data={serviceJson} />
+      <JsonLd id="faq-hotels-evenements-marseille" data={faqJson} />
     </main>
   );
 }

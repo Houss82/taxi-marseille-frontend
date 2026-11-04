@@ -1,5 +1,8 @@
 export const metadata = {
-  title: "City tour Marseille | Visite privée en taxi | Taxi Marseille",
+  // absolute : conserve le Title SEO sans doublon via le template layout
+  title: {
+    absolute: "City tour Marseille | Visite privée en taxi | Taxi Marseille",
+  },
   description:
     "City tour Marseille en taxi privé : Vieux-Port, Panier, Notre-Dame-de-la-Garde, Corniche, MuCEM. Chauffeur local, itinéraire sur mesure, arrêts photos. Devis sur demande, 1h à demi-journée.",
   keywords:
@@ -7,6 +10,9 @@ export const metadata = {
   alternates: {
     canonical:
       "https://www.taxis-marseille.fr/services/city-tour-visite-marseille",
+  },
+  openGraph: {
+    url: "https://www.taxis-marseille.fr/services/city-tour-visite-marseille",
   },
 };
 
@@ -23,7 +29,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 export default function CityTourVisiteMarseille() {
   const tourFormulas = [
@@ -571,16 +577,8 @@ export default function CityTourVisiteMarseille() {
         </div>
       </section>
 
-      <Script
-        id="service-city-tour-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJson) }}
-      />
-      <Script
-        id="faq-city-tour-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
-      />
+      <JsonLd id="service-city-tour-marseille" data={serviceJson} />
+      <JsonLd id="faq-city-tour-marseille" data={faqJson} />
     </main>
   );
 }

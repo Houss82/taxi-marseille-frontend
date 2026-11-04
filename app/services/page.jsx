@@ -9,13 +9,17 @@ import Button from "../components/ui/Button";
 import Card from "../components/ui/Card";
 
 export const metadata = {
-  title: "Services - Taxi Marseille",
+  title: "Services",
   description:
     "Services taxi à Marseille : taxi aéroport Marseille (MRS), gare Saint-Charles, Mercedes van 8 places, mise à disposition (mariages & congrès), port de croisière et city tour. Service 24h/24.",
   keywords:
     "services taxi marseille, taxi aéroport marseille marignane, taxi gare saint-charles, van 8 places marseille, taxi mariage marseille, taxi congrès marseille, taxi port de croisière marseille, city tour marseille",
   alternates: {
     canonical: "https://www.taxis-marseille.fr/services",
+  },
+  openGraph: {
+    url: "https://www.taxis-marseille.fr/services",
+    title: "Services | Taxi Marseille",
   },
   robots: { index: true, follow: true },
 };

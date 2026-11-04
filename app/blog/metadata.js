@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Blog Taxi Marseille | Conseils & Actualités Transport",
+  title: "Blog | Conseils & Actualités Transport",
   description:
     "Découvrez nos conseils pour vos transports à Marseille et Provence. Guides pratiques, actualités et informations sur nos services de taxi premium. Articles sur transferts aéroport, excursions et spots photo.",
   keywords: [
@@ -13,7 +13,7 @@ export const metadata = {
     "taxi gare saint-charles",
   ],
   openGraph: {
-    title: "Blog Taxi Marseille | Conseils & Actualités | Taxi Marseille",
+    title: "Blog | Conseils & Actualités | Taxi Marseille",
     description:
       "Découvrez nos conseils pour vos transports à Marseille et Provence. Guides pratiques, actualités et informations sur nos services de taxi premium.",
     url: "https://www.taxis-marseille.fr/blog",
@@ -30,7 +30,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog Taxi Marseille | Conseils & Actualités | Taxi Marseille",
+    title: "Blog | Conseils & Actualités | Taxi Marseille",
     description:
       "Découvrez nos conseils pour vos transports à Marseille et Provence. Guides pratiques et actualités.",
     images: ["https://www.taxis-marseille.fr/blog-page.jpg"],

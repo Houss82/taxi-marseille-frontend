@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 export default function ChauffeurPriveMarseille() {
   const faqItems = [
@@ -531,20 +531,8 @@ export default function ChauffeurPriveMarseille() {
         </div>
       </section>
 
-      <Script
-        id="service-chauffeur-prive-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceJson),
-        }}
-      />
-      <Script
-        id="faq-chauffeur-prive-marseille"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJson),
-        }}
-      />
+      <JsonLd id="service-chauffeur-prive-marseille" data={serviceJson} />
+      <JsonLd id="faq-chauffeur-prive-marseille" data={faqJson} />
     </main>
   );
 }

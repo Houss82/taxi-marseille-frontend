@@ -5,14 +5,23 @@ export const revalidate = 86400;
 
 // ✅ Métadonnées SEO pour cette page
 export const metadata = {
-  title:
-    "Taxi Marseille Aéroport & Gare Saint-Charles | Prix fixe & réservation 24h/24",
+  title: {
+    absolute:
+      "Taxi Marseille Aéroport & Gare Saint-Charles | Prix fixe & réservation 24h/24",
+  },
   description:
     "Taxi Marseille sur réservation : transfert aéroport Marignane (MRS), gare Saint-Charles, métropole et longues distances. Prix fixe annoncé à l'avance, chauffeur professionnel joignable 7j/7. Réservation téléphone ou en ligne.",
   keywords:
     "taxi marseille, taxi aéroport marseille, gare saint-charles, taxi marseille prix fixe, taxi marseille réservation, taxi marseille métropole, transfert mrs",
   alternates: {
     canonical: "https://www.taxis-marseille.fr/",
+  },
+  openGraph: {
+    url: "https://www.taxis-marseille.fr/",
+    title:
+      "Taxi Marseille Aéroport & Gare Saint-Charles | Prix fixe & réservation 24h/24",
+    description:
+      "Taxi Marseille sur réservation : transfert aéroport Marignane (MRS), gare Saint-Charles, métropole et longues distances. Prix fixe annoncé à l'avance, chauffeur professionnel joignable 7j/7.",
   },
 };
 
@@ -36,7 +45,6 @@ import {
 import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import ElfsightGoogleReviews from "./components/client/ElfsightGoogleReviews";
 import HeroBackgroundSlideshow from "./components/client/HeroBackgroundSlideshow";
 import VehicleCarousel from "./components/client/VehicleCarousel";
@@ -1113,11 +1121,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* JSON-LD LocalBusiness pour Taxi Marseille */}
-      <Script
+      {/* JSON-LD TaxiService — rendu SSR (HTML initial) */}
+      <script
         id="localbusiness-taxi-marseille"
         type="application/ld+json"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -1149,11 +1156,10 @@ export default function Home() {
         }}
       />
 
-      {/* JSON-LD FAQPage — rich results Google */}
-      <Script
+      {/* JSON-LD FAQPage — rich results Google (SSR) */}
+      <script
         id="faq-taxi-marseille"
         type="application/ld+json"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",

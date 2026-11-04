@@ -5,8 +5,12 @@ export const dynamic = "force-static";
 
 export const runtime = "nodejs";
 
-/** Toutes les URLs hors blog — aucun import de module blog (évite erreur 500 si dépendances FS / parsing) */
-function getStaticUrlEntries(now) {
+/**
+ * URLs hors blog.
+ * Pas de lastModified artificiel (= Date.now() au build) : sans date fiable
+ * de modification de contenu, on omet lastModified (recommandation audit SEO).
+ */
+function getStaticUrlEntries() {
   const staticPaths = [
     { path: "", priority: 1.0, changeFrequency: "daily" },
     { path: "/services", priority: 0.9, changeFrequency: "monthly" },
@@ -110,7 +114,6 @@ function getStaticUrlEntries(now) {
 
   return staticPaths.map(({ path, priority, changeFrequency }) => ({
     url: `${baseUrl}${path}`,
-    lastModified: now,
     changeFrequency,
     priority,
   }));
@@ -118,24 +121,31 @@ function getStaticUrlEntries(now) {
 
 /** Import dynamique : si le blog plante au chargement, le sitemap des services reste valide */
 export default async function sitemap() {
-  const now = new Date();
-  const staticEntries = getStaticUrlEntries(now);
+  const staticEntries = getStaticUrlEntries();
 
   try {
     const { getAllPostSlugs, getAllPosts } = await import("@/lib/blogManifest");
     const allPosts = getAllPosts();
     const postDatesMap = {};
     allPosts.forEach((post) => {
-      const d = post.date ? new Date(post.date) : now;
-      postDatesMap[post.slug] = Number.isNaN(d.getTime()) ? now : d;
+      if (!post.date) return;
+      const d = new Date(post.date);
+      if (!Number.isNaN(d.getTime())) {
+        postDatesMap[post.slug] = d;
+      }
     });
 
-    const blogEntries = getAllPostSlugs().map(({ slug }) => ({
-      url: `${baseUrl}/blog/${slug}`,
-      lastModified: postDatesMap[slug] || now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    }));
+    const blogEntries = getAllPostSlugs().map(({ slug }) => {
+      const entry = {
+        url: `${baseUrl}/blog/${slug}`,
+        changeFrequency: "monthly",
+        priority: 0.7,
+      };
+      if (postDatesMap[slug]) {
+        entry.lastModified = postDatesMap[slug];
+      }
+      return entry;
+    });
 
     return [...staticEntries, ...blogEntries];
   } catch (e) {

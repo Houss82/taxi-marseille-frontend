@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 export default function MiseADispositionMariageCongres() {
   const faqItems = [
@@ -583,16 +583,8 @@ export default function MiseADispositionMariageCongres() {
       </section>
 
       {/* JSON-LD (Service + FAQPage) */}
-      <Script
-        id="service-mise-a-disposition"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJson) }}
-      />
-      <Script
-        id="faq-mise-a-disposition"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
-      />
+      <JsonLd id="service-mise-a-disposition" data={serviceJson} />
+      <JsonLd id="faq-mise-a-disposition" data={faqJson} />
     </main>
   );
 }

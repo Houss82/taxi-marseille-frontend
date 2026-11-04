@@ -7,11 +7,20 @@ import ReservationForm from "../components/client/ReservationForm";
 import Card from "../components/ui/Card";
 
 export const metadata = {
-  title: "Réservation - Taxi Marseille",
+  title: "Réservation",
   description:
     "Réservez votre taxi à Marseille. Confirmation par email. Transferts aéroport MRS, gare Saint-Charles, Aix, Cassis. Service 24/7.",
   keywords:
     "réservation taxi marseille, réserver taxi mrs, booking taxi marseille, réservation chauffeur privé",
+  alternates: {
+    canonical: "https://www.taxis-marseille.fr/reservation",
+  },
+  openGraph: {
+    url: "https://www.taxis-marseille.fr/reservation",
+    title: "Réservation | Taxi Marseille",
+    description:
+      "Réservez votre taxi à Marseille. Confirmation par email. Transferts aéroport MRS, gare Saint-Charles, Aix, Cassis. Service 24/7.",
+  },
 };
 
 export default function Reservation() {

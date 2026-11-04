@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/app/components/JsonLd";
 
 export default function MarseilleAixCassis() {
   const faqItems = [
@@ -718,16 +718,8 @@ export default function MarseilleAixCassis() {
         </div>
       </section>
 
-      <Script
-        id="service-marseille-aix-cassis"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJson) }}
-      />
-      <Script
-        id="faq-marseille-aix-cassis"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
-      />
+      <JsonLd id="service-marseille-aix-cassis" data={serviceJson} />
+      <JsonLd id="faq-marseille-aix-cassis" data={faqJson} />
     </main>
   );
 }
