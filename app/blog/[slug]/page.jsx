@@ -119,7 +119,7 @@ export default async function BlogPostPage({ params }) {
             <div className="relative w-full h-[320px] sm:h-[384px] md:h-auto md:aspect-video md:max-h-[520px]">
               <Image
                 src={post.image}
-                alt={post.title}
+                alt={post.imageAlt || post.title}
                 fill
                 className="object-cover object-[center_80%]"
                 priority={true}
