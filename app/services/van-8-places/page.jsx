@@ -331,10 +331,16 @@ export default function Van8PlacesPage() {
           <p className="mb-4">
             Vous recherchez un <strong>taxi van à Marseille</strong> pour un
             transfert aéroport, une arrivée en gare, un mariage, un séminaire ou
-            une excursion sur la Côte d&apos;Azur ? Notre{" "}
-            <strong>Mercedes van 8 places</strong> réunit confort, volume de
-            coffre et chauffeur connaissant la métropole — sans multiplier les
-            courses ni les places de parking.
+            une excursion sur la Côte d&apos;Azur ?{" "}
+            <Link
+              href="/"
+              className="font-semibold text-cyan-700 underline-offset-2 hover:underline"
+            >
+              Taxi Marseille
+            </Link>{" "}
+            propose un <strong>Mercedes van 8 places</strong> qui réunit confort,
+            volume de coffre et chauffeur connaissant la métropole — sans
+            multiplier les courses ni les places de parking.
           </p>
           <p className="mb-4">
             Le <strong>taxi van Marseille</strong> est particulièrement pertinent

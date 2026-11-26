@@ -49,6 +49,11 @@ export default function Footer() {
             <h3 className="font-bold mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li>
+                <Link href="/" className={navLink}>
+                  Accueil
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/taxi-aeroport-marseille" className={navLink}>
                   Taxi aéroport Marseille (MRS)
                 </Link>

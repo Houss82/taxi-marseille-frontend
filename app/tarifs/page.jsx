@@ -62,7 +62,15 @@ export default function Pricing() {
               compétitifs —{" "}
               <span className="text-foreground font-medium">
                 van 8 places sur devis pour groupes.
-              </span>
+              </span>{" "}
+              Vous pouvez aussi{" "}
+              <Link
+                href="/"
+                className="text-accent font-semibold underline-offset-2 hover:underline"
+              >
+                réserver un taxi à Marseille
+              </Link>{" "}
+              depuis l&apos;accueil.
             </p>
             <p className="mt-5 text-base text-muted-foreground max-w-2xl mx-auto">
               Pour organiser votre trajet aéroport :{" "}

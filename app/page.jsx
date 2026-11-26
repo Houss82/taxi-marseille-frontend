@@ -100,6 +100,14 @@ const FAQ_ITEMS = [
     q: "Prenez-vous les groupes et les bagages volumineux ?",
     a: "Oui, Mercedes SUV et van 8 places pour familles, équipes et bagages (croisière, aéroport). Précisez-le lors de la réservation.",
   },
+  {
+    q: "Où retrouver mon chauffeur à l'aéroport Marseille Provence ?",
+    a: "Votre point de rendez-vous est défini lors de la confirmation de votre réservation, en fonction de votre terminal d'arrivée. Communiquez votre numéro de vol pour faciliter l'organisation de votre prise en charge.",
+  },
+  {
+    q: "Que se passe-t-il si mon vol arrive en retard ?",
+    a: "Grâce au numéro de vol communiqué lors de votre réservation, votre chauffeur peut suivre l'évolution de votre arrivée et adapter l'organisation de votre prise en charge.",
+  },
 ];
 
 const HERO_PRICES = [
@@ -907,12 +915,55 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Taxi Marseille – Taxi aéroport Marseille Marignane (MRS)
             </h2>
-            <p className="text-lg mb-8 text-primary-foreground/90">
+            <p className="text-lg mb-6 text-primary-foreground/90">
               Environ 25 à 35 minutes depuis l&apos;aéroport Marseille Provence,
               notre service <strong>taxi aéroport Marseille</strong> assure des
               trajets confortables vers le centre-ville, la gare Saint-Charles,
               le littoral ou votre hôtel.
             </p>
+            <div className="mb-8 space-y-5 text-primary-foreground/90">
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-snug">
+                  Votre prise en charge à l&apos;aéroport Marseille Provence
+                </h3>
+                <p className="text-base leading-relaxed mb-3">
+                  Pour votre arrivée à l&apos;aéroport Marseille Provence (MRS),
+                  indiquez votre numéro de vol, votre heure d&apos;arrivée et le
+                  nombre de passagers lors de votre réservation. Votre chauffeur
+                  organise votre prise en charge au terminal 1 ou 2, selon votre
+                  vol. Le point de rendez-vous vous est précisé lors de la
+                  confirmation de votre réservation.
+                </p>
+                <p className="text-base leading-relaxed">
+                  Le suivi de votre vol permet d&apos;adapter votre prise en
+                  charge en cas de retard. Vous pouvez également réserver votre
+                  taxi pour un départ très matinal depuis Marseille ou pour une
+                  arrivée tardive à Marignane.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-snug">
+                  Les principales destinations depuis l&apos;aéroport de
+                  Marseille
+                </h3>
+                <p className="text-base leading-relaxed mb-3">
+                  Depuis l&apos;aéroport Marseille Provence, nous assurons vos
+                  transferts vers Marseille centre, le Vieux-Port, la gare
+                  Saint-Charles, les hôtels, le port de croisière et les
+                  quartiers d&apos;affaires.
+                </p>
+                <p className="text-base leading-relaxed mb-3">
+                  Vous pouvez également réserver un taxi vers Aix-en-Provence,
+                  Cassis ou La Ciotat. Pour les familles, les groupes et les
+                  voyageurs avec plusieurs bagages, un van jusqu&apos;à 8
+                  passagers peut être réservé selon disponibilité.
+                </p>
+                <p className="text-base leading-relaxed">
+                  Indiquez votre destination pour connaître le prix de votre
+                  trajet avant le départ.
+                </p>
+              </div>
+            </div>
             <ul className="space-y-4 mb-8">
               {[
                 "Prix fixe annoncé à l’avance",

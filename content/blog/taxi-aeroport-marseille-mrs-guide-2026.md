@@ -11,7 +11,7 @@ published: true
 
 L'**aéroport Marseille Provence (MRS)**, situé à **Marignane**, est la principale porte d'entrée aérienne de la métropole marseillaise et du département des Bouches-du-Rhône. Il dessert le **centre-ville**, le **Vieux-Port**, la **gare Saint-Charles**, **Joliette** / **Euroméditerranée** et l'ensemble de la région.
 
-Que vous arriviez pour le travail ou les vacances, ou que vous partiez depuis Marseille, un **taxi aéroport Marseille Marignane** fiable évite le stress des correspondances, des parkings et des horaires de navettes.
+Que vous arriviez pour le travail ou les vacances, ou que vous partiez depuis Marseille, un **taxi aéroport Marseille Marignane** fiable évite le stress des correspondances, des parkings et des horaires de navettes. Pour planifier votre trajet, vous pouvez aussi consulter notre page d'accueil dédiée au [taxi à Marseille pour rejoindre l'aéroport](/).
 
 Ci-dessous : nos **transferts depuis et vers MRS**, les **temps de trajet**, des **tarifs indicatifs** (le montant exact dépend de votre adresse), des **conseils pratiques** — dont **où retrouver votre chauffeur** — et une **FAQ**.
 

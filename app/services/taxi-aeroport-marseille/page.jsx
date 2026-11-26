@@ -222,8 +222,15 @@ export default function TaxiAeroportMarseille() {
             Vous cherchez un <strong>taxi aéroport Marseille</strong> pour
             rejoindre l&apos;aéroport Marseille Provence à{" "}
             <strong>Marignane (MRS)</strong> ou partir du terminal vers Marseille
-            centre ? Notre service assure vos transferts{" "}
-            <strong>24h/24</strong> avec un tarif annoncé à l&apos;avance.
+            centre ? Notre{" "}
+            <Link
+              href="/"
+              className="font-semibold text-accent underline-offset-2 hover:underline"
+            >
+              service de taxi à Marseille
+            </Link>{" "}
+            assure vos transferts <strong>24h/24</strong> avec un tarif annoncé
+            à l&apos;avance.
           </p>
           <p className="mb-4">
             Nous desservons les principaux quartiers de Marseille :{" "}
