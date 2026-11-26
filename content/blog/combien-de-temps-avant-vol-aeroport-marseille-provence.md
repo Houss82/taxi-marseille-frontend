@@ -2,8 +2,8 @@
 title: "Combien de temps avant un vol à l'aéroport Marseille Provence ?"
 date: "2026-11-26"
 excerpt: "Découvrez quand arriver à l'aéroport Marseille Provence et à quelle heure quitter Marseille pour prendre votre vol sans stress."
-image: "/taxi-aeroport-marseille-depart-matinal.webp"
-imageAlt: "Taxi pour un départ matinal à l'aéroport Marseille Provence"
+image: "/taxi-marseille-partenaire.jpeg"
+imageAlt: "Taxis Mercedes devant le Terminal 1 de l'aéroport Marseille Provence (MRS)"
 category: "Transferts Aéroport"
 author: "Taxi Marseille"
 language: "fr"
@@ -190,6 +190,8 @@ Ces horaires **ne remplacent pas** l’heure limite d’enregistrement de votre 
 ## Comment rejoindre l’aéroport pour un vol à 6 h ou 7 h du matin ?
 
 Les vols matinaux concentrent les contraintes : peu de transports, fatigue, bagages, marge aéroportuaire.
+
+<img src="/taxi-marseille-jet-privee.jpeg" alt="Taxi van Mercedes Taxi Marseille à proximité de l'aéroport Marseille Provence" class="blog-img-van-desktop" />
 
 Selon [La Métropole Mobilité](https://www.lametropolemobilite.fr/navettes-gares-aeroports/), la navette propose des **premiers départs dès 3 h 30** depuis Saint-Charles ; le trajet peut prendre **jusqu’à 50 minutes**. Pour un vol à **6 h** (arrivée souhaitée vers **4 h** à MRS), la navette peut convenir **si** vous êtes déjà à la gare et si l’horaire colle à votre HLE — avec peu de marge en cas de retard.
 
